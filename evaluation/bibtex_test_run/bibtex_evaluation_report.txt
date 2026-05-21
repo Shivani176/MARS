@@ -1,0 +1,110 @@
+BibTeX Export Feature - Evaluation Report
+======================================================================
+
+Date: 2025-10-24 07:14:21
+
+DATABASE STATISTICS
+----------------------------------------------------------------------
+Total papers: 433
+Year range: 1961 - 2025
+
+Papers by source:
+  arxiv: 278
+  openalex: 155
+
+Keyword frequencies:
+  'transformer': 58 papers
+  'survey': 17 papers
+  'review': 9 papers
+  'attention': 87 papers
+  'bert': 21 papers
+  'gpt': 19 papers
+
+======================================================================
+
+TEST RESULTS
+----------------------------------------------------------------------
+
+1. [PASS] Export all papers
+   Category: Basic Functionality
+   Query: Export all papers to all_papers.bib
+   Count: 433 (expected 433-433)
+
+2. [PASS] Export with simple filename
+   Category: Basic Functionality
+   Query: Export all papers to test.bib
+   Count: 433 (expected 433-433)
+
+3. [PASS] Filter by "transformer"
+   Category: Keyword Filtering
+   Query: Export transformer papers to transformers.bib
+   Count: 58 (expected 58-58)
+
+4. [PASS] Filter by "survey"
+   Category: Keyword Filtering
+   Query: Export survey papers to surveys.bib
+   Count: 17 (expected 17-17)
+
+5. [PASS] Filter by "review"
+   Category: Keyword Filtering
+   Query: Export review papers to reviews.bib
+   Count: 9 (expected 9-9)
+
+6. [PASS] Filter by "attention"
+   Category: Keyword Filtering
+   Query: Export attention papers to attention.bib
+   Count: 87 (expected 87-87)
+
+7. [PASS] Papers from 2020 onwards
+   Category: Year Filtering
+   Query: Export papers from 2020 onwards to recent_2020.bib
+   Count: 245 (expected 50-433)
+
+8. [PASS] Papers from 2023 onwards
+   Category: Year Filtering
+   Query: Export papers from 2023 onwards to very_recent.bib
+   Count: 130 (expected 10-433)
+
+9. [PASS] Papers from 2024
+   Category: Year Filtering
+   Query: Export papers from 2024 to papers_2024.bib
+   Count: 47 (expected 0-433)
+
+10. [PASS] Transformers from 2023+
+   Category: Combined Filters
+   Query: Export transformer papers from 2023 onwards to recent_transformers.bib
+   Count: 23 (expected 1-58)
+
+11. [PASS] Recent surveys
+   Category: Combined Filters
+   Query: Export survey papers from 2022 onwards to recent_surveys.bib
+   Count: 15 (expected 1-17)
+
+12. [PASS] ArXiv papers only
+   Category: Source Filtering
+   Query: Export only arxiv papers to arxiv_papers.bib
+   Count: 278 (expected 278-278)
+
+13. [PASS] OpenAlex papers only
+   Category: Source Filtering
+   Query: Export only openalex papers to openalex_papers.bib
+   Count: 155 (expected 155-155)
+
+14. [FAIL] Empty result (nonexistent keyword)
+   Category: Edge Cases
+   Query: Export papers about quantum_blockchain_ai_xyz to empty.bib
+   Error: File not created
+
+15. [PASS] Special characters in filename
+   Category: Edge Cases
+   Query: Export all papers to my_papers_2024.bib
+   Count: 433 (expected 433-433)
+
+======================================================================
+
+SUMMARY
+----------------------------------------------------------------------
+Total tests: 15
+Passed: 14
+Failed: 1
+Success rate: 93.3%

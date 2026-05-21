@@ -1,0 +1,14 @@
+{
+  "bm25": {
+    "avg_overlap": 0.20666666666666667,
+    "note": "Simple metrics without ground truth. For accurate results, provide ground truth."
+  },
+  "semantic": {
+    "avg_overlap": 0.20666666666666667,
+    "note": "Simple metrics without ground truth. For accurate results, provide ground truth."
+  },
+  "hybrid": {
+    "avg_overlap": 0.20666666666666667,
+    "note": "Simple metrics without ground truth. For accurate results, provide ground truth."
+  }
+}

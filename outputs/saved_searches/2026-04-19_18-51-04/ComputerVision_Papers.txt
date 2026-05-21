@@ -1,0 +1,68 @@
+ --- Research Output ---
+Timestamp: 2026-04-19 18:51:04
+
+Here are the latest papers on generative AI from both ArXiv and OpenAlex:
+
+## Recent ArXiv Papers (2023-2026):
+
+### 1. **Foundations of GenIR** (2025)
+- **Authors:** Qingyao Ai, Jingtao Zhan, Yiqun Liu
+- **Focus:** Impact of generative AI on information access systems, covering information generation and synthesis
+- **Key Topics:** Retrieval-augmented generation, multi-modal applications, corpus modeling
+
+### 2. **Competing Visions of Ethical AI: A Case Study of OpenAI** (2026)
+- **Authors:** Melissa Wilfley, Mengting Ai, Madelyn Rose Sanfilippo
+- **Focus:** Analysis of OpenAI's ethical AI discourse over time
+- **Key Topics:** AI ethics, safety discourse, governance implications
+
+### 3. **AI and the EU Digital Markets Act** (2023)
+- **Authors:** Ayse Gizem Yasar, Andrew Chong, et al.
+- **Focus:** Regulatory challenges for generative AI under EU's Digital Markets Act
+- **Key Topics:** Market regulation, gatekeeper obligations, AI governance
+
+### 4. **Exploring utilization of generative AI for research and education in data-driven materials science** (2025)
+- **Authors:** Takahiro Misawa, Ai Koizumi, Ryo Tamura, Kazuyoshi Yoshimi
+- **Focus:** Applications in materials science research and education
+- **Key Topics:** AI-assisted software, educational tools, GUI applications
+
+### 5. **Privacy and Copyright Protection in Generative AI** (2023)
+- **Authors:** Dawen Zhang, Boming Xia, et al.
+- **Focus:** Data privacy and copyright challenges throughout the AI lifecycle
+- **Key Topics:** Differential privacy, machine unlearning, data poisoning
+
+## Recent OpenAlex Papers (2023-2024):
+
+### 1. **Students' voices on generative AI** (2023)
+- **Authors:** Cecilia Ka Yuk Chan, Wenjie Hu
+- **Focus:** Student perceptions of GenAI in higher education
+- **Key Findings:** Generally positive attitudes, concerns about accuracy and ethics
+
+### 2. **Generative AI at Work** (2023)
+- **Authors:** Erik Brynjolfsson, Danielle Li, Lindsey Raymond
+- **Focus:** Impact on customer support productivity
+- **Key Findings:** 14% productivity increase, greatest benefit for novice workers
+
+### 3. **Intelligent Clinical Documentation** (2024)
+- **Authors:** Anjanava Biswas, Wrick Talukdar
+- **Focus:** AI-powered clinical note generation (SOAP/BIRP notes)
+- **Key Topics:** Healthcare documentation, NLP, speech recognition
+
+### 4. **Generative AI and the future of education** (2023)
+- **Authors:** Weng Marc Lim, Asanka Gunasekara, et al.
+- **Focus:** Paradoxical perspectives on GenAI in education
+- **Key Topics:** Educational transformation, management education
+
+### 5. **The imperative for regulatory oversight of large language models in healthcare** (2023)
+- **Authors:** Bertalan Meskó, Eric J. Topol
+- **Focus:** Regulatory challenges for LLMs in healthcare settings
+- **Key Topics:** Medical AI regulation, patient safety, privacy
+
+## Key Trends Identified:
+- **Education & Training:** Multiple papers focus on GenAI's impact on education and professional development
+- **Healthcare Applications:** Growing interest in clinical documentation and medical AI regulation
+- **Ethics & Governance:** Significant attention to ethical frameworks and regulatory challenges
+- **Industry Applications:** Studies on workplace productivity and business use cases
+- **Technical Foundations:** Research on information retrieval, privacy, and system architecture
+
+These papers represent cutting-edge research spanning from technical innovations to societal implications of generative AI across various domains.
+

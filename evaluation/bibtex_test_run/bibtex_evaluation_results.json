@@ -1,0 +1,312 @@
+{
+  "timestamp": "2025-10-24T07:14:21.199001",
+  "database_statistics": {
+    "total_papers": 433,
+    "by_source": {
+      "arxiv": 278,
+      "openalex": 155
+    },
+    "year_range": [
+      1961,
+      2025
+    ],
+    "keyword_counts": {
+      "transformer": 58,
+      "survey": 17,
+      "review": 9,
+      "attention": 87,
+      "bert": 21,
+      "gpt": 19
+    }
+  },
+  "test_results": [
+    {
+      "name": "Export all papers",
+      "category": "Basic Functionality",
+      "query": "Export all papers to all_papers.bib",
+      "expected_range": [
+        433,
+        433
+      ],
+      "filename": "all_papers.bib",
+      "timestamp": "2025-10-24T07:14:13.031495",
+      "passed": true,
+      "details": {
+        "actual_count": 433,
+        "file_size": 369904,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Export with simple filename",
+      "category": "Basic Functionality",
+      "query": "Export all papers to test.bib",
+      "expected_range": [
+        433,
+        433
+      ],
+      "filename": "test.bib",
+      "timestamp": "2025-10-24T07:14:13.630440",
+      "passed": true,
+      "details": {
+        "actual_count": 433,
+        "file_size": 369904,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Filter by \"transformer\"",
+      "category": "Keyword Filtering",
+      "query": "Export transformer papers to transformers.bib",
+      "expected_range": [
+        58,
+        58
+      ],
+      "filename": "transformers.bib",
+      "timestamp": "2025-10-24T07:14:14.182745",
+      "passed": true,
+      "details": {
+        "actual_count": 58,
+        "file_size": 51563,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Filter by \"survey\"",
+      "category": "Keyword Filtering",
+      "query": "Export survey papers to surveys.bib",
+      "expected_range": [
+        17,
+        17
+      ],
+      "filename": "surveys.bib",
+      "timestamp": "2025-10-24T07:14:14.701611",
+      "passed": true,
+      "details": {
+        "actual_count": 17,
+        "file_size": 15958,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Filter by \"review\"",
+      "category": "Keyword Filtering",
+      "query": "Export review papers to reviews.bib",
+      "expected_range": [
+        9,
+        9
+      ],
+      "filename": "reviews.bib",
+      "timestamp": "2025-10-24T07:14:15.238638",
+      "passed": true,
+      "details": {
+        "actual_count": 9,
+        "file_size": 8220,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Filter by \"attention\"",
+      "category": "Keyword Filtering",
+      "query": "Export attention papers to attention.bib",
+      "expected_range": [
+        87,
+        87
+      ],
+      "filename": "attention.bib",
+      "timestamp": "2025-10-24T07:14:15.776278",
+      "passed": true,
+      "details": {
+        "actual_count": 87,
+        "file_size": 76172,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Papers from 2020 onwards",
+      "category": "Year Filtering",
+      "query": "Export papers from 2020 onwards to recent_2020.bib",
+      "expected_range": [
+        50,
+        433
+      ],
+      "filename": "recent_2020.bib",
+      "timestamp": "2025-10-24T07:14:16.305267",
+      "passed": true,
+      "details": {
+        "actual_count": 245,
+        "file_size": 220415,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Papers from 2023 onwards",
+      "category": "Year Filtering",
+      "query": "Export papers from 2023 onwards to very_recent.bib",
+      "expected_range": [
+        10,
+        433
+      ],
+      "filename": "very_recent.bib",
+      "timestamp": "2025-10-24T07:14:16.853414",
+      "passed": true,
+      "details": {
+        "actual_count": 130,
+        "file_size": 118073,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Papers from 2024",
+      "category": "Year Filtering",
+      "query": "Export papers from 2024 to papers_2024.bib",
+      "expected_range": [
+        0,
+        433
+      ],
+      "filename": "papers_2024.bib",
+      "timestamp": "2025-10-24T07:14:17.410257",
+      "passed": true,
+      "details": {
+        "actual_count": 47,
+        "file_size": 42288,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Transformers from 2023+",
+      "category": "Combined Filters",
+      "query": "Export transformer papers from 2023 onwards to recent_transformers.bib",
+      "expected_range": [
+        1,
+        58
+      ],
+      "filename": "recent_transformers.bib",
+      "timestamp": "2025-10-24T07:14:17.943900",
+      "passed": true,
+      "details": {
+        "actual_count": 23,
+        "file_size": 20235,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Recent surveys",
+      "category": "Combined Filters",
+      "query": "Export survey papers from 2022 onwards to recent_surveys.bib",
+      "expected_range": [
+        1,
+        17
+      ],
+      "filename": "recent_surveys.bib",
+      "timestamp": "2025-10-24T07:14:18.487880",
+      "passed": true,
+      "details": {
+        "actual_count": 15,
+        "file_size": 14154,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "ArXiv papers only",
+      "category": "Source Filtering",
+      "query": "Export only arxiv papers to arxiv_papers.bib",
+      "expected_range": [
+        278,
+        278
+      ],
+      "filename": "arxiv_papers.bib",
+      "timestamp": "2025-10-24T07:14:19.035043",
+      "passed": true,
+      "details": {
+        "actual_count": 278,
+        "file_size": 244955,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "OpenAlex papers only",
+      "category": "Source Filtering",
+      "query": "Export only openalex papers to openalex_papers.bib",
+      "expected_range": [
+        155,
+        155
+      ],
+      "filename": "openalex_papers.bib",
+      "timestamp": "2025-10-24T07:14:19.588673",
+      "passed": true,
+      "details": {
+        "actual_count": 155,
+        "file_size": 125030,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Empty result (nonexistent keyword)",
+      "category": "Edge Cases",
+      "query": "Export papers about quantum_blockchain_ai_xyz to empty.bib",
+      "expected_range": [
+        0,
+        0
+      ],
+      "filename": "empty.bib",
+      "timestamp": "2025-10-24T07:14:20.140800",
+      "passed": false,
+      "details": {
+        "error": "File not created",
+        "status": "FAIL"
+      }
+    },
+    {
+      "name": "Special characters in filename",
+      "category": "Edge Cases",
+      "query": "Export all papers to my_papers_2024.bib",
+      "expected_range": [
+        433,
+        433
+      ],
+      "filename": "my_papers_2024.bib",
+      "timestamp": "2025-10-24T07:14:20.644331",
+      "passed": true,
+      "details": {
+        "actual_count": 433,
+        "file_size": 369904,
+        "format_valid": true,
+        "validation_message": "Valid BibTeX format",
+        "status": "PASS"
+      }
+    }
+  ],
+  "summary": {
+    "total_tests": 15,
+    "passed": 14,
+    "failed": 1,
+    "success_rate": 93.33333333333333
+  }
+}

@@ -1,0 +1,557 @@
+[
+  {
+    "query": "BERT language model",
+    "category": "specific",
+    "overlap": {
+      "bm25_semantic": 2,
+      "bm25_hybrid": 9,
+      "semantic_hybrid": 3,
+      "all_three": 2
+    },
+    "bm25": {
+      "time": 0.001707315444946289,
+      "paper_count": 10,
+      "top_3_titles": [
+        "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model",
+        "Adapt or Get Left Behind: Domain Adaptation through BERT Language Model Finetuning for Aspect-Target Sentiment Classification",
+        "Comparing the Performance of NLP Toolkits and Evaluation measures in Legal Tech"
+      ]
+    },
+    "semantic": {
+      "time": 0.11673116683959961,
+      "paper_count": 4,
+      "top_3_titles": [
+        "A Primer in BERTology: What We Know About How BERT Works",
+        "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model",
+        "Bangla-BERT: Transformer-Based Efficient Model for Transfer Learning and Language Understanding"
+      ]
+    },
+    "hybrid": {
+      "time": 0.04399681091308594,
+      "paper_count": 10,
+      "top_3_titles": [
+        "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model",
+        "Bangla-BERT: Transformer-Based Efficient Model for Transfer Learning and Language Understanding",
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+      ]
+    }
+  },
+  {
+    "query": "transformer architecture",
+    "category": "specific",
+    "overlap": {
+      "bm25_semantic": 1,
+      "bm25_hybrid": 9,
+      "semantic_hybrid": 1,
+      "all_three": 1
+    },
+    "bm25": {
+      "time": 0.001529693603515625,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Deep Learning Transformer Architecture for Named Entity Recognition on Low Resourced Languages: State of the art results",
+        "TART: Token-based Architecture Transformer for Neural Network Performance Prediction",
+        "ResiDual: Transformer with Dual Residual Connections"
+      ]
+    },
+    "semantic": {
+      "time": 0.02288341522216797,
+      "paper_count": 4,
+      "top_3_titles": [
+        "ResiDual: Transformer with Dual Residual Connections",
+        "On Layer Normalization in the Transformer Architecture",
+        "On Layer Normalization in the Transformer Architecture"
+      ]
+    },
+    "hybrid": {
+      "time": 0.048151493072509766,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Deep Learning Transformer Architecture for Named Entity Recognition on Low Resourced Languages: State of the art results",
+        "ResiDual: Transformer with Dual Residual Connections",
+        "TART: Token-based Architecture Transformer for Neural Network Performance Prediction"
+      ]
+    }
+  },
+  {
+    "query": "GPT models",
+    "category": "specific",
+    "overlap": {
+      "bm25_semantic": 4,
+      "bm25_hybrid": 9,
+      "semantic_hybrid": 4,
+      "all_three": 4
+    },
+    "bm25": {
+      "time": 0.001049041748046875,
+      "paper_count": 10,
+      "top_3_titles": [
+        "How to Capture and Study Conversations Between Research Participants and ChatGPT: GPT for Researchers (g4r.org)",
+        "GPT Store Mining and Analysis",
+        "GPT in Game Theory Experiments"
+      ]
+    },
+    "semantic": {
+      "time": 0.021716594696044922,
+      "paper_count": 10,
+      "top_3_titles": [
+        "GPT-4 Technical Report",
+        "How to Capture and Study Conversations Between Research Participants and ChatGPT: GPT for Researchers (g4r.org)",
+        "GPT-3: What\u2019s it good for?"
+      ]
+    },
+    "hybrid": {
+      "time": 0.042826175689697266,
+      "paper_count": 10,
+      "top_3_titles": [
+        "How to Capture and Study Conversations Between Research Participants and ChatGPT: GPT for Researchers (g4r.org)",
+        "GPT Store Mining and Analysis",
+        "FoundationLayerNorm: Scaling BERT and GPT to 1,000 Layers"
+      ]
+    }
+  },
+  {
+    "query": "attention mechanism",
+    "category": "specific",
+    "overlap": {
+      "bm25_semantic": 0,
+      "bm25_hybrid": 9,
+      "semantic_hybrid": 0,
+      "all_three": 0
+    },
+    "bm25": {
+      "time": 0.001356363296508789,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Explaining the Attention Mechanism of End-to-End Speech Recognition Using Decision Trees",
+        "Towards understanding how attention mechanism works in deep learning",
+        "Get The Point of My Utterance! Learning Towards Effective Responses with Multi-Head Attention Mechanism"
+      ]
+    },
+    "semantic": {
+      "time": 0.05814313888549805,
+      "paper_count": 7,
+      "top_3_titles": [
+        "The neural mechanisms of top-down attentional control",
+        "How brains beware: neural mechanisms of emotional attention",
+        "Neural Mechanisms of Selective Visual Attention"
+      ]
+    },
+    "hybrid": {
+      "time": 0.06992936134338379,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Explaining the Attention Mechanism of End-to-End Speech Recognition Using Decision Trees",
+        "Towards understanding how attention mechanism works in deep learning",
+        "Get The Point of My Utterance! Learning Towards Effective Responses with Multi-Head Attention Mechanism"
+      ]
+    }
+  },
+  {
+    "query": "neural machine translation",
+    "category": "specific",
+    "overlap": {
+      "bm25_semantic": 5,
+      "bm25_hybrid": 9,
+      "semantic_hybrid": 6,
+      "all_three": 5
+    },
+    "bm25": {
+      "time": 0.0013685226440429688,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation",
+        "BERT-JAM: Boosting BERT-Enhanced Neural Machine Translation with Joint Attention",
+        "Incorporating BERT into Neural Machine Translation"
+      ]
+    },
+    "semantic": {
+      "time": 0.04295659065246582,
+      "paper_count": 6,
+      "top_3_titles": [
+        "Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation",
+        "Attention is All you Need",
+        "Attention Is All You Need"
+      ]
+    },
+    "hybrid": {
+      "time": 0.05422544479370117,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation",
+        "BERT-JAM: Boosting BERT-Enhanced Neural Machine Translation with Joint Attention",
+        "Incorporating BERT into Neural Machine Translation"
+      ]
+    }
+  },
+  {
+    "query": "understanding context in text",
+    "category": "conceptual",
+    "overlap": {
+      "bm25_semantic": 3,
+      "bm25_hybrid": 7,
+      "semantic_hybrid": 1,
+      "all_three": 1
+    },
+    "bm25": {
+      "time": 0.0013432502746582031,
+      "paper_count": 10,
+      "top_3_titles": [
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "Tri-Attention: Explicit Context-Aware Attention Mechanism for Natural Language Processing",
+        "Breaking BERT: Understanding its Vulnerabilities for Named Entity Recognition through Adversarial Attack"
+      ]
+    },
+    "semantic": {
+      "time": 0.0263516902923584,
+      "paper_count": 8,
+      "top_3_titles": [
+        "How Contextual are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings",
+        "What BERT Is Not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models",
+        "Tri-Attention: Explicit Context-Aware Attention Mechanism for Natural Language Processing"
+      ]
+    },
+    "hybrid": {
+      "time": 0.05807018280029297,
+      "paper_count": 10,
+      "top_3_titles": [
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "Breaking BERT: Understanding its Vulnerabilities for Named Entity Recognition through Adversarial Attack",
+        "Sentiment Analysis of Text Based on Bidirectional LSTM With Multi-Head Attention"
+      ]
+    }
+  },
+  {
+    "query": "learning representations from unlabeled data",
+    "category": "conceptual",
+    "overlap": {
+      "bm25_semantic": 2,
+      "bm25_hybrid": 9,
+      "semantic_hybrid": 2,
+      "all_three": 2
+    },
+    "bm25": {
+      "time": 0.002004384994506836,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Is 'Unsupervised Learning' a Misconceived Term?",
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "A Domain Agnostic Normalization Layer for Unsupervised Adversarial Domain Adaptation"
+      ]
+    },
+    "semantic": {
+      "time": 0.03341054916381836,
+      "paper_count": 8,
+      "top_3_titles": [
+        "Is 'Unsupervised Learning' a Misconceived Term?",
+        "Nonlinear Dimensionality Reduction by Locally Linear Embedding",
+        "Importance of the Mathematical Foundations of Machine Learning Methods for Scientific and Engineering Applications"
+      ]
+    },
+    "hybrid": {
+      "time": 0.05669713020324707,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Is 'Unsupervised Learning' a Misconceived Term?",
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "A Domain Agnostic Normalization Layer for Unsupervised Adversarial Domain Adaptation"
+      ]
+    }
+  },
+  {
+    "query": "handling long-range dependencies",
+    "category": "conceptual",
+    "overlap": {
+      "bm25_semantic": 3,
+      "bm25_hybrid": 8,
+      "semantic_hybrid": 1,
+      "all_three": 1
+    },
+    "bm25": {
+      "time": 0.0011870861053466797,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Transformers",
+        "Combining Global and Local Attention with Positional Encoding for Video Summarization",
+        "LncLocFormer: a Transformer-based deep learning model for multi-label lncRNA subcellular localization prediction by using localization-specific attention mechanism"
+      ]
+    },
+    "semantic": {
+      "time": 0.030400991439819336,
+      "paper_count": 6,
+      "top_3_titles": [
+        "SCCA: Shifted Cross Chunk Attention for long contextual semantic expansion",
+        "Transformers",
+        "Bi-Level Attention Graph Neural Networks"
+      ]
+    },
+    "hybrid": {
+      "time": 0.04995369911193848,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Combining Global and Local Attention with Positional Encoding for Video Summarization",
+        "Transformers",
+        "LncLocFormer: a Transformer-based deep learning model for multi-label lncRNA subcellular localization prediction by using localization-specific attention mechanism"
+      ]
+    }
+  },
+  {
+    "query": "improving model efficiency",
+    "category": "conceptual",
+    "overlap": {
+      "bm25_semantic": 1,
+      "bm25_hybrid": 9,
+      "semantic_hybrid": 0,
+      "all_three": 0
+    },
+    "bm25": {
+      "time": 0.0016758441925048828,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Diffuser: Efficient Transformers with Multi-hop Attention Diffusion for Long Sequences",
+        "Accurate background velocity model building method based on iterative deep learning in sparse transform domain",
+        "Differentiable Neural Architecture Search with Morphism-based Transformable Backbone Architectures"
+      ]
+    },
+    "semantic": {
+      "time": 0.02588677406311035,
+      "paper_count": 7,
+      "top_3_titles": [
+        "Data Cleansing for Models Trained with SGD",
+        "Attention Is All You Need But You Don't Need All Of It For Inference of Large Language Models",
+        "RoBERTa: A Robustly Optimized BERT Pretraining Approach"
+      ]
+    },
+    "hybrid": {
+      "time": 0.046801090240478516,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Diffuser: Efficient Transformers with Multi-hop Attention Diffusion for Long Sequences",
+        "Accurate background velocity model building method based on iterative deep learning in sparse transform domain",
+        "Differentiable Neural Architecture Search with Morphism-based Transformable Backbone Architectures"
+      ]
+    }
+  },
+  {
+    "query": "transfer learning approaches",
+    "category": "conceptual",
+    "overlap": {
+      "bm25_semantic": 1,
+      "bm25_hybrid": 7,
+      "semantic_hybrid": 0,
+      "all_three": 0
+    },
+    "bm25": {
+      "time": 0.0014879703521728516,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Learning Texture Transformer Network for Image Super-Resolution",
+        "Multiband NFC for High-Throughput Wireless Computer Vision Sensor Network",
+        "Bangla-BERT: Transformer-Based Efficient Model for Transfer Learning and Language Understanding"
+      ]
+    },
+    "semantic": {
+      "time": 0.02701544761657715,
+      "paper_count": 8,
+      "top_3_titles": [
+        "Return of Frustratingly Easy Domain Adaptation",
+        "Importance of the Mathematical Foundations of Machine Learning Methods for Scientific and Engineering Applications",
+        "Meta-learning approaches for few-shot learning: A survey of recent advances"
+      ]
+    },
+    "hybrid": {
+      "time": 0.05041670799255371,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Learning Texture Transformer Network for Image Super-Resolution",
+        "Multiband NFC for High-Throughput Wireless Computer Vision Sensor Network",
+        "The Eval4NLP 2023 Shared Task on Prompting Large Language Models as Explainable Metrics"
+      ]
+    }
+  },
+  {
+    "query": "pre-training language models on large corpora",
+    "category": "hybrid",
+    "overlap": {
+      "bm25_semantic": 3,
+      "bm25_hybrid": 8,
+      "semantic_hybrid": 5,
+      "all_three": 3
+    },
+    "bm25": {
+      "time": 0.001857757568359375,
+      "paper_count": 10,
+      "top_3_titles": [
+        "BioBERT: a pre-trained biomedical language representation model for biomedical text mining",
+        "BEiT: BERT Pre-Training of Image Transformers",
+        "The Eval4NLP 2023 Shared Task on Prompting Large Language Models as Explainable Metrics"
+      ]
+    },
+    "semantic": {
+      "time": 0.027088642120361328,
+      "paper_count": 8,
+      "top_3_titles": [
+        "Canonical Autoregressive Generation",
+        "Bangla-BERT: Transformer-Based Efficient Model for Transfer Learning and Language Understanding",
+        "How Good are Commercial Large Language Models on African Languages?"
+      ]
+    },
+    "hybrid": {
+      "time": 0.06208968162536621,
+      "paper_count": 10,
+      "top_3_titles": [
+        "BioBERT: a pre-trained biomedical language representation model for biomedical text mining",
+        "How Good are Commercial Large Language Models on African Languages?",
+        "BEiT: BERT Pre-Training of Image Transformers"
+      ]
+    }
+  },
+  {
+    "query": "self-attention for sequence modeling",
+    "category": "hybrid",
+    "overlap": {
+      "bm25_semantic": 3,
+      "bm25_hybrid": 8,
+      "semantic_hybrid": 3,
+      "all_three": 3
+    },
+    "bm25": {
+      "time": 0.0018215179443359375,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Self-Attention: A Better Building Block for Sentiment Analysis Neural Network Classifiers",
+        "ERNIE-SPARSE: Learning Hierarchical Efficient Transformer Through Regularized Self-Attention",
+        "Is Attention All What You Need? -- An Empirical Investigation on Convolution-Based Active Memory and Self-Attention"
+      ]
+    },
+    "semantic": {
+      "time": 0.025836706161499023,
+      "paper_count": 5,
+      "top_3_titles": [
+        "Is Attention All What You Need? -- An Empirical Investigation on Convolution-Based Active Memory and Self-Attention",
+        "Agglomerative Attention",
+        "Attention Is All You Need"
+      ]
+    },
+    "hybrid": {
+      "time": 0.048824310302734375,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Self-Attention: A Better Building Block for Sentiment Analysis Neural Network Classifiers",
+        "Is Attention All What You Need? -- An Empirical Investigation on Convolution-Based Active Memory and Self-Attention",
+        "DiSAN: Directional Self-Attention Network for RNN/CNN-Free Language Understanding"
+      ]
+    }
+  },
+  {
+    "query": "bidirectional encoding for NLP tasks",
+    "category": "hybrid",
+    "overlap": {
+      "bm25_semantic": 2,
+      "bm25_hybrid": 10,
+      "semantic_hybrid": 2,
+      "all_three": 2
+    },
+    "bm25": {
+      "time": 0.0019745826721191406,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Improving Position Encoding of Transformers for Multivariate Time Series Classification",
+        "Deep Learning Transformer Architecture for Named Entity Recognition on Low Resourced Languages: State of the art results",
+        "Adapting GPT, GPT-2 and BERT Language Models for Speech Recognition"
+      ]
+    },
+    "semantic": {
+      "time": 0.024561166763305664,
+      "paper_count": 7,
+      "top_3_titles": [
+        "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "Rethinking Positional Encoding in Language Pre-training",
+        "Rethinking Positional Encoding in Language Pre-training"
+      ]
+    },
+    "hybrid": {
+      "time": 0.05018949508666992,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Evaluation of BERT and ALBERT Sentence Embedding Performance on Downstream NLP Tasks",
+        "Improving Position Encoding of Transformers for Multivariate Time Series Classification",
+        "BERT: Pre-training of Deep Bidirectional Transformers"
+      ]
+    }
+  },
+  {
+    "query": "fine-tuning transformers for downstream tasks",
+    "category": "hybrid",
+    "overlap": {
+      "bm25_semantic": 0,
+      "bm25_hybrid": 10,
+      "semantic_hybrid": 0,
+      "all_three": 0
+    },
+    "bm25": {
+      "time": 0.0015692710876464844,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Fine-Grained VLM Fine-tuning via Latent Hierarchical Adapter Learning",
+        "Complementary Subspace Low-Rank Adaptation of Vision-Language Models for Few-Shot Classification",
+        "Deep Learning Transformer Architecture for Named Entity Recognition on Low Resourced Languages: State of the art results"
+      ]
+    },
+    "semantic": {
+      "time": 0.025371074676513672,
+      "paper_count": 8,
+      "top_3_titles": [
+        "ResiDual: Transformer with Dual Residual Connections",
+        "On Layer Normalization in the Transformer Architecture",
+        "On Layer Normalization in the Transformer Architecture"
+      ]
+    },
+    "hybrid": {
+      "time": 0.0498964786529541,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Fine-Grained VLM Fine-tuning via Latent Hierarchical Adapter Learning",
+        "Complementary Subspace Low-Rank Adaptation of Vision-Language Models for Few-Shot Classification",
+        "Deep Learning Transformer Architecture for Named Entity Recognition on Low Resourced Languages: State of the art results"
+      ]
+    }
+  },
+  {
+    "query": "comparing different attention mechanisms",
+    "category": "hybrid",
+    "overlap": {
+      "bm25_semantic": 1,
+      "bm25_hybrid": 10,
+      "semantic_hybrid": 1,
+      "all_three": 1
+    },
+    "bm25": {
+      "time": 0.0013883113861083984,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Attention in Attention Network for Image Super-Resolution",
+        "Aggregated Sparse Attention for Steering Angle Prediction",
+        "A General Survey on Attention Mechanisms in Deep Learning"
+      ]
+    },
+    "semantic": {
+      "time": 0.025803089141845703,
+      "paper_count": 7,
+      "top_3_titles": [
+        "The neural mechanisms of top-down attentional control",
+        "How brains beware: neural mechanisms of emotional attention",
+        "Saccade target selection and object recognition: Evidence for a common attentional mechanism"
+      ]
+    },
+    "hybrid": {
+      "time": 0.053827762603759766,
+      "paper_count": 10,
+      "top_3_titles": [
+        "Attention in Attention Network for Image Super-Resolution",
+        "A General Survey on Attention Mechanisms in Deep Learning",
+        "Aggregated Sparse Attention for Steering Angle Prediction"
+      ]
+    }
+  }
+]

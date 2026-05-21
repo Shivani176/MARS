@@ -1,0 +1,32 @@
+ --- Research Output ---
+Timestamp: 2025-10-24 10:27:35
+
+Based on the search results, I'll highlight the most relevant recent papers on affordance learning from 2023 onwards:
+
+1. "INTRA: Interaction Relationship-aware Weakly Supervised Affordance Grounding" (2024)
+- Focuses on weakly supervised affordance grounding
+- Uses contrastive learning with exocentric images
+- Leverages vision-language model embeddings for flexible affordance grounding
+- Shows good performance on multiple datasets including AGD20K, IIT-AFF, CAD and UMD
+
+2. "Object Affordance Recognition and Grounding via Multi-scale Cross-modal Representation Learning" (2025)
+- Addresses both 3D affordance grounding and affordance classification
+- Introduces a novel cross-modal 3D representation approach
+- Uses multi-scale geometric feature propagation
+- Employs a two-stage prediction mechanism for better affordance understanding
+
+3. "DAG: Unleash the Potential of Diffusion Model for Open-Vocabulary 3D Affordance Grounding" (2025)
+- Uses text-to-image diffusion models to extract general affordance knowledge
+- Introduces a diffusion-based 3D affordance grounding framework
+- Features an affordance block and multi-source affordance decoder
+- Shows strong performance and open-world generalization capabilities
+
+These papers represent the latest developments in affordance learning, with particular focus on:
+- Weakly supervised learning approaches
+- Multi-modal and cross-modal representation learning
+- 3D affordance grounding
+- Integration with modern AI techniques like diffusion models
+- Open-vocabulary and generalization capabilities
+
+The field appears to be moving toward more flexible and generalizable approaches that require less supervision, while also incorporating advanced deep learning techniques and 3D understanding.
+
