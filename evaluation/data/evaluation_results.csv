@@ -1,0 +1,46 @@
+System,Query_ID,Query,Length,Words,Total_Citations,Unique_Citations,Papers_Found,Coverage_%,Density,Density_Norm,Quality_Score,Filename
+Your System,Q01,BERT,6928,870,101,20,47,42.6,14.58,0.7,0.561,Q01_BERT_review.txt
+Your System,Q02,GPT,4889,630,68,12,36,33.3,13.91,0.7,0.474,Q02_GPT_review.txt
+Your System,Q03,transformer,7271,860,102,20,100,20.0,14.03,0.7,0.455,Q03_transformer_review.txt
+Your System,Q04,natural language processing,5970,748,90,20,44,45.5,15.08,0.69,0.555,Q04_natural_language_processing_review.txt
+Your System,Q05,vision transformer,6242,752,132,20,27,74.1,21.15,0.3,0.585,Q05_vision_transformer_review.txt
+Your System,Q06,CNN,6906,856,103,20,39,51.3,14.91,0.7,0.605,Q06_CNN_review.txt
+Your System,Q07,image segmentation,5281,642,100,20,10,100.0,18.94,0.39,0.721,Q07_image_segmentation_review.txt
+Your System,Q08,computer vision,5417,674,88,20,47,42.6,16.25,0.6,0.501,Q08_computer_vision_review.txt
+Your System,Q09,attention mechanism,6230,758,124,20,91,22.0,19.9,0.31,0.327,Q09_attention_mechanism_review.txt
+Your System,Q10,transfer learning,5521,655,83,20,10,100.0,15.03,0.7,0.82,Q10_transfer_learning_review.txt
+Your System,Q11,neural networks,6786,850,116,20,100,20.0,17.09,0.53,0.395,Q11_neural_networks_review.txt
+Your System,Q12,deep learning,7315,940,98,20,76,26.3,13.4,0.7,0.488,Q12_deep_learning_review.txt
+Your System,Q13,graph neural networks,6434,809,114,20,17,100.0,17.72,0.48,0.773,Q13_graph_neural_networks_review.txt
+Your System,Q14,GAN,6355,784,98,20,26,76.9,15.42,0.67,0.712,Q14_GAN_review.txt
+Your System,Q15,neural architecture search,5610,664,100,20,14,100.0,17.83,0.47,0.754,Q15_neural_architecture_search_review.txt
+Elicit,Q01,BERT,2872,383,9,6,47,12.8,3.13,1.0,0.421,Elicit_Q01_BERT.txt
+Elicit,Q02,GPT,4127,570,12,11,36,30.6,2.91,0.97,0.526,Elicit_Q02_GPT.txt
+Elicit,Q03,transformer,4503,618,7,5,100,5.0,1.55,0.52,0.271,Elicit_Q03_transformers.txt
+Elicit,Q04,natural language processing,4738,601,12,11,44,25.0,2.53,0.84,0.473,Elicit_Q04_NLP.txt
+Elicit,Q05,vision transformer,5177,678,9,9,27,33.3,1.74,0.58,0.444,Elicit_Q05_ViTs.txt
+Elicit,Q06,CNN,5420,705,8,5,39,12.8,1.48,0.49,0.32,Elicit_Q06_CNN.txt
+Elicit,Q07,image segmentation,5372,708,10,9,10,90.0,1.86,0.62,0.744,Elicit_Q07_ImageSeg.txt
+Elicit,Q08,computer vision,6598,847,14,14,47,29.8,2.12,0.71,0.493,Elicit_Q08_CompVision.txt
+Elicit,Q09,attention mechanism,4347,614,0,0,91,0.0,0.0,0.0,0.087,Elicit_Q09_AttentionNN.txt
+Elicit,Q10,transfer learning,4710,663,0,0,10,0.0,0.0,0.0,0.094,Elicit_Q10_TransferLearning.txt
+Elicit,Q11,neural networks,5167,721,0,0,100,0.0,0.0,0.0,0.103,Elicit_Q11_NN.txt
+Elicit,Q12,deep learning,6942,927,0,0,76,0.0,0.0,0.0,0.139,Elicit_Q12_DeepLearning.txt
+Elicit,Q13,graph neural networks,4406,628,0,0,17,0.0,0.0,0.0,0.088,Elicit_Q13_GNN.txt
+Elicit,Q14,GAN,7054,943,0,0,26,0.0,0.0,0.0,0.141,Elicit_Q14_GAN.txt
+Elicit,Q15,neural architecture search,6989,941,0,0,14,0.0,0.0,0.0,0.14,Elicit_Q15_NN_Architecture.txt
+Consensus,Q01,BERT,3590,525,11,11,47,23.4,3.06,1.0,0.489,Consensus_Q01_BERT.txt
+Consensus,Q02,GPT,4464,604,16,16,36,44.4,3.58,1.0,0.612,Consensus_Q02_GPT.txt
+Consensus,Q03,transformer,3641,530,15,15,100,15.0,4.12,1.0,0.448,Consensus_Q03_Transformers.txt
+Consensus,Q04,natural language processing,4224,549,19,19,44,43.2,4.5,1.0,0.6,Consensus_Q04_NLP.txt
+Consensus,Q05,vision transformer,3742,568,15,15,27,55.6,4.01,1.0,0.653,Consensus_Q05_ViTs.txt
+Consensus,Q06,CNN,3689,554,15,15,39,38.5,4.07,1.0,0.566,Consensus_Q06_CNN.txt
+Consensus,Q07,image segmentation,4094,592,15,15,10,100.0,3.66,1.0,0.882,Consensus_Q07_ImageSeg.txt
+Consensus,Q08,computer vision,3853,513,19,19,47,40.4,4.93,1.0,0.579,Consensus_Q08_CompVision.txt
+Consensus,Q09,attention mechanism,3382,497,11,11,91,12.1,3.25,1.0,0.428,Consensus_Q09_AttentionNN.txt
+Consensus,Q10,transfer learning,4533,662,19,19,10,100.0,4.19,1.0,0.891,Consensus_Q10_TransferLearning.txt
+Consensus,Q11,neural networks,4501,616,16,16,100,16.0,3.55,1.0,0.47,Consensus_Q11_NN.txt
+Consensus,Q12,deep learning,5986,886,19,19,76,25.0,3.17,1.0,0.545,Consensus_Q12_DeepLearning.txt
+Consensus,Q13,graph neural networks,4427,674,15,15,17,88.2,3.39,1.0,0.83,Consensus_Q13_GNN.txt
+Consensus,Q14,GAN,5564,815,19,19,26,73.1,3.41,1.0,0.777,Consensus_Q14_GAN.txt
+Consensus,Q15,neural architecture search,4919,742,17,17,14,100.0,3.46,1.0,0.898,Consensus_Q15_NN_Architecture.txt
