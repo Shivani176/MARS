@@ -1,0 +1,69 @@
+# **Attention Mechanisms in Neural Networks:** How They Work
+
+Attention mechanisms let neural networks **focus on the most relevant parts** of their input instead of treating everything equally. Inspired by human perception, they improve both performance and efficiency across tasks like translation, vision, and sentiment analysis  (Niu et al., 2021; Soydaner, 2022; De Santana Correia & Colombini, 2021; Hernández & Amigó, 2021; Ghaffarian et al., 2021).  
+
+## **Core Mechanism: Scores, Weights, Context**
+
+Most attention mechanisms follow a common pattern  (Niu et al., 2021; Brauwers & Frasincar, 2022; Hernández & Amigó, 2021):
+
+1. **Inputs as keys/values, task as query**  
+   - A **query** represents what the model currently wants (e.g., a word being translated).  
+   - Each input element provides a **key** (for matching) and a **value** (information to use)  (Hernández & Amigó, 2021; Ghaffarian et al., 2021).  
+
+2. **Compute relevance scores**  
+   - A **similarity/score function** compares the query with each key (e.g., a small neural net or dot product)  (Hernández & Amigó, 2021).  
+
+3. **Normalize into weights**  
+   - Scores are passed through **softmax** to get non‑negative weights that sum to 1 (a convex combination)  (Hernández & Amigó, 2021; De Santana Correia & Colombini, 2021; Ghaffarian et al., 2021).  
+
+4. **Weighted sum (context vector)**  
+   - The output is a weighted sum of the values, so more relevant elements contribute more  (Niu et al., 2021; Hernández & Amigó, 2021; Ghaffarian et al., 2021).  
+
+This makes attention **differentiable**, so it is trained via backpropagation  (Hernández & Amigó, 2021).
+
+### Types of Attention (Conceptual)
+
+| Type | Key idea | Citations |
+|------|---------|-----------|
+| **Soft / global** | Weighs all inputs with continuous weights |  (De Santana Correia & Colombini, 2021; Ghaffarian et al., 2021; Niu et al., 2021)|
+| **Hard** | Selects discrete elements (0/1), often via RL |  (De Santana Correia & Colombini, 2021; Ghaffarian et al., 2021)|
+| **Self-attention** | Query, key, value all from same sequence |  (De Santana Correia & Colombini, 2021; Hernández & Amigó, 2021; Brauwers & Frasincar, 2022)|
+
+**Figure 1:** Common attention variants used in deep learning
+
+## **Why It Helps**
+
+- **Captures long-range dependencies** better than purely sequential models  (Soydaner, 2022; Hernández & Amigó, 2021; Zhu et al., 2019).  
+- **Improves accuracy** in tasks like sentiment and aspect-based sentiment analysis, often by several percentage points  (Kardakis et al., 2021; Onsale et al., 2025).  
+- Can act as an **interpretable focus map**, highlighting which inputs influenced a decision  (Niu et al., 2021; Hassanin et al., 2022; De Santana Correia & Colombini, 2021; Gonçalves et al., 2022).  
+
+## **Conclusion**
+
+Attention mechanisms work by learning how strongly each part of the input should influence a current decision, via learned similarity scores and normalized weights. This flexible “focus” greatly improves neural networks’ ability to model complex, long-range relationships and often makes their behavior more interpretable.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Niu, Z., Zhong, G., & Yu, H. (2021). A review on the attention mechanism of deep learning. *Neurocomputing*, 452, 48-62. https://doi.org/10.1016/j.neucom.2021.03.091
+ 
+Soydaner, D. (2022). Attention mechanism in neural networks: where it comes and where it goes. *Neural Computing and Applications*, 34, 13371 - 13385. https://doi.org/10.1007/s00521-022-07366-3
+ 
+Brauwers, G., & Frasincar, F. (2022). A General Survey on Attention Mechanisms in Deep Learning. *IEEE Transactions on Knowledge and Data Engineering*, 35, 3279-3298. https://doi.org/10.1109/tkde.2021.3126456
+ 
+Hassanin, M., Anwar, S., Radwan, I., Khan, F., & Mian, A. (2022). Visual Attention Methods in Deep Learning: An In-Depth Survey. *Inf. Fusion*, 108, 102417. https://doi.org/10.48550/arxiv.2204.07756
+ 
+De Santana Correia, A., & Colombini, E. (2021). Attention, please! A survey of neural attention models in deep learning. *Artificial Intelligence Review*, 55, 6037 - 6124. https://doi.org/10.1007/s10462-022-10148-x
+ 
+Kardakis, S., Perikos, I., Grivokostopoulou, F., & Hatzilygeroudis, I. (2021). Examining Attention Mechanisms in Deep Learning Models for Sentiment Analysis. *Applied Sciences*, 11, 3883. https://doi.org/10.3390/app11093883
+ 
+Hernández, A., & Amigó, J. (2021). Attention Mechanisms and Their Applications to Complex Systems. *Entropy*, 23. https://doi.org/10.3390/e23030283
+ 
+Zhu, X., Cheng, D., Zhang, Z., Lin, S., & Dai, J. (2019). An Empirical Study of Spatial Attention Mechanisms in Deep Networks. *2019 IEEE/CVF International Conference on Computer Vision (ICCV)*, 6687-6696. https://doi.org/10.1109/iccv.2019.00679
+ 
+Onsale, K., Oirere, A., & Muketha, G. (2025). A Comparative Study of Attention Mechanisms in Deep Learning Models for Aspect-based Sentiment Analysis of Customer Reviews. *International Journal of Advanced Trends in Computer Science and Engineering*. https://doi.org/10.30534/ijatcse/2025/011422025
+ 
+Ghaffarian, S., Valente, J., Voort, M., & Tekinerdogan, B. (2021). Effect of Attention Mechanism in Deep Learning-Based Remote Sensing Image Processing: A Systematic Literature Review. *Remote. Sens.*, 13, 2965. https://doi.org/10.3390/rs13152965
+ 
+Gonçalves, T., Rio-Torto, I., Teixeira, L., & Cardoso, J. (2022). A Survey on Attention Mechanisms for Medical Applications: are we Moving Toward Better Algorithms?. *IEEE Access*, 10, 98909-98935. https://doi.org/10.1109/access.2022.3206449
+ 

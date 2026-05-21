@@ -1,0 +1,66 @@
+# **Transformer Architectures in Simple Terms:** Core Ideas and How They Work
+
+Transformers are a type of deep neural network that became the dominant architecture for tasks involving sequences like text, images, and genomic data. They replace older recurrent or convolutional sequence models with a design built almost entirely around **attention**.
+
+## **Core Architecture and Building Blocks**
+
+Transformers are typically made by stacking identical **blocks** that each contain:  
+- **Multi-head self-attention**: lets every element in a sequence “look at” every other element and decide how important it is. This is what captures **long-range dependencies** regardless of distance in the sequence  (Tay et al., 2020; Vaswani et al., 2017; Khan et al., 2021).  
+- **Position-wise feed‑forward network**: a small neural network applied separately to each position to transform the attended information  (Choi & Lee, 2023; Tay et al., 2020; Khan et al., 2021).  
+- **Residual connections and layer normalization**: help stabilize and speed up training by adding each sublayer’s input to its output, then normalizing  (Rahali & Akhloufi, 2023; Tay et al., 2020; Khan et al., 2021).
+
+Positional encodings are added so the model knows the order of tokens, since attention itself is order-agnostic  (Tay et al., 2020; Singh & Mahmood, 2021; Wolf et al., 2019).
+
+### Transformer Variants by Structure
+
+- **Encoder–decoder (sequence‑to‑sequence)**: original design for machine translation; encoder reads input, decoder generates output step‑by‑step using attention to encoder outputs  (Singh & Mahmood, 2021; Vaswani et al., 2017).  
+- **Encoder‑only** (e.g., BERT): good for understanding tasks like classification and question answering  (Rahali & Akhloufi, 2023; Țucudean et al., 2024; Ghojogh & Ghodsi, 2020; Zhang & Shafiq, 2024).  
+- **Decoder‑only** (e.g., GPT): good for **generation**, predicting the next token given previous ones  (Rahali & Akhloufi, 2023; Ghojogh & Ghodsi, 2020; Yenduri et al., 2023; Zhang & Shafiq, 2024).
+
+## **How Attention Works Conceptually**
+
+Self‑attention scores how much each token should attend to others, then forms a weighted combination of their representations. Multiple “heads” learn different types of relationships in parallel  (Tay et al., 2020; Vaswani et al., 2017; Khan et al., 2021).  
+Visualization tools show that heads often learn meaningful structure (e.g., grammar in text, regions in images, or genomic features) and that patterns evolve across layers  (Yeh et al., 2023; Vig, 2019; Consens et al., 2025).
+
+## **Efficiency and Extensions**
+
+Standard attention is costly on long sequences, so many “efficient transformers” approximate or modify attention to reduce memory and time, such as linear attention (e.g., Performer) and other variants  (Rahali & Akhloufi, 2023; Tay et al., 2020). Compression, pruning, and quantization are also used to run models on limited hardware  (Rahali & Akhloufi, 2023; Han et al., 2020; Singh & Mahmood, 2021).
+
+## **Conclusion**
+
+Transformers are stacks of attention‑based blocks that process all positions in parallel, use attention to model relationships across entire sequences, and rely on simple feed‑forward and normalization layers around that core. Variants of the basic encoder/decoder design underpin models like BERT and GPT and have been adapted across text, vision, and genomics.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Rahali, A., & Akhloufi, M. (2023). End-to-End Transformer-Based Models in Textual-Based NLP. *AI*. https://doi.org/10.3390/ai4010004
+ 
+Choi, S., & Lee, M. (2023). Transformer Architecture and Attention Mechanisms in Genome Data Analysis: A Comprehensive Review. *Biology*, 12. https://doi.org/10.3390/biology12071033
+ 
+Țucudean, G., Bucos, M., Drăgulescu, B., & Căleanu, C. (2024). Natural language processing with transformers: a review. *PeerJ Computer Science*, 10. https://doi.org/10.7717/peerj-cs.2222
+ 
+Yeh, C., Chen, Y., Wu, A., Chen, C., Vi'egas, F., & Wattenberg, M. (2023). AttentionViz: A Global View of Transformer Attention. *IEEE Transactions on Visualization and Computer Graphics*, 30, 262-272. https://doi.org/10.1109/tvcg.2023.3327163
+ 
+Han, K., Wang, Y., Chen, H., Chen, X., Guo, J., Liu, Z., Tang, Y., Xiao, A., Xu, C., Xu, Y., Yang, Z., Zhang, Y., & Tao, D. (2020). A Survey on Vision Transformer. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, PP, 1-1. https://doi.org/10.1109/tpami.2022.3152247
+ 
+Tay, Y., Dehghani, M., Bahri, D., & Metzler, D. (2020). Efficient Transformers: A Survey. *ACM Computing Surveys*, 55, 1 - 28. https://doi.org/10.1145/3530811
+ 
+Ghojogh, B., & Ghodsi, A. (2020). Attention Mechanism, Transformers, BERT, and GPT: Tutorial and Survey. **. https://doi.org/10.31219/osf.io/m6gcn
+ 
+Vig, J. (2019). A Multiscale Visualization of Attention in the Transformer Model. *ArXiv*, abs/1906.05714. https://doi.org/10.18653/v1/p19-3007
+ 
+Singh, S., & Mahmood, A. (2021). The NLP Cookbook: Modern Recipes for Transformer Based Deep Learning Architectures. *IEEE Access*, 9, 68675-68702. https://doi.org/10.1109/access.2021.3077350
+ 
+Consens, M., Díaz-Navarro, A., Chu, V., Stein, L., He, H., Moses, A., & Wang, B. (2025). Interpreting Attention Mechanisms in Genomic Transformer Models: A Framework for Biological Insights. *bioRxiv*. https://doi.org/10.1101/2025.06.26.661544
+ 
+Yenduri, G., Ramalingam, M., Selvi, G., Supriya, Y., Srivastava, G., Maddikunta, P., Raj, G., Jhaveri, R., Prabadevi, B., Wang, W., Vasilakos, A., & Gadekallu, T. (2023). GPT (Generative Pre-Trained Transformer)— A Comprehensive Review on Enabling Technologies, Potential Applications, Emerging Challenges, and Future Directions. *IEEE Access*, 12, 54608-54649. https://doi.org/10.1109/access.2024.3389497
+ 
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A., Kaiser, L., & Polosukhin, I. (2017). Attention is All you Need. **, 5998-6008. 
+ 
+Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., Cistac, P., Rault, T., Louf, R., & Funtowicz, M. (2019). Transformers : State-ofthe-art Natural Language Processing. **. 
+ 
+Khan, S., Naseer, M., Hayat, M., Zamir, S., Khan, F., & Shah, M. (2021). Transformers in Vision: A Survey. *ACM Computing Surveys (CSUR)*, 54, 1 - 41. https://doi.org/10.1145/3505244
+ 
+Zhang, H., & Shafiq, M. (2024). Survey of transformers and towards ensemble learning using transformers for natural language processing. *Journal of Big Data*, 11. https://doi.org/10.1186/s40537-023-00842-0
+ 

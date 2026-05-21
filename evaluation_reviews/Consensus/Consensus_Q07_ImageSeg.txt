@@ -1,0 +1,79 @@
+## **The Main Approaches to Image Segmentation**
+
+Image segmentation means dividing an image into meaningful regions or objects. Methods can be grouped into **traditional** (pre–deep learning) and **deep-learning–based** approaches.
+
+---
+
+## **Classical (Pre–Deep Learning) Approaches**  
+
+These use hand‑crafted rules on pixel intensity, color, or texture:
+
+- **Thresholding & histogram-based**: choose one or more intensity thresholds (e.g., Otsu) to split foreground/background or multiple regions  (Minaee et al., 2020; Xu et al., 2024; Ghosh et al., 2019).  
+- **Edge-based**: find strong changes in intensity, then link edges into object boundaries  (Xu et al., 2024).  
+- **Region-based / region growing**: start from seed points and grow regions by similarity  (Minaee et al., 2020; Xu et al., 2024).  
+- **Clustering**: group pixels into clusters (e.g., k‑means, hierarchical clustering) based on feature similarity  (Minaee et al., 2020; Xu et al., 2024).  
+- **Graph-based & energy models**: formulate segmentation as graph cuts, Markov/conditional random fields, or active contours optimizing a global objective  (Minaee et al., 2020; Xu et al., 2024; Ghosh et al., 2019).
+
+---
+
+### Key Deep Segmentation Architectures
+
+| Approach type | Core idea (very briefly) | Typical tasks | Citations |
+|---------------|--------------------------|--------------|-----------|
+| **Fully Convolutional Networks (FCN)** | Per-pixel classification using CNNs without fully connected layers | Semantic seg. |  (Minaee et al., 2020; Badrinarayanan et al., 2015; Ronneberger et al., 2015; Ghosh et al., 2019)|
+| **Encoder–decoder (U-Net, SegNet)** | Downsample for context, upsample for precise boundaries, often with skip connections | Medical, natural images |  (Minaee et al., 2020; Xu et al., 2024; Badrinarayanan et al., 2015; Ronneberger et al., 2015; Bhatti et al., 2024)|
+| **Multi-scale / pyramid & dilated conv (DeepLab)** | Capture context at multiple scales without losing resolution | Complex scenes |  (Minaee et al., 2020; Zhang et al., 2021; Ronneberger et al., 2015; Soylu et al., 2023)|
+| **R-CNN-based instance seg. (Mask R‑CNN, etc.)** | Detect objects, then predict a mask per detection (top‑down) | Instance seg. |  (Minaee et al., 2020; Zhang et al., 2021; Sultana et al., 2020; Cheng et al., 2021)|
+| **Attention / transformer & recurrent models** | Use attention or sequence modeling to refine pixel labels | Large scenes, long-range context |  (Minaee et al., 2020; Csurka et al., 2023; Kovtunenko & Mashtalir, 2025; Cheng et al., 2021)|
+| **GANs / generative & hybrid models** | Use adversarial or mixed traditional+DL losses to improve realism or robustness | Medical, low‑label settings |  (Minaee et al., 2020; Xu et al., 2024; Taghanaki et al., 2019)|
+
+**Figure 1:** Major families of deep segmentation architectures
+
+---
+
+## **By Segmentation Task**
+
+- **Semantic segmentation**: label every pixel with a class (road, sky); often FCN, U‑Net, DeepLab, transformers  (Minaee et al., 2020; Csurka et al., 2023; Badrinarayanan et al., 2015; Ronneberger et al., 2015; Soylu et al., 2023).  
+- **Instance segmentation**: separate each object instance (each person, each car); top‑down and bottom‑up CNN frameworks  (Zhang et al., 2021; Sultana et al., 2020).  
+- **Panoptic segmentation**: unified view combining semantic + instance segmentation into one coherent output  (Zhang et al., 2021; Mohammed & Ralescu, 2024; Kirillov et al., 2018; Cheng et al., 2021).
+
+---
+
+## **Conclusion**
+
+Main segmentation approaches evolved from simple thresholding, edges, regions, clustering, and graph models to powerful deep CNN encoder–decoder, multi-scale, and attention/transformer architectures, specialized for semantic, instance, and panoptic segmentation and widely used in natural, medical, and other imaging domains.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Minaee, S., Boykov, Y., Porikli, F., Plaza, A., Kehtarnavaz, N., & Terzopoulos, D. (2020). Image Segmentation Using Deep Learning: A Survey. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 44, 3523-3542. https://doi.org/10.1109/tpami.2021.3059968
+ 
+Csurka, G., Volpi, R., & Chidlovskii, B. (2023). Semantic Image Segmentation: Two Decades of Research. *Found. Trends Comput. Graph. Vis.*, 14, 1-162. https://doi.org/10.1561/0600000095
+ 
+Xu, Y., Quan, R., Xu, W., Huang, Y., Chen, X., & Liu, F. (2024). Advances in Medical Image Segmentation: A Comprehensive Review of Traditional, Deep Learning and Hybrid Approaches. *Bioengineering*, 11. https://doi.org/10.3390/bioengineering11101034
+ 
+Zhang, W., Pang, J., Chen, K., & Loy, C. (2021). K-Net: Towards Unified Image Segmentation. *ArXiv*, abs/2106.14855. 
+ 
+Mohammed, S., & Ralescu, A. (2024). Insights into Image Understanding: Segmentation Methods for Object Recognition and Scene Classification. *Algorithms*, 17, 189. https://doi.org/10.3390/a17050189
+ 
+Badrinarayanan, V., Kendall, A., & Cipolla, R. (2015). SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 39, 2481-2495. https://doi.org/10.1109/tpami.2016.2644615
+ 
+Kirillov, A., He, K., Girshick, R., Rother, C., & Dollár, P. (2018). Panoptic Segmentation. *2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 9396-9405. https://doi.org/10.1109/cvpr.2019.00963
+ 
+Ronneberger, O., Fischer, P., & Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. *ArXiv*, abs/1505.04597. https://doi.org/10.1007/978-3-319-24574-4_28
+ 
+Sultana, F., Sufian, A., & Dutta, P. (2020). Evolution of Image Segmentation using Deep Convolutional Neural Network: A Survey. *Knowl. Based Syst.*, 201-202, 106062. https://doi.org/10.1016/j.knosys.2020.106062
+ 
+Kovtunenko, A., & Mashtalir, S. (2025). A Review of Modern Neural Network Architectures for Image Segmentation. *Management Information System and Devises*. https://doi.org/10.30837/0135-1710.2025.185.043
+ 
+Soylu, B., Guzel, M., Bostancı, G., Ekinci, F., Aşuroğlu, T., & Açıcı, K. (2023). Deep-Learning-Based Approaches for Semantic Segmentation of Natural Scene Images: A Review. *Electronics*. https://doi.org/10.3390/electronics12122730
+ 
+Taghanaki, S., Abhishek, K., Cohen, J., Cohen-Adad, J., & Hamarneh, G. (2019). Deep semantic segmentation of natural and medical images: a review. *Artificial Intelligence Review*, 54, 137 - 178. https://doi.org/10.1007/s10462-020-09854-1
+ 
+Ghosh, S., Das, N., Das, I., & Maulik, U. (2019). Understanding Deep Learning Techniques for Image Segmentation. *ACM Computing Surveys (CSUR)*, 52, 1 - 35. https://doi.org/10.1145/3329784
+ 
+Cheng, B., Misra, I., Schwing, A., Kirillov, A., & Girdhar, R. (2021). Masked-attention Mask Transformer for Universal Image Segmentation. *2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 1280-1289. https://doi.org/10.1109/cvpr52688.2022.00135
+ 
+Bhatti, M., Sethumadhavan, S., Chen, H., Hu, Y., Keung, L., Zeeshan, Z., Ali, Y., & Sarhan, N. (2024). Utilizing convolutional neural networks (CNN) and U-Net architecture for precise crop and weed segmentation in agricultural imagery: A deep learning approach. *Big Data Res.*, 36, 100465. https://doi.org/10.1016/j.bdr.2024.100465
+ 

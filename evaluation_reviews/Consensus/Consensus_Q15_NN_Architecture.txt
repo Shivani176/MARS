@@ -1,0 +1,82 @@
+# **Neural Architecture Search (NAS): Automating Neural Network Design**
+
+Neural Architecture Search (NAS) is an AutoML technique that automatically designs neural network architectures instead of relying on manual, trial‑and‑error work by experts. It explores a large space of possible models and returns architectures that balance accuracy and efficiency for a given task and hardware.
+
+## **What NAS Is and Why It Matters**
+
+- NAS is a subset of **AutoML** focused specifically on the neural network’s architecture (layers, connections, operations) rather than just hyperparameters  (Avval et al., 2025; Wang & Zhu, 2024; Wistuba et al., 2019; Liu et al., 2020; Ren et al., 2020).  
+- It has discovered architectures that **match or surpass hand‑crafted models** on tasks like image classification, segmentation, machine translation, and NLP  (Zade, 2024; Chitty-Venkata & Somani, 2022; Heuillet et al., 2023; Wang & Zhu, 2024; Ren et al., 2020; Pham et al., 2018).  
+- NAS reduces the need for deep domain expertise and manual experimentation, making deep learning more accessible  (Avval et al., 2025; Wang & Zhu, 2024; Wistuba et al., 2019; Liu et al., 2020; Meng et al., 2024; Ren et al., 2020).
+
+### Core NAS Components
+
+| Component           | Role in Automation                                     | Citations |
+|--------------------|--------------------------------------------------------|-----------|
+| **Search space**   | Defines what architectures are allowed to vary         |  (Avval et al., 2025; Heuillet et al., 2023; Wang & Zhu, 2024; Wistuba et al., 2019; Ren et al., 2020)|
+| **Search strategy**| Algorithm that explores architectures                  |  (Avval et al., 2025; Heuillet et al., 2023; Wang & Zhu, 2024; Luo et al., 2018; Wistuba et al., 2019; Liu et al., 2020; Ren et al., 2020; Pham et al., 2018)|
+| **Evaluation strategy** | How candidate models are scored without full training |  (Avval et al., 2025; Heuillet et al., 2023; Wang & Zhu, 2024; Wistuba et al., 2019; Ren et al., 2020; Pham et al., 2018)|
+
+**Figure 1:** Main building blocks of NAS methods
+
+## **How NAS Automates Model Design**
+
+### 1. Defining the Search Space  
+- Can be **macro** (entire network layout) or **micro** (cells/blocks repeated across the network)  (Wang & Zhu, 2024; Wistuba et al., 2019; Ren et al., 2020).  
+- Encodes choices like types of layers, kernel sizes, depth, and connections  (Wang & Zhu, 2024; Wistuba et al., 2019; Sun, 2025).
+
+### 2. Searching the Space (Algorithms)
+
+Common strategies to explore architectures automatically:
+
+- **Reinforcement learning controllers**: sample architectures as “actions” and use validation accuracy as reward  (Wang & Zhu, 2024; Luo et al., 2018; Wistuba et al., 2019; Liu et al., 2020; Ren et al., 2020; Pham et al., 2018).  
+- **Evolutionary / genetic algorithms**: evolve populations of architectures via mutation and recombination  (Wang & Zhu, 2024; Luo et al., 2018; Wistuba et al., 2019; Liu et al., 2020; Wang et al., 2022; Kapanova et al., 2018; Ünal & Başçiftçi, 2021).  
+- **Differentiable / gradient‑based NAS (e.g., DARTS, DNAS, NAO)**: relax discrete choices into continuous parameters so architectures can be optimized with gradients, making search **orders of magnitude faster**  (Heuillet et al., 2023; Baymurzina et al., 2021; Luo et al., 2018; Ren et al., 2020; Sun, 2025).  
+- **Hardware‑aware NAS (HW‑NAS)**: includes latency, FLOPs, energy, or memory in the objective to directly produce hardware‑efficient models  (Chitty-Venkata & Somani, 2022; Lupión et al., 2025; Wang & Zhu, 2024; Liu et al., 2020).
+
+### 3. Efficient Evaluation
+
+- Full training of every candidate is too costly, so NAS uses **performance predictors, weight sharing, and early stopping** to cheaply approximate model quality  (Chitty-Venkata & Somani, 2022; Heuillet et al., 2023; Lupión et al., 2025; Wang & Zhu, 2024; Luo et al., 2018; Wistuba et al., 2019; Ren et al., 2020; Pham et al., 2018).  
+- Techniques like **parameter sharing** (ENAS) reuse weights across many candidates, cutting compute by up to ~1000× compared with early NAS  (Pham et al., 2018; Wang & Zhu, 2024; Ren et al., 2020).
+
+## **Conclusion**
+
+Neural Architecture Search treats model design as an optimization problem: it defines a space of possible architectures, uses algorithms (RL, evolution, gradients, etc.) to explore that space, and employs fast evaluation tricks to score candidates. In doing so, NAS largely automates the design of accurate and efficient neural networks, often under hardware or resource constraints, greatly reducing human trial‑and‑error while sometimes outperforming expert‑designed models.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Avval, S., Eskue, N., Groves, R., & Yaghoubi, V. (2025). Systematic review on neural architecture search. *Artificial Intelligence Review*, 58. https://doi.org/10.1007/s10462-024-11058-w
+ 
+Zade, N. (2024). Neural Architecture Search: Automating the Design of Convolutional Models for Scalability. *Panamerican Mathematical Journal*. https://doi.org/10.52783/pmj.v34.i4.1877
+ 
+Chitty-Venkata, K., & Somani, A. (2022). Neural Architecture Search Survey: A Hardware Perspective. *ACM Computing Surveys*, 55, 1 - 36. https://doi.org/10.1145/3524500
+ 
+Heuillet, A., Nasser, A., Arioui, H., & Tabia, H. (2023). Efficient Automation of Neural Network Design: A Survey on Differentiable Neural Architecture Search. *ACM Computing Surveys*, 56, 1 - 36. https://doi.org/10.1145/3665138
+ 
+Lupión, M., Cruz, N., Ortigosa, E., & Ortigosa, P. (2025). A holistic approach for resource-constrained neural network architecture search. *Appl. Soft Comput.*, 172, 112832. https://doi.org/10.1016/j.asoc.2025.112832
+ 
+Wang, X., & Zhu, W. (2024). Advances in neural architecture search. *National Science Review*, 11. https://doi.org/10.1093/nsr/nwae282
+ 
+Baymurzina, D., Golikov, E., & Burtsev, M. (2021). A review of neural architecture search. *Neurocomputing*, 474, 82-93. https://doi.org/10.1016/j.neucom.2021.12.014
+ 
+Luo, R., Tian, F., Qin, T., & Liu, T. (2018). Neural Architecture Optimization. *ArXiv*, abs/1808.07233. 
+ 
+Wistuba, M., Rawat, A., & Pedapati, T. (2019). A Survey on Neural Architecture Search. *ArXiv*, abs/1905.01392. 
+ 
+Liu, Y., Sun, Y., Xue, B., Zhang, M., & Yen, G. (2020). A Survey on Evolutionary Neural Architecture Search. *IEEE Transactions on Neural Networks and Learning Systems*, 34, 550-570. https://doi.org/10.1109/tnnls.2021.3100554
+ 
+Wang, Y., Qiao, X., & Wang, G. (2022). Architecture evolution of convolutional neural network using monarch butterfly optimization. *Journal of Ambient Intelligence and Humanized Computing*, 14, 12257 - 12271. https://doi.org/10.1007/s12652-022-03766-4
+ 
+Meng, F., Wang, C., & Brown, A. (2024). Evolution and Efficiency in Neural Architecture Search: Bridging the Gap Between Expert Design and Automated Optimization. *ArXiv*, abs/2403.17012. https://doi.org/10.33140/jmtcm.03.03.01
+ 
+Ren, P., Xiao, Y., Chang, X., Huang, P., Li, Z., Chen, X., & Wang, X. (2020). A Comprehensive Survey of Neural Architecture Search. *ACM Computing Surveys (CSUR)*, 54, 1 - 34. https://doi.org/10.1145/3447582
+ 
+Kapanova, K., Dimov, I., & Sellier, J. (2018). A genetic approach to automatic neural network architecture optimization. *Neural Computing and Applications*, 29, 1481-1492. https://doi.org/10.1007/s00521-016-2510-6
+ 
+Pham, H., Guan, M., Zoph, B., Le, Q., & Dean, J. (2018). Efficient Neural Architecture Search via Parameter Sharing. *ArXiv*, abs/1802.03268. 
+ 
+Sun, L. (2025). Automated Neural Network Architecture Design and Hyperparameter Adjustment Integrating Distribution-Based Optimization Strategy. *Applied and Computational Engineering*. https://doi.org/10.54254/2755-2721/2025.22721
+ 
+Ünal, H., & Başçiftçi, F. (2021). Evolutionary design of neural network architectures: a review of three decades of research. *Artificial Intelligence Review*, 55, 1723 - 1802. https://doi.org/10.1007/s10462-021-10049-5
+ 

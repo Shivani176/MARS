@@ -1,0 +1,59 @@
+# **Graph Neural Networks:** What they are and how they work
+
+Graph neural networks (GNNs) are deep learning models designed specifically for data with relationships, represented as **graphs**: collections of nodes (objects) and edges (connections). They are used when the structure of connections matters, such as social networks, molecules, or citation networks.  (Khemani et al., 2024; Zhou et al., 2018; Wu et al., 2020; Reiser et al., 2022)## **What is a Graph Neural Network?**
+
+- A graph is defined by **nodes** and **edges**, which can encode many systems (social networks, molecules, knowledge graphs, physical systems).  (Khemani et al., 2024; Zhou et al., 2018; Gama et al., 2020; Reiser et al., 2022)- GNNs are neural networks **tailored for graph-structured data**, learning from both node features and the graph connectivity.  (Khemani et al., 2024; Zhou et al., 2018; Ruiz et al., 2020; Wu et al., 2020; Zhu et al., 2021)- They extend ideas from **convolutional neural networks (CNNs)** and **graph embedding** to the non‑Euclidean graph domain.  (Zhou et al., 2018; Ruiz et al., 2020; Gama et al., 2020; Wu et al., 2020)### Main Roles of GNNs
+
+| Task type            | What the GNN predicts                  | Citations      |
+|----------------------|-----------------------------------------|----------------|
+| Node-level           | Node label (e.g., user type)           |  (Khemani et al., 2024; Zhou et al., 2018; Wu et al., 2020; Dwivedi et al., 2022)|
+| Edge-level           | Link existence/strength (e.g., bond)   |  (Khemani et al., 2024; Zhou et al., 2018; Wu et al., 2020; Reiser et al., 2022)|
+| Graph-level          | Whole-graph label (e.g., molecule type)|  (Wu et al., 2020; Dwivedi et al., 2022; Reiser et al., 2022)|
+
+**Figure 1:** Typical prediction targets for graph neural networks
+
+## **Core Working Principle: Message Passing**
+
+- Most GNNs use **message passing**: each node repeatedly gathers (“aggregates”) information from its neighbors and updates its own state.  (Khemani et al., 2024; Zhou et al., 2018; Wu et al., 2020; He et al., 2024; Zhu et al., 2021; Di Giovanni et al., 2022; Zhou et al., 2023)- A typical layer:
+  1. **Aggregate neighbor features** guided by the graph structure.
+  2. **Mix and transform** them with learnable weights (a linear transformation or filter).
+  3. Apply a **nonlinearity** (e.g., ReLU) to get new node representations.  (Khemani et al., 2024; Zhou et al., 2018; Ruiz et al., 2020; Gama et al., 2020; Wu et al., 2020; Zhu et al., 2021; Di Giovanni et al., 2022)- Stacking layers lets information flow over multiple hops, capturing more distant dependencies.  (Khemani et al., 2024; Zhou et al., 2018; Ruiz et al., 2020; Gama et al., 2020; Wu et al., 2020; Dwivedi et al., 2022)Variants include graph convolutional networks (GCN), GraphSAGE, graph attention networks (GAT), recurrent GNNs, and spatio‑temporal GNNs, all following this basic scheme with different aggregation and weighting strategies.  (Khemani et al., 2024; Zhou et al., 2018; Gama et al., 2020; Wu et al., 2020; Zhu et al., 2021; Ponzi & Napoli, 2025; Klicpera et al., 2019)## **Key Properties and Challenges**
+
+- **Permutation invariance/equivariance**: outputs do not depend on how nodes are ordered.  (Zhou et al., 2018; Ruiz et al., 2020; Gama et al., 2020)- **Stability and transferability**: many GNNs are robust to small graph changes and can transfer across graphs of different sizes.  (Ruiz et al., 2020; Gama et al., 2020)- Challenges include limited expressive power of standard message passing, over‑smoothing of features in deep networks, and scaling to large or dynamic graphs.  (Wu et al., 2020; Balcilar et al., 2021; Dwivedi et al., 2022; Di Giovanni et al., 2022; Zheng et al., 2024; Klicpera et al., 2019)## **Conclusion**
+
+Graph neural networks are deep learning models that operate directly on graphs by iteratively passing and transforming messages between connected nodes. This allows them to learn powerful representations that capture both the attributes of entities and the structure of their relationships, enabling effective prediction at node, edge, and graph levels across many domains.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Khemani, B., Patil, S., Kotecha, K., & Tanwar, S. (2024). A review of graph neural networks: concepts, architectures, techniques, challenges, datasets, applications, and future directions. *Journal of Big Data*, 11, 1-43. https://doi.org/10.1186/s40537-023-00876-4
+ 
+Zhou, J., Cui, G., Zhang, Z., Yang, C., Liu, Z., & Sun, M. (2018). Graph Neural Networks: A Review of Methods and Applications. *ArXiv*, abs/1812.08434. https://doi.org/10.1016/j.aiopen.2021.01.001
+ 
+Ruiz, L., Gama, F., & Ribeiro, A. (2020). Graph Neural Networks: Architectures, Stability, and Transferability. *Proceedings of the IEEE*, 109, 660-682. https://doi.org/10.1109/jproc.2021.3055400
+ 
+Gama, F., Isufi, E., Leus, G., & Ribeiro, A. (2020). Graphs, Convolutions, and Neural Networks: From Graph Filters to Graph Neural Networks. *IEEE Signal Processing Magazine*, 37, 128-138. https://doi.org/10.1109/msp.2020.3016143
+ 
+Wu, Z., Pan, S., Chen, F., Long, G., Zhang, C., & Yu, P. (2020). A Comprehensive Survey on Graph Neural Networks. *IEEE Transactions on Neural Networks and Learning Systems*, 32, 4-24. https://doi.org/10.1109/tnnls.2020.2978386
+ 
+He, T., Liu, Y., Ong, Y., Wu, X., & Luo, X. (2024). Polarized message-passing in graph neural networks. *Artif. Intell.*, 331, 104129. https://doi.org/10.1016/j.artint.2024.104129
+ 
+Balcilar, M., Héroux, P., Gaüzère, B., Vasseur, P., Adam, S., & Honeine, P. (2021). Breaking the Limits of Message Passing Graph Neural Networks. *ArXiv*, abs/2106.04319. 
+ 
+Dwivedi, V., Joshi, C., Laurent, T., Bengio, Y., & Bresson, X. (2022). Benchmarking Graph Neural Networks. *ArXiv*, abs/2003.00982. 
+ 
+Zhu, M., Wang, X., Shi, C., Ji, H., & Cui, P. (2021). Interpreting and Unifying Graph Neural Networks with An Optimization Framework. *Proceedings of the Web Conference 2021*. https://doi.org/10.1145/3442381.3449953
+ 
+Di Giovanni, F., Rowbottom, J., Chamberlain, B., Markovich, T., & Bronstein, M. (2022). Understanding convolution on graphs via energies. *Trans. Mach. Learn. Res.*, 2023. 
+ 
+Zheng, Y., Yi, L., & Wei, Z. (2024). A survey of dynamic graph neural networks. *Frontiers of Computer Science*, 19. https://doi.org/10.1007/s11704-024-3853-2
+ 
+Zhou, Y., Huo, H., Hou, Z., Bu, L., Mao, J., Wang, Y., Lv, X., & Bu, F. (2023). Co-embedding of edges and nodes with deep graph convolutional neural networks. *Scientific Reports*, 13. https://doi.org/10.1038/s41598-023-44224-1
+ 
+Ponzi, V., & Napoli, C. (2025). Graph Neural Networks: Architectures, Applications, and Future Directions. *IEEE Access*, 13, 62870-62891. https://doi.org/10.1109/access.2025.3558752
+ 
+Klicpera, J., Weißenberger, S., & Günnemann, S. (2019). Diffusion Improves Graph Learning. **, 13333-13345. 
+ 
+Reiser, P., Neubert, M., Eberhard, A., Torresi, L., Zhou, C., Shao, C., Metni, H., Van Hoesel, C., Schopmans, H., Sommer, T., & Friederich, P. (2022). Graph neural networks for materials science and chemistry. *Communications Materials*, 3. https://doi.org/10.1038/s43246-022-00315-6
+ 

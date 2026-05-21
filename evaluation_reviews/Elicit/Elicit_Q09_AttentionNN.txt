@@ -1,0 +1,31 @@
+Attention mechanisms allow a neural network to dynamically focus on the most relevant parts of its input when producing each element of its output — rather than treating all input positions equally or compressing them into a single fixed-length representation.
+
+The foundational idea, developed in the context of sequence-to-sequence models (initially for machine translation), is straightforward: when generating each output token, the model computes a relevance score for every input position, normalizes these scores into a probability distribution (typically via softmax), and then takes a weighted sum of input representations. This weighted sum — the "context vector" — gives the model a flexible, position-sensitive summary of the input at each decoding step. Several surveys trace this evolution from early additive attention in RNNs through to modern architectures. [^1][^2][^3]
+
+The mechanism that now dominates is **self-attention**, introduced in the Transformer (Vaswani et al., 2017). [^4] The Transformer dispenses with recurrence and convolution entirely, relying solely on attention. Each input token is projected into three vectors — a **query**, a **key**, and a **value** — via learned linear transformations. Attention scores are computed as the dot product of the query with all keys, scaled by the square root of the key dimension to avoid gradient-vanishing issues from large dot products, then passed through softmax. The output for each position is the weighted sum of the value vectors according to these scores. [^4][^5]
+
+The Transformer uses **multi-head attention**: instead of computing a single attention function, the model runs several attention "heads" in parallel, each with its own learned projections into smaller subspaces. This lets different heads capture different types of relationships — one head might attend to syntactic dependencies, another to semantic similarity. The outputs of all heads are concatenated and linearly projected. [^4][^6] Recent theoretical work has begun formalizing why multiple heads help: Adler (2025) derives a capacity scaling law showing that distributing a fixed key-query budget across many small heads can recover more relations than a single large head, particularly when input embeddings are compressed into overlapping subspaces. [^7]
+
+Three variants of attention appear in the Transformer architecture: **self-attention** (each position attends to all positions in the same sequence), **cross-attention** (decoder positions attend to encoder outputs), and **masked self-attention** (in the decoder, each position can only attend to earlier positions, preserving autoregressive generation). [^4]
+
+Since 2017, attention has become the core mechanism behind essentially all large language models (GPT, BERT, and their successors) and has spread to computer vision, speech recognition, time series, and other domains. [^1][^2][^3] Ongoing research focuses on efficiency — standard self-attention scales quadratically with sequence length — with approaches like hard retrieval attention (attending to only one token per head instead of all) and multiplication-free alternatives. [^8][^9]
+
+This is from a quick literature scan — there's an enormous body of work on attention variants, efficient attention, and theoretical analyses that a deeper search would cover more thoroughly.
+
+[^1]: Chaudhari et al., 2019. An Attentive Survey of Attention Models. ACM Transactions on Intelligent Systems and Technology.
+
+[^2]: Brauwers & Frasincar, 2022. A General Survey on Attention Mechanisms in Deep Learning. IEEE Transactions on Knowledge and Data Engineering.
+
+[^3]: Correia & Colombini, 2021. Attention, please! A survey of neural attention models in deep learning. Artificial Intelligence Review.
+
+[^4]: Vaswani et al., 2017. Attention is All you Need. Neural Information Processing Systems.
+
+[^5]: Bernhard, 2023. Alternatives to the Scaled Dot Product for Attention in the Transformer Neural Network Architecture. arXiv.org.
+
+[^6]: Cordonnier et al., 2020. Multi-Head Attention: Collaborate Instead of Concatenate. arXiv.org.
+
+[^7]: Adler, 2025. A Capacity-Based Rationale for Multi-Head Attention.
+
+[^8]: Xu & Liu, 2020. Learning Hard Retrieval Cross Attention for Transformer. arXiv.org.
+
+[^9]: Gao & Xu, 2025. EcoTransformer: Attention without Multiplication. arXiv.org.

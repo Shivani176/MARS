@@ -1,0 +1,88 @@
+EVALUATION REVIEW - Q08
+Query: computer vision
+Generated: 2026-03-21 09:32:33
+================================================================================
+
+# LITERATURE REVIEW: computer vision
+
+# A Structured Literature Review on Computer Vision
+
+## 1. INTRODUCTION
+
+Computer vision has evolved significantly with the integration of transformer architectures and attention mechanisms, originally developed for natural language processing [7]. The field encompasses diverse applications from surveillance and medical imaging to assistive technologies, with recent developments focusing on vision transformers as alternatives to traditional convolutional neural networks [3][9].
+
+## 2. KEY FINDINGS
+
+### Vision Transformers and Attention Mechanisms
+
+Vision transformers have demonstrated superior performance across multiple computer vision tasks, with transformer-based models performing similar to or better than convolutional and recurrent neural networks on various visual benchmarks [7]. Self-attention mechanisms can serve as effective stand-alone layers, with pure self-attention models achieving 12% fewer FLOPS and 29% fewer parameters while outperforming baselines on ImageNet classification [19]. In object detection tasks, self-attention models matched baseline RetinaNet performance with 39% fewer FLOPS and 34% fewer parameters [19].
+
+### Hybrid Approaches and Architecture Evolution
+
+The combination of traditional computer vision techniques with deep learning has proven beneficial, particularly in emerging domains such as panoramic vision and 3D vision where deep learning models have not yet been fully optimized [3]. Hybrid vision transformers, incorporating both convolution operations and self-attention mechanisms, have demonstrated remarkable results by exploiting both local and global image representations [9]. Progressive token clustering approaches show that not all image regions require equal representation, with human body regions needing fine-grained tokens while backgrounds can be modeled with fewer tokens [17].
+
+### Specialized Applications and Performance
+
+In medical computer vision, vision transformers are being utilized across multiple areas including image-based disease classification, anatomical structure segmentation, registration, region-based lesion detection, captioning, report generation, and reconstruction using multiple medical imaging modalities [6]. For 3D vision tasks, transformers have been successfully applied to classification, segmentation, detection, completion, and pose estimation, with over 100 transformer methods developed for various 3D vision applications [14].
+
+### Computational Efficiency and Hardware Implementation
+
+Vision transformer inference accelerators designed for edge applications can achieve nearly 90% hardware utilization efficiency with power consumption of 0.88W at 150 MHz clock frequency [15]. Alternative architectures like Mamba utilize state-space models for linear scalability, addressing the quadratic complexity limitations of transformer attention mechanisms [13].
+
+## 3. METHODOLOGICAL APPROACHES
+
+The literature reveals diverse evaluation approaches across computer vision applications. Performance assessment varies significantly by domain, with maritime computer vision requiring specialized bottom edge proximity metrics rather than conventional assessment criteria [5]. Vision transformer research commonly employs benchmarks including ImageNet for classification, COCO for object detection [19], COCO-WholeBody for pose estimation, and 3DPW for 3D human mesh reconstruction [17]. In 3D vision, transformer methods are evaluated across 12 different 3D benchmarks [14]. Medical computer vision applications utilize multiple imaging modalities with various performance measures specific to diagnostic tasks [6].
+
+## 4. RESEARCH GAPS
+
+Several critical limitations persist across the field. Despite computer vision becoming accessible to law enforcement agencies, there is little knowledge of computer vision potential in the field, with inadequate research on system-wide impacts [2]. Vision transformers may suffer from limited generalization as they do not tend to model local correlation in images effectively [9]. In assistive technologies, concerns over bias, privacy, and potential usefulness arise when applying computer vision for individuals with visual impairment [4]. 
+
+The field faces scalability challenges, with transformer quadratic complexity in attention mechanisms presenting limitations for large-scale applications [13]. Multi-object tracking with transformers still lags behind traditional deep learning methods despite recent advances [12]. Additionally, the attention mechanisms in vision transformers may not function as intended, with evidence suggesting they perform similarity grouping rather than true attention mechanisms comparable to human visual attention [20].
+
+## 5. CONCLUSION
+
+The literature collectively demonstrates that computer vision is undergoing a significant transformation with the adoption of transformer architectures, showing promising results across diverse applications while revealing important limitations. The field is moving toward hybrid approaches that combine traditional techniques with modern deep learning methods, though significant research gaps remain in understanding the fundamental mechanisms and optimizing performance for specific domains.
+
+## REFERENCES
+
+[1] Sven Lončarić and Siniša Šegvić (2013): Second Croatian Computer Vision Workshop (CCVW 2013)
+[2] Haroon Idrees et al. (2018): Enhancing camera surveillance using computer vision: a research note
+[3] Niall O' Mahony et al. (2019): Deep Learning vs. Traditional Computer Vision
+[4] Linda Wang and Alexander Wong (2019): Implications of Computer Vision Driven Assistive Technologies Towards Individuals with Visual Impairment
+[5] Dilip K. Prasad et al. (2018): Are object detection assessment criteria ready for maritime computer vision?
+[6] Arshi Parvaiz et al. (2022): Vision Transformers in Medical Computer Vision -- A Contemplative Retrospection
+[7] Kai Han et al. (2022): A Survey on Vision Transformer
+[8] Meng-Hao Guo et al. (2022): Attention mechanisms in computer vision: A survey
+[9] Asifullah Khan et al. (2023): A survey of the Vision Transformers and their CNN-Transformer based Variants
+[10] Adam Pardyl et al. (2023): Beyond Grids: Exploring Elastic Input Sampling for Vision Transformers
+[11] Yiğit Gündüç (2021): Tensor-to-Image: Image-to-Image Translation with Vision Transformers
+[12] Abhi Kamboj (2024): The Progression of Transformers from Language to Vision to MOT: A Literature Review on Multi-Object Tracking with Transformers
+[13] Fady Ibrahim et al. (2025): A Survey on Mamba Architecture for Vision Applications
+[14] Jean Lahoud et al. (2022): 3D Vision with Transformers: A Survey
+[15] Shashank Nag et al. (2023): ViTA: A Vision Transformer Inference Accelerator for Edge Applications
+[16] F. Li and J. Du (2017): Multiband NFC for High-Throughput Wireless Computer Vision Sensor Network
+[17] Wang Zeng et al. (2022): Not All Tokens Are Equal: Human-centric Visual Analysis via Token Clustering Transformer
+[18] Ke-Wei Huang et al. (2019): Computer Vision and Metrics Learning for Hypothesis Testing: An Application of Q-Q Plot for Normality Test
+[19] Prajit Ramachandran et al. (2019): Stand-Alone Self-Attention in Vision Models
+[20] Paria Mehrani and John K. Tsotsos (2023): Self-attention in Vision Transformers Performs Perceptual Grouping, Not Attention
+
+──────────────────────────────────────────────────────────────────────
+📊 **QUALITY ASSURANCE**
+
+✅ **QUALITY VERIFIED**
+- Overall Score: **1.000/1.0**
+- Grade: **A (Excellent)**
+- Citation Coverage: 100%
+- Semantic Accuracy: 0.720
+
+⚠️  Issues detected:
+  • High duplicate count: 24 duplicates
+──────────────────────────────────────────────────────────────────────
+
+
+📊 **Analysis Statistics**
+
+- Papers analyzed: **20**
+- Papers cited: **20** (100% coverage)
+- Review length: 7,320 characters
+- Relevance score: 0.782

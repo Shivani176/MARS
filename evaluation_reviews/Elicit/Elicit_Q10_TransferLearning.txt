@@ -1,0 +1,39 @@
+Transfer learning is the practice of reusing knowledge learned from one task (the "source") to improve performance on a different but related task (the "target"). In deep learning, this typically means taking a neural network that has already been trained on a large dataset and adapting it — rather than training a new model from scratch — which is especially valuable when labeled data for the target task is scarce. [^1][^2]
+
+The reason it works is that deep networks learn hierarchical representations. In a convolutional neural network trained on ImageNet, for example, early layers learn generic features (edges, textures, color gradients) that are useful across virtually all image tasks, while later layers learn increasingly task-specific features. Transfer learning exploits the generality of those earlier representations. [^3][^1]
+
+In practice, there are three main strategies:
+
+**Feature extraction** — freeze the pre-trained network's weights and use it as a fixed feature extractor. You pass your new data through the network, take the activations from an intermediate layer, and train a simple classifier (e.g., a linear layer) on top. This works well when your target dataset is small and similar to the source domain. [^1][^4]
+
+**Fine-tuning** — unfreeze some or all of the pre-trained network's layers and continue training on the new task with a small learning rate. This allows the model to adapt its learned representations to the target domain. The key practical decision is how many layers to unfreeze — freezing too few risks overfitting on small datasets; freezing too many limits adaptability. [^4][^5]
+
+**Domain adaptation** — a more specialized form that explicitly addresses distribution mismatch between source and target domains, often using techniques like adversarial training to learn domain-invariant representations. [^6][^7]
+
+The paradigm has evolved significantly with the rise of foundation models. BERT and GPT demonstrated that massive pre-training on unlabeled text, followed by task-specific fine-tuning (or even zero/few-shot prompting), could achieve state-of-the-art results across NLP tasks. [^8][^9] The same "pre-train, then adapt" approach now extends well beyond NLP and vision — recent work applies it to scientific machine learning (solving PDEs with orders of magnitude fewer downstream examples than training from scratch) [^10] and even single-cell biology, where scGPT was pre-trained on over 33 million cells and fine-tuned for tasks like cell type annotation and perturbation response prediction. [^11]
+
+The main risks are **negative transfer** (when source and target domains are too dissimilar, transferred knowledge can actually hurt performance) and **catastrophic forgetting** (fine-tuning can destroy useful pre-trained knowledge). Jiang et al. (2022) provide a comprehensive framework covering these challenges across the full lifecycle of deep transfer learning. [^2]
+
+This is a quick survey of a very large topic — extended thinking could provide a more structured comparison of methods across specific application domains.
+
+[^1]: Tan et al., 2018. A Survey on Deep Transfer Learning. International Conference on Artificial Neural Networks.
+
+[^2]: Jiang et al., 2022. Transferability in Deep Learning: A Survey. arXiv.org.
+
+[^3]: Chandrababu et al., 2022. An Abridged Review of Transfer Learning Technology. 2022 Second International Conference on Next Generation Intelligent Systems (ICNGIS).
+
+[^4]: Sreerama & Sistla, 2023. Harnessing the Power of Transfer Learning in Deep Learning Models. Online (Weston, Conn.).
+
+[^5]: Ethiraj & Bolla, 2021. Classification of Astronomical Bodies by Efficient Layer Fine-Tuning of Deep Neural Networks. Conference Information and Communication Technology.
+
+[^6]: Venkateswara et al., 2017. Deep-Learning Systems for Domain Adaptation in Computer Vision: Learning Transferable Feature Representations. IEEE Signal Processing Magazine.
+
+[^7]: Ramponi & Plank, 2020. Neural Unsupervised Domain Adaptation in NLP—A Survey. International Conference on Computational Linguistics.
+
+[^8]: Zhou et al., 2023. A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT. arXiv.org.
+
+[^9]: Paass & Giesselbach, 2023. Foundation Models for Natural Language Processing: Pre-trained Language Models Integrating Media. Artificial Intelligence: Foundations, Theory, and Algorithms.
+
+[^10]: Subramanian et al., 2023. Towards Foundation Models for Scientific Machine Learning: Characterizing Scaling and Transfer Behavior. Neural Information Processing Systems.
+
+[^11]: Cui et al., 2024. scGPT: toward building a foundation model for single-cell multi-omics using generative AI. Nature Methods.

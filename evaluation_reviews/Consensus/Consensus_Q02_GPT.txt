@@ -1,0 +1,83 @@
+# **GPT is a large generative Transformer model that predicts the next token in a sequence, enabling powerful, flexible language generation across many tasks.**
+
+## What GPT is
+
+- **GPT (Generative Pre‑trained Transformer)** is a deep learning **language model** pre‑trained on massive text corpora to predict the next token from previous tokens (autoregressive modeling)  (Luo et al., 2022; Yenduri et al., 2023; Yu et al., 2023).  
+- It uses the **Transformer decoder architecture** with masked self‑attention, so at each step it only “sees” earlier tokens, learning syntax, grammar and semantics from raw text  (Yu et al., 2023; Luo et al., 2022).  
+- Modern GPTs (e.g., GPT‑3, GPT‑4) scale to **billions–trillions of parameters**, trained on web, books, and other text, and can be adapted via prompting or fine‑tuning to many tasks without task‑specific architectures  (Imamguluyev, 2023; Achiam et al., 2023; Liu et al., 2023).  
+
+## Core applications in language generation
+
+### Direct text generation and completion
+- Producing **coherent continuations** from prompts: articles, product descriptions, social media posts, emails, etc.  (Imamguluyev, 2023; Yenduri et al., 2023).  
+- **Autocomplete / predictive typing** and form/template completion  (Imamguluyev, 2023).  
+
+### Dialogue and assistance
+- **Chatbots and virtual assistants** that conduct multi‑turn, human‑like conversations, answer questions, and support customer service or tutoring  (Imamguluyev, 2023; Qiu, 2023; Liu et al., 2023; Baktash & Dawodi, 2023).  
+- Tools for **co‑writing and creative support**, where humans and GPT jointly write stories or edit drafts  (Yuan et al., 2022; Chakrabarty et al., 2023).  
+
+### Transforming and analyzing text
+- **Summarization** of documents, news, and research papers  (Imamguluyev, 2023; Liu et al., 2023; Baktash & Dawodi, 2023).  
+- **Machine translation** across languages using the same model  (Imamguluyev, 2023; Liu et al., 2023; Baktash & Dawodi, 2023).  
+- **Sentiment analysis** and other classification tasks via prompting or light fine‑tuning  (Imamguluyev, 2023; Yu et al., 2023; Cano et al., 2023).  
+
+### Domain‑specific generation
+- **Biomedical text generation and mining** (BioGPT) for literature‑aware Q&A and relation extraction  (Luo et al., 2022).  
+- Code generation, scientific assistance, and specialized models for domains like medicine and education  (Yenduri et al., 2023; Liu et al., 2023).  
+
+### Beyond language
+- GPT‑style generative Transformers are adapted to **molecules**, **materials**, and **time series**, treating sequences like language for design or forecasting  (Haroon et al., 2023; Choudhary, 2024; Liu et al., 2024; Cao et al., 2023).  
+
+### Summary table: key language‑generation uses
+
+| Application area        | Example uses                                   | Citations |
+|-------------------------|-----------------------------------------------|-----------|
+| General text generation | Articles, posts, reports, emails              |  (Imamguluyev, 2023; Yenduri et al., 2023; Alomari, 2023)|
+| Conversation            | Chatbots, virtual assistants                  |  (Imamguluyev, 2023; Qiu, 2023; Liu et al., 2023; Baktash & Dawodi, 2023)|
+| Creative writing        | Stories, poetry, collaborative drafting       |  (Chakrabarty et al., 2023; Yuan et al., 2022)|
+| Summarization           | News, research, long documents                |  (Imamguluyev, 2023; Luo et al., 2022; Liu et al., 2023; Baktash & Dawodi, 2023)|
+| Translation             | Cross‑lingual text translation                |  (Imamguluyev, 2023; Liu et al., 2023; Baktash & Dawodi, 2023)|
+| Analysis/classification | Sentiment, intent, information extraction     |  (Imamguluyev, 2023; Yu et al., 2023; Luo et al., 2022; Cano et al., 2023)|
+
+**Figure 1:** Major GPT applications focused on language generation.
+
+## Conclusion
+
+GPT is an autoregressive, Transformer‑based language model pre‑trained on vast text data, then adapted via prompts or fine‑tuning. Its ability to generate fluent, context‑aware text underpins applications from content creation and chatbots to summarization, translation, code generation, and domain‑specialized scientific tools.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Yenduri, G., Ramalingam, M., Selvi, G., Supriya, Y., Srivastava, G., Maddikunta, P., Raj, G., Jhaveri, R., Prabadevi, B., Wang, W., Vasilakos, A., & Gadekallu, T. (2023). GPT (Generative Pre-Trained Transformer)— A Comprehensive Review on Enabling Technologies, Potential Applications, Emerging Challenges, and Future Directions. *IEEE Access*, 12, 54608-54649. https://doi.org/10.1109/access.2024.3389497
+ 
+Haroon, S., C.A., H., & A.S., J. (2023). Generative Pre-trained Transformer (GPT) based model with relative attention for de novo drug design. *Computational biology and chemistry*, 106, 107911. https://doi.org/10.1016/j.compbiolchem.2023.107911
+ 
+Imamguluyev, R. (2023). The Rise of GPT-3: Implications for Natural Language Processing and Beyond. *International Journal of Research Publication and Reviews*. https://doi.org/10.55248/gengpi.2023.4.33987
+ 
+Chakrabarty, T., Padmakumar, V., He, H., & Peng, N. (2023). Creative Natural Language Generation. *Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: Tutorial Abstracts*. https://doi.org/10.18653/v1/2023.emnlp-tutorial.6
+ 
+Choudhary, K. (2024). AtomGPT: Atomistic Generative Pretrained Transformer for Forward and Inverse Materials Design.. *The journal of physical chemistry letters*, 6909-6917. https://doi.org/10.1021/acs.jpclett.4c01126
+ 
+Qiu, R. (2023). Editorial: GPT revolutionizing AI applications: empowering future digital transformation. *Digital Transformation and Society*. https://doi.org/10.1108/dts-05-2023-066
+ 
+Yu, C., Liu, X., Wang, Y., Liu, Y., Feng, W., Deng, X., Tang, C., & Lv, J. (2023). GPT-NAS: Neural Architecture Search Meets Generative Pre-Trained Transformer Model. *Big Data Min. Anal.*, 8, 45-64. https://doi.org/10.26599/bdma.2024.9020036
+ 
+Liu, Y., Zhang, H., Li, C., Huang, X., Wang, J., & Long, M. (2024). Timer: Generative Pre-trained Transformers Are Large Time Series Models. **. 
+ 
+Luo, R., Sun, L., Xia, Y., Qin, T., Zhang, S., Poon, H., & Liu, T. (2022). BioGPT: Generative Pre-trained Transformer for Biomedical Text Generation and Mining. *Briefings in bioinformatics*. https://doi.org/10.1093/bib/bbac409
+ 
+Cao, D., Jia, F., Arik, S., Pfister, T., Zheng, Y., Ye, W., & Liu, Y. (2023). TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting. *ArXiv*, abs/2310.04948. https://doi.org/10.48550/arxiv.2310.04948
+ 
+Liu, Y., Han, T., , S., Zhang, J., Yang, Y., Tian, J., He, H., Li, A., He, M., Liu, Z., Wu, Z., Zhu, D., Li, X., Qiang, N., Shen, D., Liu, T., & Ge, B. (2023). Summary of ChatGPT-Related Research and Perspective Towards the Future of Large Language Models. *Meta-Radiology*. https://doi.org/10.1016/j.metrad.2023.100017
+ 
+Cano, C., Castillo, V., & Gallego, T. (2023). Unveiling the Thematic Landscape of Generative Pre-trained Transformer (GPT) Through Bibliometric Analysis. *Metaverse Basic and Applied Research*. https://doi.org/10.56294/mr202333
+ 
+Achiam, O., Adler, S., Agarwal, S., Ahmad, L., Akkaya, I., Aleman, F., Almeida, D., Altenschmidt, J., Altman, S., Anadkat, S., Avila, R., Babuschkin, I., Balaji, S., Balcom, V., Baltescu, P., Bao, H., Bavarian, M., Belgum, J., Bello, I., Berdine, J., Bernadett-Shapiro, G., Berner, C., Bogdonoff, L., Boiko, O., Boyd, M., Brakman, A., Brockman, G., Brooks, T., Brundage, M., Button, K., Cai, T., Campbell, R., Cann, A., Carey, B., Carlson, C., Carmichael, R., Chan, B., Chang, C., Chantzis, F., Chen, D., Chen, S., Chen, R., Chen, J., Chen, M., Chess, B., Cho, C., Chu, C., Chung, H., Cummings, D., Currier, J., Dai, Y., Decareaux, C., Degry, T., Deutsch, N., Deville, D., Dhar, A., Dohan, D., Dowling, S., Dunning, S., Ecoffet, A., Eleti, A., Eloundou, T., Farhi, D., Fedus, L., Felix, N., Fishman, S., Forte, J., Fulford, I., Gao, L., Georges, E., Gibson, C., Goel, V., Gogineni, T., Goh, G., Gontijo-Lopes, R., Gordon, J., Grafstein, M., Gray, S., Greene, R., Gross, J., Gu, S., Guo, Y., Hallacy, C., Han, J., Harris, J., He, Y., Heaton, M., Heidecke, J., Hesse, C., Hickey, A., Hickey, W., Hoeschele, P., Houghton, B., Hsu, K., Hu, S., Hu, X., Huizinga, J., Jain, S., Jain, S., Jang, J., Jiang, A., Jiang, R., Jin, H., Jin, D., Jomoto, S., Jonn, B., Jun, H., Kaftan, T., Kaiser, L., Kamali, A., Kanitscheider, I., Keskar, N., Khan, T., Kilpatrick, L., Kim, J., Kim, C., Kim, Y., Kirchner, H., Kiros, J., Knight, M., Kokotajlo, D., Kondraciuk, L., Kondrich, A., Konstantinidis, A., Kosic, K., Krueger, G., Kuo, V., Lampe, M., Lan, I., Lee, T., Leike, J., Leung, J., Levy, D., Li, C., Lim, R., Lin, M., Lin, S., Litwin, M., Lopez, T., Lowe, R., Lue, P., Makanju, A., Malfacini, K., Manning, S., Markov, T., Markovski, Y., Martin, B., Mayer, K., Mayne, A., McGrew, B., McKinney, S., McLeavey, C., McMillan, P., McNeil, J., Medina, D., Mehta, A., Menick, J., Metz, L., Mishchenko, A., Mishkin, P., Monaco, V., Morikawa, E., Mossing, D., Mu, T., Murati, M., Murk, O., M'ely, D., Nair, A., Nakano, R., Nayak, R., Neelakantan, A., Ngo, R., Noh, H., Long, O., O'Keefe, C., Pachocki, J., Paino, A., Palermo, J., Pantuliano, A., Parascandolo, G., Parish, J., Parparita, E., Passos, A., Pavlov, M., Peng, A., Perelman, A., De Avila Belbute Peres, F., Petrov, M., De Oliveira Pinto, H., Pokorny, M., Pokrass, M., Pong, V., Powell, T., Power, A., Power, B., Proehl, E., Puri, R., Radford, A., Rae, J., Ramesh, A., Raymond, C., Real, F., Rimbach, K., Ross, C., Rotsted, B., Roussez, H., Ryder, N., Saltarelli, M., Sanders, T., Santurkar, S., Sastry, G., Schmidt, H., Schnurr, D., Schulman, J., Selsam, D., Sheppard, K., Sherbakov, T., Shieh, J., Shoker, S., Shyam, P., Sidor, S., Sigler, E., Simens, M., Sitkin, J., Slama, K., Sohl, I., Sokolowsky, B., Song, Y., Staudacher, N., Such, F., Summers, N., Sutskever, I., Tang, J., Tezak, N., Thompson, M., Tillet, P., Tootoonchian, A., Tseng, E., Tuggle, P., Turley, N., Tworek, J., Uribe, J., Vallone, A., Vijayvergiya, A., Voss, C., Wainwright, C., Wang, J., Wang, A., Wang, B., Ward, J., Wei, J., Weinmann, C., Welihinda, A., Welinder, P., Weng, J., Weng, L., Wiethoff, M., Willner, D., Winter, C., Wolrich, S., Wong, H., Workman, L., Wu, S., Wu, J., Wu, M., Xiao, K., Xu, T., Yoo, S., Yu, K., Yuan, Q., Zaremba, W., Zellers, R., Zhang, C., Zhang, M., Zhao, S., Zheng, T., Zhuang, J., Zhuk, W., & Zoph, B. (2023). GPT-4 Technical Report. **. 
+ 
+Yuan, A., Coenen, A., Reif, E., & Ippolito, D. (2022). Wordcraft: Story Writing With Large Language Models. *Proceedings of the 27th International Conference on Intelligent User Interfaces*. https://doi.org/10.1145/3490099.3511105
+ 
+Alomari, E. (2023). Transforming Text Generation in NLP: Deep Learning with GPT Models and 2023 Twitter Corpus Using Transformer Architecture. *International Journal on Recent and Innovation Trends in Computing and Communication*. https://doi.org/10.17762/ijritcc.v11i9.9463
+ 
+Baktash, J., & Dawodi, M. (2023). Gpt-4: A Review on Advancements and Opportunities in Natural Language Processing. *ArXiv*, abs/2305.03195. https://doi.org/10.48550/arxiv.2305.03195
+ 

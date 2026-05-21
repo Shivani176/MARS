@@ -1,0 +1,77 @@
+# **Fundamental Concepts and Types of Neural Networks**
+
+Neural networks are computational models inspired by the brain, built from many simple processing units (“neurons”) connected in layers. They learn patterns from data by adjusting connection weights to reduce error on a task.
+
+## **Core Concepts**
+
+- **Neurons and Layers**: Networks consist of input, hidden, and output layers of artificial neurons. Each neuron sums its inputs (weighted by learned parameters) plus a bias and passes this through a non‑linear **activation function** such as sigmoid, tanh, or ReLU to capture complex patterns  (Shrestha & Mahmood, 2019; López et al., 2022; Ghosh et al., 2019; Thakur, 2021).  
+- **Topology / Architecture**: The **topology** describes how neurons and layers are organized and connected (feedforward vs recurrent, number of layers, presence of intra‑ or supra‑layer connections) and strongly affects performance  (López et al., 2022).  
+- **Learning and Backpropagation**: Networks are trained by minimizing a **loss function** using gradient‑based optimization; backpropagation computes gradients of the loss with respect to all weights  (Shrestha & Mahmood, 2019; López et al., 2022; Hagan et al., 1995; Hammad, 2024).  
+- **Shallow vs Deep**: Deep neural networks have multiple hidden layers (multiple non‑linear transformations), enabling hierarchical feature learning from raw data  (Shrestha & Mahmood, 2019; Emmert-Streib et al., 2020; Alzubaidi et al., 2021).
+
+### Main Architectural Dimensions
+
+| Dimension            | Key Options                          | Citations |
+|---------------------|--------------------------------------|-----------|
+| Flow of information | Feedforward vs recurrent             |  (Shrestha & Mahmood, 2019; López et al., 2022; Emmert-Streib et al., 2020; Ghosh et al., 2019)|
+| Depth               | Shallow vs deep                      |  (Shrestha & Mahmood, 2019; Emmert-Streib et al., 2020; Alzubaidi et al., 2021)|
+| Connectivity style  | Fully connected vs convolutional, radial basis, etc. |  (Shrestha & Mahmood, 2019; López et al., 2022; Ghosh et al., 2019; Sharkawy, 2020)|
+
+**Figure 1:** Key structural dimensions of neural networks
+
+## **Major Types of Neural Networks**
+
+### **Feedforward / Multilayer Perceptron (MLP)**  
+Information flows one way from input to output with no cycles. Used for general regression and classification and considered the basic network model  (Shrestha & Mahmood, 2019; López et al., 2022; Emmert-Streib et al., 2020; Ghosh et al., 2019; Sharkawy, 2020; Thakur, 2021).
+
+### **Convolutional Neural Networks (CNNs)**  
+Introduce local connectivity, shared weights (filters), and pooling to learn translation‑robust features, especially for images and other multidimensional signals  (Gonzalez, 2018; Du, 2024; Ghosh et al., 2019; Alzubaidi et al., 2021; Taye, 2023; Purwono et al., 2023).
+
+### **Recurrent Neural Networks (RNNs) and Variants**  
+Include feedback connections, making them suitable for sequences and time series; important variants include LSTM and GRU networks  (Shrestha & Mahmood, 2019; Pan, 2024; Emmert-Streib et al., 2020; Sharkawy, 2020; DiPietro & Hager, 2019; Alzubaidi et al., 2021).
+
+### **Other Common Types**  
+- **Radial Basis Function (RBF) networks**: Use radial basis activations, with distinct advantages and disadvantages vs MLPs  (Ghosh et al., 2019; Sharkawy, 2020).  
+- **Autoencoders and Variational Autoencoders**: Learn compressed representations and generative models  (Shrestha & Mahmood, 2019; Makosso et al., 2025; Emmert-Streib et al., 2020; Alzubaidi et al., 2021).  
+- **Deep reinforcement learning architectures**: Combine neural nets with reinforcement learning for decision‑making tasks  (Shrestha & Mahmood, 2019; Makosso et al., 2025; Alzubaidi et al., 2021).
+
+## **Conclusion**
+
+Fundamental neural network ideas center on layers of simple nonlinear units, their connectivity (topology), and gradient‑based learning. The main families—feedforward, convolutional, recurrent, RBF, and autoencoder‑based networks—differ primarily in how they connect neurons and handle structure in data (spatial, temporal, or latent), and these design choices determine which problems each type is best suited to solve.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Shrestha, A., & Mahmood, A. (2019). Review of Deep Learning Algorithms and Architectures. *IEEE Access*, 7, 53040-53065. https://doi.org/10.1109/access.2019.2912200
+ 
+Gonzalez, R. (2018). Deep Convolutional Neural Networks [Lecture Notes]. *IEEE Signal Processing Magazine*, 35, 79-87. https://doi.org/10.1109/msp.2018.2842646
+ 
+Pan, Y. (2024). Different Types of Neural Networks and Applications: Evidence from Feedforward, Convolutional and Recurrent Neural Networks. *Highlights in Science, Engineering and Technology*. https://doi.org/10.54097/6rn1wd81
+ 
+López, O., López, A., & Crossa, J. (2022). Fundamentals of Artificial Neural Networks and Deep Learning. *Multivariate Statistical Machine Learning Methods for Genomic Prediction*. https://doi.org/10.1007/978-3-030-89010-0_10
+ 
+Du, Z. (2024). Review of Convolutional Neural Network. *Science and Technology of Engineering, Chemistry and Environmental Protection*. https://doi.org/10.61173/1xfrez14
+ 
+Makosso, T., Almaktoof, A., & Abo-Al-Ez, K. (2025). Review of Different Types of Neural Network Architectures. *International Journal of Electrical Engineering and Applied Sciences (IJEEAS)*. https://doi.org/10.54554/ijeeas.2024.7.02.006
+ 
+Hagan, M., Demuth, H., & Beale, M. (1995). Neural network design. **. 
+ 
+Emmert-Streib, F., Yang, Z., Feng, H., Tripathi, S., & Dehmer, M. (2020). An Introductory Review of Deep Learning for Prediction Models With Big Data. *Frontiers in Artificial Intelligence*, 3. https://doi.org/10.3389/frai.2020.00004
+ 
+Ghosh, A., Sufian, A., Sultana, F., Chakrabarti, A., & De, D. (2019). Fundamental Concepts of Convolutional Neural Network. **, 519-567. https://doi.org/10.1007/978-3-030-32644-9_36
+ 
+Sharkawy, A. (2020). Principle of Neural Network and Its Main Types: Review. *Journal of Advances in Applied & Computational Mathematics*. https://doi.org/10.15377/2409-5761.2020.07.2
+ 
+Thakur, A. (2021). Fundamentals of Neural Networks. *International Journal for Research in Applied Science and Engineering Technology*. https://doi.org/10.22214/ijraset.2021.37362
+ 
+DiPietro, R., & Hager, G. (2019). Deep learning: RNNs and LSTM. **, 503-519. https://doi.org/10.1016/b978-0-12-816176-0.00026-0
+ 
+Hammad, M. (2024). Artificial Neural Network and Deep Learning: Fundamentals and Theory. *ArXiv*, abs/2408.16002. https://doi.org/10.48550/arxiv.2408.16002
+ 
+Alzubaidi, L., Zhang, J., Humaidi, A., Al-Dujaili, A., Duan, Y., Al-Shamma, O., Santamaría, J., Fadhel, M., Al-Amidie, M., & Farhan, L. (2021). Review of deep learning: concepts, CNN architectures, challenges, applications, future directions. *Journal of Big Data*, 8. https://doi.org/10.1186/s40537-021-00444-8
+ 
+Taye, M. (2023). Theoretical Understanding of Convolutional Neural Network: Concepts, Architectures, Applications, Future Directions. *Comput.*, 11, 52. https://doi.org/10.3390/computation11030052
+ 
+Purwono, P., Ma’arif, A., Rahmaniar, W., Fathurrahman, H., Frisky, A., & Haq, Q. (2023). Understanding of Convolutional Neural Network (CNN): A Review. *International Journal of Robotics and Control Systems*. https://doi.org/10.31763/ijrcs.v2i4.888
+ 

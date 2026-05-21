@@ -1,0 +1,33 @@
+At the most basic level, a neural network is a computational model composed of layers of interconnected units ("neurons"), where each connection carries a learnable weight. An input passes through these layers, gets transformed by weighted sums and nonlinear activation functions, and produces an output. The network learns by adjusting its weights to minimize the difference between predicted and actual outputs — a process driven by backpropagation and gradient descent. [^1][^2]
+
+Several survey papers in my search provide useful taxonomies of the major architecture families. [^3][^4] Here's a concise map of the main types:
+
+**Feedforward / Fully Connected Networks** are the simplest form: input flows in one direction through hidden layers to the output, with every neuron connected to every neuron in the next layer. They're the building blocks of deep learning but don't inherently capture spatial or temporal structure. Backpropagation — computing the gradient of the loss with respect to each weight by applying the chain rule backward through the network — is the standard training algorithm and dates back to the 1980s. [^1]
+
+**Convolutional Neural Networks (CNNs)** introduced local connectivity and weight sharing through convolutional filters that slide across input data, making them dramatically more efficient for spatial data like images. Early layers learn low-level features (edges, textures), while deeper layers compose these into higher-level representations (objects, faces). Architectures like VGG, ResNet, Inception, and DenseNet differ in depth, skip connections, and computational efficiency. CNNs dominate image classification, object detection, and medical imaging. [^3][^4][^5]
+
+**Recurrent Neural Networks (RNNs)** process sequential data by maintaining a hidden state that is updated at each time step, giving them a form of memory. Standard RNNs struggle with long sequences due to vanishing gradients, which led to two important variants: **Long Short-Term Memory (LSTM)** networks, which use gating mechanisms (input, forget, output gates) to control information flow over long sequences, and **Gated Recurrent Units (GRUs)**, a simplified alternative with fewer parameters. These architectures have been widely used for language modeling, speech recognition, and time-series forecasting. [^4][^5][^6]
+
+**Transformers**, introduced by Vaswani et al. in 2017, replaced recurrence with self-attention mechanisms (as we discussed earlier in this conversation), allowing every position to attend to every other position in parallel. This solved the sequential bottleneck of RNNs and enabled much larger-scale training. Transformers are the backbone of modern language models (BERT, GPT) and have increasingly been adopted in vision (Vision Transformers) and other domains. Comparative analyses in my search results confirm that transformers outperform RNNs and CNNs in capturing long-range dependencies. [^7]
+
+**Generative Adversarial Networks (GANs)** use a different training paradigm entirely: two networks — a generator and a discriminator — compete against each other. The generator tries to produce realistic synthetic data, while the discriminator tries to distinguish real from fake. This adversarial process drives the generator to produce increasingly realistic outputs. GANs have been transformative for image synthesis, data augmentation, and style transfer. [^8]
+
+Other notable architectures include **autoencoders** (which learn compressed representations by encoding input into a low-dimensional space and reconstructing it), **deep belief networks** (stacked layers of restricted Boltzmann machines, historically important for pre-training), and **deep reinforcement learning** models (which combine neural networks with reward-based learning for decision-making tasks). [^3][^4]
+
+A comprehensive survey by Alom et al. (2019) in *Electronics* covers all of these architectures alongside training techniques, frameworks, and benchmark datasets, and remains one of the more widely referenced overviews in the field. [^4] This is a quick pass over a vast topic — a deeper search could explore any of these architecture families in much more detail.
+
+[^1]: Li, 2024. Comprehensive Review of Backpropagation Neural Networks. Academic Journal of Science and Technology.
+
+[^2]: S. et al., 2020. Survey on Neural Network Architectures with Deep Learning. Journal of Soft Computing Paradigm.
+
+[^3]: Liu et al., 2017. A survey of deep neural network architectures and their applications. Neurocomputing.
+
+[^4]: Alom et al., 2019. A State-of-the-Art Survey on Deep Learning Theory and Architectures. Electronics.
+
+[^5]: Shiri et al., 2023. A Comprehensive Overview and Comparative Analysis on Deep Learning Models: CNN, RNN, LSTM, GRU. Journal of Artificial Intelligence.
+
+[^6]: Agrawal et al., 2025. Unraveling Neural Intelligence: A Cross-Domain Study of RNN and CNN Architectures. 2025 IEEE 4th International Conference for Advancement in Technology (ICONAT).
+
+[^7]: Goyal et al., 2025. Breaking Neural Barriers with Transformers Replacing RNN and CNN. AIJR Proceedings.
+
+[^8]: Shetty. Generative Adversarial Networks (GANS).

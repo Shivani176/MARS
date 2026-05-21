@@ -1,0 +1,39 @@
+Graph neural networks (GNNs) are deep learning models designed for data that lives on graphs — networks of nodes connected by edges — rather than the regular grids that standard neural networks expect (like images or sequences). Molecules, social networks, traffic systems, and knowledge graphs are all natural examples. Several comprehensive surveys cover the field well. [^1][^2][^3]
+
+The core mechanism is **message passing**. At each layer, every node collects information from its neighbors, aggregates it, and updates its own representation. Concretely, a single round looks like this: (1) each node sends a "message" derived from its current feature vector to its neighbors; (2) each node aggregates the incoming messages (via sum, mean, max, or attention-weighted combination); (3) each node updates its own representation using the aggregated message and its previous state. Stack several of these layers and each node's representation encodes information from progressively larger neighborhoods. [^4] Gilmer et al. formalized this as the Message Passing Neural Network (MPNN) framework, showing that many GNN variants — GCN, GAT, GraphSAGE, Gated GNNs — are special cases of this pattern. [^5]
+
+The main architectural variants differ in how they aggregate:
+
+- **Graph Convolutional Networks (GCN)** use a normalized mean of neighbor features, analogous to convolution on a grid but adapted to irregular topology.
+- **Graph Attention Networks (GAT)** learn attention weights to determine how much each neighbor contributes, rather than treating all neighbors equally.
+- **GraphSAGE** samples a fixed number of neighbors and applies learnable aggregation functions, making it scalable to large graphs.
+
+After several message-passing rounds, node-level representations can be used directly (for node classification or link prediction), or pooled into a single graph-level vector for tasks like molecular property prediction or graph classification. [^1][^4]
+
+A key theoretical result, from Xu et al. (ICLR 2019), establishes that standard message-passing GNNs are at most as powerful as the Weisfeiler-Lehman (WL) graph isomorphism test — meaning there are structurally distinct graphs that GNNs provably cannot distinguish. [^6] This has spawned a substantial body of work on more expressive architectures. Zhang et al. introduced "homomorphism expressivity" as a finer-grained measure of what GNNs can and cannot represent, going beyond the binary WL characterization. [^7] Others have proposed higher-order message passing and subgraph-aware methods that exceed WL expressiveness while keeping computational costs manageable. [^8][^9]
+
+In terms of applications, drug discovery is one of the most active areas: GNNs naturally represent molecules as graphs of atoms and bonds, enabling molecular property prediction, drug-target interaction modeling, virtual screening, and de novo molecule generation. [^10][^11] Beyond chemistry, GNNs are widely applied in social network analysis, recommendation systems, traffic forecasting, and knowledge graph reasoning. [^1][^3]
+
+This is a quick scan of a very large literature — there's much more depth available on specific architectures, scalability, or application domains.
+
+[^1]: Wu et al., 2019. A Comprehensive Survey on Graph Neural Networks. IEEE Transactions on Neural Networks and Learning Systems.
+
+[^2]: Zhang et al., 2026. A Survey on Graph Neural Networks. IEEE Access.
+
+[^3]: Gkarmpounis et al., 2024. Survey on Graph Neural Networks. IEEE Access.
+
+[^4]: Zhou et al., 2018. Graph Neural Networks: A Review of Methods and Applications. AI Open.
+
+[^5]: Gilmer et al., 2020. Message Passing Neural Networks.
+
+[^6]: Xu et al., 2018. How Powerful are Graph Neural Networks?. International Conference on Learning Representations.
+
+[^7]: Zhang et al., 2024. Beyond Weisfeiler-Lehman: A Quantitative Framework for GNN Expressiveness. International Conference on Learning Representations.
+
+[^8]: Jogl et al., 2022. Weisfeiler and Leman Return with Graph Transformations.
+
+[^9]: Feng et al., 2023. Extending the Design Space of Graph Neural Networks by Rethinking Folklore Weisfeiler-Lehman. Neural Information Processing Systems.
+
+[^10]: Zhang et al., 2025. Graph Neural Networks in Modern AI-aided Drug Discovery. Chemical Reviews.
+
+[^11]: Wang & Zhuang, 2025. Graph neural networks driven acceleration in drug discovery. Acta Pharmaceutica Sinica B.

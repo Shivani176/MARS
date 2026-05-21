@@ -1,0 +1,84 @@
+# **Generative Adversarial Networks (GANs):** What they are and where they’re used
+
+Generative adversarial networks are a class of deep-learning models that can learn to generate highly realistic data, such as images, video, audio, or text, by mimicking patterns in real datasets. They have become a central tool for modern generative AI across vision, language, and many scientific and medical domains  (Goodfellow et al., 2021; Creswell et al., 2017; Gui et al., 2020; Wang et al., 2019; Chakraborty et al., 2023; Megahed & Mohammed, 2023).
+
+## **What GANs Are and How They Work**
+
+- **Basic idea:** GANs consist of two neural networks trained together:
+  - a **generator** that turns random noise into synthetic samples;
+  - a **discriminator** that tries to distinguish real data from generated data  (Goodfellow et al., 2021; Gui et al., 2020; Lan et al., 2020; Chakraborty et al., 2023).
+- Training is a **zero-sum “game”**: the generator improves at fooling the discriminator, while the discriminator improves at spotting fakes, pushing generated data toward the real data distribution  (Creswell et al., 2017; Wang et al., 2019; Dash et al., 2021; Ahmad et al., 2024; Chakraborty et al., 2023).
+
+### Core properties and challenges
+
+- Strengths: powerful **feature learning**, sharp and realistic outputs, and ability to learn from unlabelled data  (Creswell et al., 2017; Park et al., 2021; Wang et al., 2019; Jin et al., 2020; Pan et al., 2019).
+- Main difficulties: **training instability**, **mode collapse** (limited diversity), non-convergence, and hard-to-standardize **evaluation metrics** like Inception Score and FID  (Goodfellow et al., 2021; Sharma et al., 2024; Park et al., 2021; Gui et al., 2020; Wang et al., 2019; Nayak et al., 2024; Ahmad et al., 2024; Cao et al., 2018; Pan et al., 2019; Megahed & Mohammed, 2023).
+
+## **Major Application Areas of GANs**
+
+### Key application types
+
+| Area / Task                          | Example Uses (non-exhaustive)                                   | Citations |
+|--------------------------------------|------------------------------------------------------------------|-----------|
+| Image & video generation/editing     | Photorealistic image synthesis, deepfakes, video synthesis      |  (Goodfellow et al., 2021; Creswell et al., 2017; Sharma et al., 2024; Wang et al., 2019; Islam et al., 2024; Liu et al., 2020; Cao et al., 2018; Porkodi et al., 2022)|
+| Image-to-image translation           | Style transfer, super-resolution, inpainting, domain transfer   |  (Creswell et al., 2017; Park et al., 2021; Wang et al., 2019; Jin et al., 2020; Islam et al., 2024; Liu et al., 2020; Cao et al., 2018)|
+| Data augmentation & anomaly tasks    | Training data expansion, forgery and anomaly detection          |  (Goodfellow et al., 2021; Sharma et al., 2024; Park et al., 2021; Wang et al., 2019; Dash et al., 2021; Jin et al., 2020; Pan et al., 2019)|
+| Medical & biomedical                 | Image reconstruction, segmentation, cross-modality synthesis    |  (Park et al., 2021; Islam et al., 2024; Lan et al., 2020; Yi et al., 2018)|
+| Text, audio, and time series         | Text-to-image, speech/audio, music, time-series synthesis       |  (Sharma et al., 2024; Park et al., 2021; Gui et al., 2020; Wang et al., 2019; Dash et al., 2021)|
+| Scientific & engineering domains     | Protein/structure design, remote sensing, geoscience            |  (Dash et al., 2021; Chakraborty et al., 2023)|
+| Business and creative industries     | Finance, marketing, fashion, game content generation            |  (Sharma et al., 2024; Dash et al., 2021; Jin et al., 2020; Chakraborty et al., 2023)|
+
+**Figure 1:** Representative domains where GANs are applied
+
+## **Benefits, Limitations, and Future Directions**
+
+- **Benefits:** high-quality sample generation, flexible architectures (conditional, cycle-consistent, StyleGAN, Wasserstein GAN, etc.), and wide applicability across disciplines  (Sharma et al., 2024; Gui et al., 2020; Wang et al., 2019; Dash et al., 2021; Liu et al., 2020; Chakraborty et al., 2023; Megahed & Mohammed, 2023).
+- **Limitations:** instability, difficulty controlling outputs, potential misuse (e.g., deepfakes), and lack of universally accepted evaluation standards  (Goodfellow et al., 2021; Sharma et al., 2024; Park et al., 2021; Wang et al., 2019; Ahmad et al., 2024; Cao et al., 2018; Pan et al., 2019; Megahed & Mohammed, 2023).
+- **Future work:** improved stability and scalability, better control over generated content, integration with newer models (transformers, diffusion), and stronger ethical and forensic tools to detect fakes  (Goodfellow et al., 2021; Sharma et al., 2024; Gui et al., 2020; Dash et al., 2021; Ahmad et al., 2024; Chakraborty et al., 2023; Megahed & Mohammed, 2023).
+
+## **Summary**
+
+GANs are dual-network systems that learn to generate new, realistic data by pitting a generator against a discriminator. They underpin many modern applications in image and video creation, translation, enhancement, and data augmentation, and are rapidly expanding into medicine, science, finance, and the arts. Their power comes with challenges—especially training instability, evaluation, and ethical risks—making stability, control, and responsible use key themes in current and future research.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., & Bengio, Y. (2021). Generative Adversarial Networks. *2023 14th International Conference on Computing Communication and Networking Technologies (ICCCNT)*, 1-7. https://doi.org/10.1109/icccnt56998.2023.10306417
+ 
+Creswell, A., White, T., Dumoulin, V., Arulkumaran, K., Sengupta, B., & Bharath, A. (2017). Generative Adversarial Networks: An Overview. *IEEE Signal Processing Magazine*, 35, 53-65. https://doi.org/10.1109/msp.2017.2765202
+ 
+Sharma, P., Kumar, M., Sharma, H., & Biju, S. (2024). Generative adversarial networks (GANs): Introduction, Taxonomy, Variants, Limitations, and Applications. *Multimedia Tools and Applications*, 83, 88811 - 88858. https://doi.org/10.1007/s11042-024-18767-y
+ 
+Park, S., Huh, J., & Kim, J. (2021). Review on Generative Adversarial Networks: Focusing on Computer Vision and Its Applications. *Electronics*, 10, 1216. https://doi.org/10.3390/electronics10101216
+ 
+Gui, J., Sun, Z., Wen, Y., Tao, D., & Ye, J. (2020). A Review on Generative Adversarial Networks: Algorithms, Theory, and Applications. *IEEE Transactions on Knowledge and Data Engineering*, 35, 3313-3332. https://doi.org/10.1109/tkde.2021.3130191
+ 
+Wang, Z., She, Q., & Ward, T. (2019). Generative Adversarial Networks in Computer Vision. *ACM Computing Surveys (CSUR)*, 54, 1 - 38. https://doi.org/10.1145/3439723
+ 
+Dash, A., Ye, J., & Wang, G. (2021). A Review of Generative Adversarial Networks (GANs) and Its Applications in a Wide Variety of Disciplines: From Medical to Remote Sensing. *IEEE Access*, 12, 18330-18357. https://doi.org/10.1109/access.2023.3346273
+ 
+Jin, L., Tan, F., & Jiang, S. (2020). Generative Adversarial Network Technologies and Applications in Computer Vision. *Computational Intelligence and Neuroscience*, 2020. https://doi.org/10.1155/2020/1459107
+ 
+Nayak, A., Venugopala, P., & Ashwini, B. (2024). A Systematic Review on Generative Adversarial Network (GAN): Challenges and Future Directions. *Archives of Computational Methods in Engineering*, 31, 4739 - 4772. https://doi.org/10.1007/s11831-024-10119-1
+ 
+Islam, S., Aziz, M., Nabil, H., Jim, J., Mridha, M., Kabir, M., Asai, N., & Shin, J. (2024). Generative Adversarial Networks (GANs) in Medical Imaging: Advancements, Applications, and Challenges. *IEEE Access*, 12, 35728-35753. https://doi.org/10.1109/access.2024.3370848
+ 
+Lan, L., You, L., Zhang, Z., Fan, Z., Zhao, W., Zeng, N., Chen, Y., & Zhou, X. (2020). Generative Adversarial Networks and Its Applications in Biomedical Informatics. *Frontiers in Public Health*, 8. https://doi.org/10.3389/fpubh.2020.00164
+ 
+Ahmad, Z., Jaffri, Z., Chen, M., & Bao, S. (2024). Understanding GANs: fundamentals, variants, training challenges, applications, and open problems. *Multimedia Tools and Applications*, 84, 10347 - 10423. https://doi.org/10.1007/s11042-024-19361-y
+ 
+Liu, M., Huang, X., Yu, J., Wang, T., & Mallya, A. (2020). Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications. *Proceedings of the IEEE*, 109, 839-862. https://doi.org/10.1109/jproc.2021.3049196
+ 
+Cao, Y., Jia, L., Chen, Y., Lin, N., Yang, C., Zhang, B., Liu, Z., Li, X., & Dai, H. (2018). Recent Advances of Generative Adversarial Networks in Computer Vision. *IEEE Access*, 7, 14985-15006. https://doi.org/10.1109/access.2018.2886814
+ 
+Porkodi, S., Sarada, V., Maik, V., & Gurushankar, K. (2022). Generic image application using GANs (Generative Adversarial Networks): A Review. *Evolving Systems*, 1 - 15. https://doi.org/10.1007/s12530-022-09464-y
+ 
+Pan, Z., Yu, W., Yi, X., Khan, A., Yuan, F., & Zheng, Y. (2019). Recent Progress on Generative Adversarial Networks (GANs): A Survey. *IEEE Access*, 7, 36322-36333. https://doi.org/10.1109/access.2019.2905015
+ 
+Chakraborty, T., S, U., Naik, S., Panja, M., & Manvitha, B. (2023). Ten years of generative adversarial nets (GANs): a survey of the state-of-the-art. *Machine Learning: Science and Technology*, 5. https://doi.org/10.1088/2632-2153/ad1f77
+ 
+Yi, X., Walia, E., & Babyn, P. (2018). Generative Adversarial Network in Medical Imaging: A Review. *Medical image analysis*, 58, 101552. https://doi.org/10.1016/j.media.2019.101552
+ 
+Megahed, M., & Mohammed, A. (2023). A comprehensive review of generative adversarial networks: Fundamentals, applications, and challenges. *Wiley Interdisciplinary Reviews: Computational Statistics*, 16. https://doi.org/10.1002/wics.1629
+ 

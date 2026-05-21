@@ -1,0 +1,88 @@
+# **Deep learning techniques and where they are used**
+
+Deep learning is a family of neural‑network methods that automatically learn useful features from large amounts of data, and now underpins many modern AI systems across science, industry, and government  (Alzubaidi et al., 2021; Ahmed et al., 2023; Alom et al., 2019; Sarker, 2021; Mienye & Swart, 2024).
+
+## **Core Techniques and Model Families**
+
+### Supervised / discriminative models
+- **Feedforward / Deep Neural Networks (DNN, MLP)** for general prediction and classification tasks  (Alom et al., 2019; Sarker, 2021; Shrestha & Mahmood, 2019).  
+- **Convolutional Neural Networks (CNNs)** for images, video, and other grid‑like data; foundation of modern computer vision  (Alzubaidi et al., 2021; Ahmed et al., 2023; Alom et al., 2019; Abdel-Jaber et al., 2022; Liu et al., 2017; Mienye & Swart, 2024).  
+- **Recurrent Neural Networks (RNNs), LSTM, GRU** for sequences such as text, speech, and time series  (Ahmed et al., 2023; Alom et al., 2019; Alom et al., 2018; Alhijaj & Khudeyer, 2023; Shrestha & Mahmood, 2019).  
+- **Transformers and attention models** for language understanding, translation, and other sequential/structured data  (Sarker, 2021; Abdel-Jaber et al., 2022; Mienye & Swart, 2024).
+
+### Unsupervised / generative models
+- **Autoencoders, variational autoencoders** for feature learning, compression, denoising  (Dong et al., 2021; Sarker, 2021; Abdel-Jaber et al., 2022; Shrestha & Mahmood, 2019).  
+- **Restricted Boltzmann Machines, Deep Belief Networks, Deep Boltzmann Machines** as early deep generative models  (Dong et al., 2021; Alom et al., 2019; Liu et al., 2017; Shrestha & Mahmood, 2019).  
+- **Generative Adversarial Networks (GANs)** for realistic image, audio, and data generation  (Ahmed et al., 2023; Alom et al., 2019; Sarker, 2021; Abdel-Jaber et al., 2022; Mienye & Swart, 2024).  
+- **Capsule networks, graph neural networks (GNNs)** as newer architectures for structured and relational data  (Ahmed et al., 2023; Abdel-Jaber et al., 2022; Mienye & Swart, 2024).
+
+### Other important paradigms
+- **Deep Reinforcement Learning (DRL)** for decision‑making and control (e.g., robotics, games)  (Alom et al., 2019; Alom et al., 2018; Mienye & Swart, 2024; Vaissnave et al., 2024).  
+- **Transfer, self‑supervised, and federated learning** to reuse knowledge, exploit unlabeled data, and train across distributed datasets  (Alom et al., 2019; Sarker, 2021; Mienye & Swart, 2024; Shrestha & Mahmood, 2019).
+
+### Major Application Areas of Deep Learning
+
+| Area / Data type      | Typical tasks & models                        | Citations |
+|-----------------------|-----------------------------------------------|-----------|
+| Computer vision       | Image classification, detection, segmentation (CNNs, transformers, GANs) |  (Alzubaidi et al., 2021; Ahmed et al., 2023; Alom et al., 2019; Liu et al., 2017; Mienye & Swart, 2024; Shrestha & Mahmood, 2019; Shiri et al., 2023)|
+| Speech & audio        | Speech recognition, speaker ID (RNN/LSTM, CNN) |  (Ahmed et al., 2023; Alom et al., 2019; Abdel-Jaber et al., 2022; Liu et al., 2017; Alam et al., 2019)|
+| Natural language      | Translation, sentiment, QA (RNN/LSTM, transformers, embeddings) |  (Alzubaidi et al., 2021; Ahmed et al., 2023; Dong et al., 2021; Abdel-Jaber et al., 2022; Alom et al., 2018; Mienye & Swart, 2024; Kumar & Renuka, 2023)|
+| Healthcare & bioinfo  | Medical imaging, diagnosis, genomics (CNNs, RNNs, general DL) |  (Alzubaidi et al., 2021; Alom et al., 2019; Sarker, 2021; Abdel-Jaber et al., 2022; Esteva et al., 2019; Mienye & Swart, 2024; Shrestha & Mahmood, 2019; Alam et al., 2019)|
+| Cybersecurity         | Intrusion/malware detection (CNN, RNN, AE, GAN, DRL) |  (Alzubaidi et al., 2021; Sarker, 2021; Dargan et al., 2019; Soori et al., 2023; Shiri et al., 2023)|
+| Robotics & control    | Navigation, manipulation (DRL, CNN, RNN)      |  (Alzubaidi et al., 2021; Alom et al., 2019; Alom et al., 2018; Esteva et al., 2019; Vaissnave et al., 2024; Soori et al., 2023; Górriz et al., 2023)|
+| Business/industry     | Recommendation, forecasting, quality control (DNNs, RNNs, CNNs) |  (Alzubaidi et al., 2021; Ahmed et al., 2023; Sarker, 2021; Mienye & Swart, 2024; Shrestha & Mahmood, 2019; Shiri et al., 2023)|
+
+**Figure 1:** Representative deep learning models and main domains of use
+
+## **Advantages, Challenges, and Trends**
+
+- **Strengths:** Learns high‑level representations from raw data, excels on large and complex datasets, often surpasses traditional machine learning  (Alzubaidi et al., 2021; Ahmed et al., 2023; Alom et al., 2019; Sarker, 2021; Mienye & Swart, 2024; Shrestha & Mahmood, 2019; Shiri et al., 2023).  
+- **Challenges:** High data and compute demands; training can be slow, expensive, and prone to overfitting or local minima; models are often “black boxes”  (Alzubaidi et al., 2021; Ahmed et al., 2023; Sarker, 2021; Abdel-Jaber et al., 2022; Mienye & Swart, 2024; Shrestha & Mahmood, 2019).  
+- **Trends:** Hybrid and ensemble models, automated model search, more interpretable and efficient architectures, and expansion into new domains like finance, agriculture, and advanced robotics  (Ahmed et al., 2023; Sarker, 2021; Esteva et al., 2019; Mienye & Swart, 2024; Vaissnave et al., 2024; Soori et al., 2023; Górriz et al., 2023).
+
+## **Summary**
+
+Key deep learning techniques include CNNs, RNN/LSTMs, transformers, autoencoders, GANs, and DRL, used in supervised, unsupervised, and reinforcement settings. They power applications across vision, language, speech, healthcare, cybersecurity, and robotics, but require large data, substantial compute, and better interpretability to fully meet real‑world needs.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Alzubaidi, L., Zhang, J., Humaidi, A., Al-Dujaili, A., Duan, Y., Al-Shamma, O., Santamaría, J., Fadhel, M., Al-Amidie, M., & Farhan, L. (2021). Review of deep learning: concepts, CNN architectures, challenges, applications, future directions. *Journal of Big Data*, 8. https://doi.org/10.1186/s40537-021-00444-8
+ 
+Ahmed, S., Alam, M., Hassan, M., Rozbu, M., Ishtiak, T., Rafa, N., Mofijur, M., Ali, A., & Gandomi, A. (2023). Deep learning modelling techniques: current progress, applications, advantages, and challenges. *Artificial Intelligence Review*, 56, 13521-13617. https://doi.org/10.1007/s10462-023-10466-8
+ 
+Dong, S., Wang, P., & Abbas, K. (2021). A survey on deep learning and its applications. *Comput. Sci. Rev.*, 40, 100379. https://doi.org/10.1016/j.cosrev.2021.100379
+ 
+Alom, M., Taha, T., Yakopcic, C., Westberg, S., Sidike, P., Nasrin, M., Hasan, M., Van Essen, B., Awwal, A., & Asari, V. (2019). A State-of-the-Art Survey on Deep Learning Theory and Architectures. *Electronics*. https://doi.org/10.3390/electronics8030292
+ 
+Sarker, I. (2021). Deep Learning: A Comprehensive Overview on Techniques, Taxonomy, Applications and Research Directions. *Sn Computer Science*, 2. https://doi.org/10.1007/s42979-021-00815-1
+ 
+Abdel-Jaber, H., Devassy, D., Salam, A., Hidaytallah, L., & El-Amir, M. (2022). A Review of Deep Learning Algorithms and Their Applications in Healthcare. *Algorithms*, 15, 71. https://doi.org/10.3390/a15020071
+ 
+Liu, W., Wang, Z., Liu, X., Zeng, N., Liu, Y., & Alsaadi, F. (2017). A survey of deep neural network architectures and their applications. *Neurocomputing*, 234, 11-26. https://doi.org/10.1016/j.neucom.2016.12.038
+ 
+Alom, M., Taha, T., Yakopcic, C., Westberg, S., Sidike, P., Nasrin, M., Essen, B., Awwal, A., & Asari, V. (2018). The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches. *ArXiv*, abs/1803.01164. 
+ 
+Alhijaj, J., & Khudeyer, R. (2023). Techniques and Applications for Deep Learning: A Review. *Journal of Al-Qadisiyah for Computer Science and Mathematics*. https://doi.org/10.29304/jqcm.2023.15.2.1236
+ 
+Esteva, A., Robicquet, A., Ramsundar, B., Kuleshov, V., DePristo, M., Chou, K., Cui, C., Corrado, G., Thrun, S., & Dean, J. (2019). A guide to deep learning in healthcare. *Nature Medicine*, 25, 24 - 29. https://doi.org/10.1038/s41591-018-0316-z
+ 
+Mienye, I., & Swart, T. (2024). A Comprehensive Review of Deep Learning: Architectures, Recent Advances, and Applications. *Inf.*, 15, 755. https://doi.org/10.3390/info15120755
+ 
+Dargan, S., Kumar, M., Ayyagari, M., & Kumar, G. (2019). A Survey of Deep Learning and Its Applications: A New Paradigm to Machine Learning. *Archives of Computational Methods in Engineering*, 27, 1071 - 1092. https://doi.org/10.1007/s11831-019-09344-w
+ 
+Kumar, L., & Renuka, D. (2023). Deep Learning Approach for Natural Language Processing, Speech, and Computer Vision. **. https://doi.org/10.1201/9781003348689
+ 
+Shrestha, A., & Mahmood, A. (2019). Review of Deep Learning Algorithms and Architectures. *IEEE Access*, 7, 53040-53065. https://doi.org/10.1109/access.2019.2912200
+ 
+Alam, M., Samad, M., Vidyaratne, L., Glandon, A., & Iftekharuddin, K. (2019). Survey on Deep Neural Networks in Speech and Vision Systems. *Neurocomputing*, 417, 302-321. https://doi.org/10.1016/j.neucom.2020.07.053
+ 
+Vaissnave, V., Nandhini, S., Davamani, A., Malathi, P., & Pothumani, S. (2024). Advancements in Deep Learning Algorithms. **. https://doi.org/10.47716/978-93-92090-47-9
+ 
+Soori, M., Arezoo, B., & Dastres, R. (2023). Artificial Intelligence, Machine Learning and Deep Learning in Advanced Robotics, A Review. *Cognitive Robotics*. https://doi.org/10.1016/j.cogr.2023.04.001
+ 
+Górriz, J., Álvarez-Illán, I., Álvarez-Marquina, A., Arco, J., Atzmueller, M., Ballarini, F., Barakova, E., Bologna, G., Bonomini, P., Castellanos-Dominguez, G., Castillo-Barnes, D., Cho, S., Contreras, R., Cuadra, J., Domínguez, E., Domínguez-Mateos, F., Duro, R., Elizondo, D., Fernández-Caballero, A., Fernández-Jover, E., Formoso, M., Gallego-Molina, N., Gamazo, J., González, J., García-Rodríguez, J., Garre, C., Garrigós, J., Gómez-Rodellar, A., Gómez-Vilda, P., Grana, M., Guerrero-Rodriguez, B., Hendrikse, S., Jiménez-Mesa, C., Jodra-Chuan, M., Julián, V., Kotz, G., Kutt, K., Leming, M., De Lope, J., Macas, B., Marrero-Aguiar, V., Martinez, J., Martínez-Murcia, F., Martínez-Tomás, R., Mekyska, J., Nalepa, G., Novais, P., Orellana, D., Ortíz, A., Palacios-Alonso, D., Palma, J., Pereira, A., Pinacho-Davidson, P., Pinninghoff, M., Ponticorvo, M., Psarrou, A., Ramírez, J., Rincón, M., Rodellar-Biarge, V., Rodríguez-Rodríguez, I., Roelofsma, P., Santos, J., Salas-González, D., Salcedo-Lagos, P., Segovia, F., Shoeibi, A., Silva, M., Šimić, D., Suckling, J., Treur, J., Tsanas, A., Varela, R., Wang, S., Wang, W., Zhang, Y., Zhu, H., Zhu, Z., & Ferrández-Vicente, J. (2023). Computational approaches to Explainable Artificial Intelligence: Advances in theory, applications and trends. *Inf. Fusion*, 100, 101945. https://doi.org/10.1016/j.inffus.2023.101945
+ 
+Shiri, F., Perumal, T., Mustapha, N., & Mohamed, R. (2023). A Comprehensive Overview and Comparative Analysis on Deep Learning Models: CNN, RNN, LSTM, GRU. *ArXiv*, abs/2305.17473. https://doi.org/10.32604/jai.2024.054314
+ 

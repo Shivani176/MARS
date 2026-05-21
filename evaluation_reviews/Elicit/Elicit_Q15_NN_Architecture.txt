@@ -1,0 +1,55 @@
+Neural architecture search (NAS) automates the design of neural network architectures — the part of deep learning that traditionally requires the most human expertise and trial-and-error. Instead of a researcher manually choosing the number of layers, the type of operations (convolutions, pooling, skip connections), how they connect, and their hyperparameters, NAS algorithms explore a defined space of possible architectures and discover high-performing designs automatically. [^1][^2][^3]
+
+The framework has three core components, as several comprehensive surveys describe. [^4][^5][^6]
+
+**Search space** defines what architectures the algorithm can consider. Most modern NAS methods use a *cell-based* search space: rather than designing an entire network from scratch, the algorithm searches for a small repeating building block (a "cell") that is then stacked to form the full network. This dramatically reduces the search space while still yielding competitive architectures. The cell typically consists of a directed acyclic graph where nodes are feature maps and edges are candidate operations (e.g., 3×3 convolution, dilated convolution, max pooling, skip connection). [^1][^6]
+
+**Search strategy** determines how the algorithm navigates the space. Three main paradigms have emerged:
+
+- *Reinforcement learning (RL)-based search* was the earliest approach: a controller network (often an LSTM) generates architecture descriptions as sequences of tokens, and is trained via policy gradient methods using the validation accuracy of the generated architecture as reward. The seminal work by Zoph & Le (2017) used this approach but required ~800 GPUs for weeks. [^1][^2]
+
+- *Evolutionary algorithms* maintain a population of architectures, mutating and recombining them over generations, selecting the fittest. Differential evolution and regularized evolution have shown robust results across NAS benchmarks. [^7][^8]
+
+- *Differentiable search (DARTS and variants)* was a major efficiency breakthrough. Liu et al. (ICLR 2019) reformulated the discrete architecture choice as a continuous relaxation: instead of choosing one operation per edge, a weighted mixture of all candidate operations is maintained, and the mixture weights are optimized via gradient descent jointly with the network parameters. The architecture is then discretized by taking the argmax. This reduced search cost from thousands of GPU-days to a single GPU-day. [^9] DARTS spawned many variants — SNAS introduced stochastic sampling to improve credit assignment [^10], PC-DARTS reduced memory by operating on partial channels [^11], and UNAS unified differentiable and RL-based approaches in one framework. [^12]
+
+**Performance estimation** is the third pillar — how to evaluate candidate architectures cheaply, since training each one to convergence is prohibitively expensive. Several strategies exist: training on proxy tasks (smaller datasets or fewer epochs), using learning curve extrapolation, or — most popularly — *one-shot/weight-sharing* methods. In one-shot NAS, a single large "supernet" containing all candidate operations is trained once, and individual architectures inherit weights from it rather than training from scratch. Guo et al.'s Single Path One-Shot approach simplified this by training the supernet with uniform path sampling, making all architectures equally represented. [^13][^14] More recent work explores *zero-shot* estimators that require no training at all, using proxy metrics to rank architectures. [^1][^4]
+
+A persistent challenge with DARTS-style methods is premature convergence to suboptimal architectures — particularly an over-reliance on skip connections, which can cause performance collapse. Several remedies have been proposed: EG-NAS combines gradient descent with evolutionary exploration to avoid local optima [^15], ZARTS uses zero-order optimization to avoid the approximation errors inherent in DARTS's bilevel optimization [^16], and BaLeNAS reformulates the search as distribution learning using Bayesian variational inference to enhance exploration. [^17]
+
+NAS-discovered architectures now routinely match or exceed hand-designed networks on standard benchmarks. On CIFAR-10, top NAS methods achieve error rates around 2.4–2.6%, and on ImageNet, they reach ~24% top-1 error under mobile constraints — competitive with expert-designed architectures like EfficientNet. [^1][^9][^11] The field has also expanded beyond image classification to language modeling, object detection, segmentation, reinforcement learning, and hardware-aware search that optimizes for latency or energy on specific devices. [^4][^6]
+
+This covers the main threads from a quick search — the NAS literature is enormous (White et al.'s 2023 survey synthesizes over 1,000 papers), so deeper coverage of any specific method or application area is readily available. [^5]
+
+[^1]: Atlas & Devi, 2025. Neural Architecture Search (NAS): A Survey of Methods, Challenges, and Future Directions. INTERNATIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT.
+
+[^2]: Wistuba et al., 2019. A Survey on Neural Architecture Search. arXiv.org.
+
+[^3]: Salehin et al., 2023. AutoML: A Systematic Review on Automated Machine Learning with Neural Architecture Search. Journal of Information and Intelligence.
+
+[^4]: Avval et al., 2025. Systematic review on neural architecture search. Artificial Intelligence Review.
+
+[^5]: White et al., 2023. Neural Architecture Search: Insights from 1000 Papers. arXiv.org.
+
+[^6]: Wang & Zhu, 2024. Advances in neural architecture search. National Science Review.
+
+[^7]: Awad et al., 2020. Differential Evolution for Neural Architecture Search. arXiv.org.
+
+[^8]: Chen et al., 2018. Reinforced Evolutionary Neural Architecture Search. arXiv.org.
+
+[^9]: Liu et al., 2018. DARTS: Differentiable Architecture Search. International Conference on Learning Representations.
+
+[^10]: Xie et al., 2018. SNAS: Stochastic Neural Architecture Search. International Conference on Learning Representations.
+
+[^11]: Xu et al., 2019. PC-DARTS: Partial Channel Connections for Memory-Efficient Differentiable Architecture Search. arXiv.org.
+
+[^12]: Vahdat et al., 2019. UNAS: Differentiable Architecture Search Meets Reinforcement Learning. Computer Vision and Pattern Recognition.
+
+[^13]: Guo et al., 2019. Single Path One-Shot Neural Architecture Search with Uniform Sampling. European Conference on Computer Vision.
+
+[^14]: Ning et al., 2020. Evaluating Efficient Performance Estimators of Neural Architectures. Neural Information Processing Systems.
+
+[^15]: Cai et al., 2024. EG-NAS: Neural Architecture Search with Fast Evolutionary Exploration. AAAI Conference on Artificial Intelligence.
+
+[^16]: Wang et al., 2021. ZARTS: On Zero-order Optimization for Neural Architecture Search. Neural Information Processing Systems.
+
+[^17]: Zhang et al., 2021. BaLeNAS: Differentiable Architecture Search via the Bayesian Learning Rule. Computer Vision and Pattern Recognition.

@@ -1,0 +1,75 @@
+# **Convolutional Neural Networks (CNNs):** What They Are and How They’re Used
+
+Convolutional neural networks (CNNs) are a leading deep learning model for working with data that have a grid-like structure, especially images. They automatically learn useful features directly from raw data, which makes them powerful for many perception tasks.
+
+## **What CNNs Are**
+
+CNNs are **feed‑forward neural networks** built from repeated layers that learn spatial patterns in data  (Yamashita et al., 2018; Li et al., 2020; Taye, 2023). Key ideas:
+
+- **Local connections & weight sharing:** Small filters (kernels) slide over the input, detecting patterns like edges or textures anywhere in the image, reducing parameters and enabling shift invariance  (Yamashita et al., 2018; Li et al., 2020; Zhao et al., 2024; Younesi et al., 2024).  
+- **Typical layers:**  
+  - Convolution layers – extract features.  
+  - Pooling layers – downsample to keep key information.  
+  - Fully connected layers – map features to outputs (e.g., class labels)  (Yamashita et al., 2018; Purwono et al., 2023; Taye, 2023).  
+- CNNs can be 1D, 2D, or 3D, adapted to time series, images, and volumes respectively  (Kiranyaz et al., 2019; Li et al., 2020; Younesi et al., 2024).
+
+## **Core Applications Across Domains**
+
+### Major use cases of CNNs
+
+| Domain/type of data | Typical CNN tasks | Citations |
+|---------------------|-------------------|----------|
+| Images & video | Image classification, object detection, segmentation, video prediction |  (Zhao et al., 2024; Khan et al., 2019; Younesi et al., 2024; Khan et al., 2018)|
+| Medical imaging & radiology | Lesion detection, image classification, segmentation |  (Yamashita et al., 2018; Taye, 2023; Khan et al., 2019)|
+| Speech & audio (1D) | Speech recognition, audio retrieval, anomaly detection |  (Kiranyaz et al., 2019; Krichen, 2023; Purwono et al., 2023)|
+| Text / NLP | Text classification, sentiment analysis, document modeling |  (Li et al., 2020; Krichen, 2023; Younesi et al., 2024; Purwono et al., 2023)|
+| Biometrics & security | Face recognition, user authentication |  (Taye, 2023; Bhatt et al., 2021; Du, 2024)|
+| Biomedical signals | ECG analysis, personalized diagnosis |  (Kiranyaz et al., 2019; Bhatt et al., 2021)|
+| Robotics & perception | Scene understanding, object recognition for robots |  (Khan et al., 2018; Raj & Kos, 2025)|
+
+**Figure 1:** Representative application areas where CNNs are widely used
+
+## **Why CNNs Are So Widely Used**
+
+- **Automatic feature learning:** No hand‑crafted features are required; CNNs learn hierarchies from simple edges to complex objects  (Taye, 2023; Zhao et al., 2024; Khan et al., 2019).  
+- **High accuracy:** They have achieved state‑of‑the‑art performance in many vision and recognition benchmarks  (Zhao et al., 2024; Krichen, 2023; Younesi et al., 2024; Alzubaidi et al., 2021).  
+- **Flexibility:** Variants (1D/2D/3D, dilated, grouped, attention-based) allow tailoring to images, signals, text, and multi-dimensional data  (Kiranyaz et al., 2019; Li et al., 2020; Younesi et al., 2024; Ayeni, 2022).
+
+## **Conclusion**
+
+CNNs are deep learning models that excel at recognizing patterns in structured data, especially images. By stacking convolution, pooling, and fully connected layers, they automatically learn rich features and now underpin applications from image and speech recognition to medical diagnosis, NLP, and robotics.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Taye, M. (2023). Theoretical Understanding of Convolutional Neural Network: Concepts, Architectures, Applications, Future Directions. *Comput.*, 11, 52. https://doi.org/10.3390/computation11030052
+ 
+Zhao, X., Wang, L., Zhang, Y., Han, X., Deveci, M., & Parmar, M. (2024). A review of convolutional neural networks in computer vision. *Artificial Intelligence Review*, 57. https://doi.org/10.1007/s10462-024-10721-6
+ 
+Kiranyaz, S., Avcı, O., Abdeljaber, O., Ince, T., Gabbouj, M., & Inman, D. (2019). 1D Convolutional Neural Networks and Applications: A Survey. *ArXiv*, abs/1905.03554. https://doi.org/10.1016/j.ymssp.2020.107398
+ 
+Li, Z., Liu, F., Yang, W., Peng, S., & Zhou, J. (2020). A Survey of Convolutional Neural Networks: Analysis, Applications, and Prospects. *IEEE Transactions on Neural Networks and Learning Systems*, 33, 6999-7019. https://doi.org/10.1109/tnnls.2021.3084827
+ 
+Krichen, M. (2023). Convolutional Neural Networks: A Survey. *Comput.*, 12, 151. https://doi.org/10.3390/computers12080151
+ 
+Younesi, A., Ansari, M., Fazli, M., Ejlali, A., Shafique, M., & Henkel, J. (2024). A Comprehensive Survey of Convolutions in Deep Learning: Applications, Challenges, and Future Trends. *IEEE Access*, 12, 41180-41218. https://doi.org/10.1109/access.2024.3376441
+ 
+Bhatt, D., Patel, C., Talsania, H., Patel, J., Vaghela, R., Pandya, S., Modi, K., & Ghayvat, H. (2021). CNN Variants for Computer Vision: History, Architecture, Application, Challenges and Future Scope. *Electronics*. https://doi.org/10.3390/electronics10202470
+ 
+Du, Z. (2024). Review of Convolutional Neural Network. *Science and Technology of Engineering, Chemistry and Environmental Protection*. https://doi.org/10.61173/1xfrez14
+ 
+Ayeni, J. (2022). Convolutional Neural Network (CNN): The architecture and applications. *Applied Journal of Physical Science*. https://doi.org/10.31248/ajps2022.085
+ 
+Khan, A., Sohail, A., Zahoora, U., & Qureshi, A. (2019). A survey of the recent architectures of deep convolutional neural networks. *Artificial Intelligence Review*, 53, 5455 - 5516. https://doi.org/10.1007/s10462-020-09825-6
+ 
+Khan, S., Rahmani, H., Shah, S., & , B. (2018). A Guide to Convolutional Neural Networks for Computer Vision. **. https://doi.org/10.2200/s00822ed1v01y201712cov015
+ 
+Yamashita, R., Nishio, M., , R., & Togashi, K. (2018). Convolutional neural networks: an overview and application in radiology. *Insights into Imaging*, 9, 611 - 629. https://doi.org/10.1007/s13244-018-0639-9
+ 
+Purwono, P., Ma’arif, A., Rahmaniar, W., Fathurrahman, H., Frisky, A., & Haq, Q. (2023). Understanding of Convolutional Neural Network (CNN): A Review. *International Journal of Robotics and Control Systems*. https://doi.org/10.31763/ijrcs.v2i4.888
+ 
+Raj, R., & Kos, A. (2025). An Extensive Study of Convolutional Neural Networks: Applications in Computer Vision for Improved Robotics Perceptions. *Sensors (Basel, Switzerland)*, 25. https://doi.org/10.3390/s25041033
+ 
+Alzubaidi, L., Zhang, J., Humaidi, A., Al-Dujaili, A., Duan, Y., Al-Shamma, O., Santamaría, J., Fadhel, M., Al-Amidie, M., & Farhan, L. (2021). Review of deep learning: concepts, CNN architectures, challenges, applications, future directions. *Journal of Big Data*, 8. https://doi.org/10.1186/s40537-021-00444-8
+ 

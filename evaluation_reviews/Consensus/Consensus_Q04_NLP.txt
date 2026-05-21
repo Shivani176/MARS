@@ -1,0 +1,79 @@
+# **Recent Advances in Natural Language Processing (NLP):** A Brief Overview
+
+Recent NLP progress is dominated by **transformer-based pretrained and large language models**, new **prompt-based learning paradigms**, and extensions to **multimodal and continual learning**. These advances emphasize scaling, transfer learning, and using prompts instead of task‑specific training.
+
+## **Foundation & Large Language Models**
+
+- Transformer-based pretrained models (GPT, BERT and successors) learn universal language representations via self‑supervised pretraining and transfer them to many tasks, avoiding training from scratch  (Kalyan et al., 2021; Ramprasath et al., 2022; Singh & Mahmood, 2021).  
+- Scaling to **large language models (LLMs)** like GPT‑3 enables strong **few-shot and zero-shot** performance across translation, QA, arithmetic, and reasoning tasks without gradient updates  (Brown et al., 2020; Kalyan, 2023; Patil & Gudivada, 2024).  
+- Surveys describe LLMs evolving from task‑specific to **task- and language-independent** architectures, with sizes reaching trillions of parameters and strong performance in both understanding and generation  (Patil & Gudivada, 2024; Souza et al., 2020; Singh & Mahmood, 2021).
+
+### Major Capabilities
+
+| Capability                     | Example advance                                      | Citations |
+|-------------------------------|------------------------------------------------------|-----------|
+| Few-/zero-shot learning       | GPT‑3, ChatGPT family, in-context learning           |  (Brown et al., 2020; Kalyan, 2023; Patil & Gudivada, 2024; Gao et al., 2021)|
+| Zero-shot reasoning           | “Let’s think step by step” chain-of-thought prompts |  (Kojima et al., 2022; Kalyan, 2023)|
+| Domain-/language adaptation   | BERTimbau for Brazilian Portuguese                   |  (Souza et al., 2020; Souza et al., 2023)|
+
+**Figure 1:** Key recent NLP capabilities and exemplars
+
+## **Prompt-Based and In-Context Learning**
+
+- The field is shifting from “pre-train, fine-tune” to **“pre-train, prompt, and predict”**, where tasks are reformulated as text prompts to exploit pretrained LMs directly  (Liu et al., 2021; Kalyan et al., 2021).  
+- Systematic work on **prompt engineering** (discrete/continuous, few‑shot, zero‑shot) shows prompts are crucial for performance and can be optimized automatically  (Liu et al., 2021; Gao et al., 2021; Li, 2023).  
+- Simple natural-language prompts and chain-of-thought instructions dramatically improve **zero-shot reasoning**  (Kojima et al., 2022)and clinical information extraction, often surpassing older neural baselines  (Sivarajkumar et al., 2024).  
+- Studies also explore **zero-shot prompt design** and “prompt programming” beyond few-shot examples, emphasizing narrative and instruction-like prompts  (Reynolds & McDonell, 2021; Li, 2023).
+
+## **Transfer, Multimodal, and Continual Learning**
+
+- Transfer learning with pretrained transformers has become “necessary” for progress across domains like healthcare and legal text, improving accuracy and efficiency while reducing labeled data needs  (Joseph et al., 2024; Kalyan et al., 2021; Singh & Mahmood, 2021).  
+- **Vision–language and multimodal models** combine text with images/video; prompt learning for CLIP and multimodal prompt tuning improve zero-shot image recognition and instruction following  (Zhou et al., 2021; Wang et al., 2024; Zeng et al., 2022).  
+- **Continual learning** methods are being adapted to foundation models to mitigate catastrophic forgetting while they learn new tasks over time  (Yang et al., 2024).
+
+## **Summary**
+
+Modern NLP is driven by large transformer-based models, extensive self-supervised pretraining, and powerful prompt-based interfaces that enable zero- or few-shot use. Research is rapidly extending these models across languages, domains, and modalities, while tackling efficiency and continual learning so they can be adapted and reused widely.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Kojima, T., Gu, S., Reid, M., Matsuo, Y., & Iwasawa, Y. (2022). Large Language Models are Zero-Shot Reasoners. *ArXiv*, abs/2205.11916. 
+ 
+Zhou, K., Yang, J., Loy, C., & Liu, Z. (2021). Learning to Prompt for Vision-Language Models. *International Journal of Computer Vision*, 130, 2337 - 2348. https://doi.org/10.1007/s11263-022-01653-1
+ 
+Kalyan, K., Rajasekharan, A., & Sangeetha, S. (2021). AMMUS : A Survey of Transformer-based Pretrained Models in Natural Language Processing. *ArXiv*, abs/2108.05542. 
+ 
+Kalyan, K. (2023). A Survey of GPT-3 Family Large Language Models Including ChatGPT and GPT-4. *Nat. Lang. Process. J.*, 6, 100048. https://doi.org/10.2139/ssrn.4593895
+ 
+Liu, P., Yuan, W., Fu, J., Jiang, Z., Hayashi, H., & Neubig, G. (2021). Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing. *ACM Computing Surveys*, 55, 1 - 35. https://doi.org/10.1145/3560815
+ 
+Ramprasath, M., Dhanasekaran, K., Karthick, T., Velumani, R., & Sudhakaran, P. (2022). An Extensive Study on Pretrained Models for Natural Language Processing Based on Transformers. *2022 International Conference on Electronics and Renewable Systems (ICEARS)*, 382-389. https://doi.org/10.1109/icears53579.2022.9752241
+ 
+Gao, T., Fisch, A., & Chen, D. (2021). Making Pre-trained Language Models Better Few-shot Learners. *ArXiv*, abs/2012.15723. https://doi.org/10.18653/v1/2021.acl-long.295
+ 
+Joseph, S., Parthi, A., Maruthavanan, D., Jayaram, V., Veerapaneni, P., & Parlapalli, V. (2024). Transfer Learning in Natural Language Processing. *2024 7th International Conference on Information and Communications Technology (ICOIACT)*, 30-36. https://doi.org/10.1109/icoiact64819.2024.10912895
+ 
+Souza, F., Nogueira, R., & Lotufo, R. (2020). BERTimbau: Pretrained BERT Models for Brazilian Portuguese. **, 403-417. https://doi.org/10.1007/978-3-030-61377-8_28
+ 
+Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D., Wu, J., Winter, C., Hesse, C., Chen, M., Sigler, E., Litwin, M., Gray, S., Chess, B., Clark, J., Berner, C., McCandlish, S., Radford, A., Sutskever, I., & Amodei, D. (2020). Language Models are Few-Shot Learners. *ArXiv*, abs/2005.14165. 
+ 
+Patil, R., & Gudivada, V. (2024). A Review of Current Trends, Techniques, and Challenges in Large Language Models (LLMs). *Applied Sciences*. https://doi.org/10.3390/app14052074
+ 
+Sivarajkumar, S., Kelley, M., Samolyk-Mazzanti, A., Visweswaran, S., & Wang, Y. (2024). An Empirical Evaluation of Prompting Strategies for Large Language Models in Zero-Shot Clinical Natural Language Processing: Algorithm Development and Validation Study. *JMIR Medical Informatics*, 12. https://doi.org/10.2196/55318
+ 
+Reynolds, L., & McDonell, K. (2021). Prompt Programming for Large Language Models: Beyond the Few-Shot Paradigm. *Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems*. https://doi.org/10.1145/3411763.3451760
+ 
+Singh, S., & Mahmood, A. (2021). The NLP Cookbook: Modern Recipes for Transformer Based Deep Learning Architectures. *IEEE Access*, 9, 68675-68702. https://doi.org/10.1109/access.2021.3077350
+ 
+Zeng, A., Wong, A., Welker, S., Choromanski, K., Tombari, F., Purohit, A., Ryoo, M., Sindhwani, V., Lee, J., Vanhoucke, V., & Florence, P. (2022). Socratic Models: Composing Zero-Shot Multimodal Reasoning with Language. *ArXiv*, abs/2204.00598. 
+ 
+Yang, Y., Zhou, J., Ding, X., Huai, T., Liu, S., Chen, Q., He, L., & Xie, Y. (2024). Recent Advances of Foundation Language Models-based Continual Learning: A Survey. *ACM Computing Surveys*, 57, 1 - 38. https://doi.org/10.1145/3705725
+ 
+Li, Y. (2023). A Practical Survey on Zero-Shot Prompt Design for In-Context Learning. **, 641-647. https://doi.org/10.26615/978-954-452-092-2_069
+ 
+Souza, F., Nogueira, R., & Lotufo, R. (2023). BERT models for Brazilian Portuguese: Pretraining, evaluation and tokenization analysis. *Appl. Soft Comput.*, 149, 110901. https://doi.org/10.1016/j.asoc.2023.110901
+ 
+Wang, T., Liu, Y., Liang, J., Zhao, J., Cui, Y., Mao, Y., Nie, S., Liu, J., Feng, F., Xu, Z., Han, C., Huang, L., Wang, Q., & Liu, D. (2024). M^2PT: Multimodal Prompt Tuning for Zero-shot Instruction Learning. **, 3723-3740. https://doi.org/10.48550/arxiv.2409.15657
+ 

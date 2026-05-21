@@ -1,0 +1,78 @@
+## **Recent Developments in Computer Vision**
+
+Recent computer vision advances are driven by deep learning, especially **transformers**, large pretrained models, and multimodal fusion. Progress focuses on better understanding of scenes (detection/segmentation/action), using less supervision, and operating across modalities (image–text, image–LiDAR, etc.).
+
+## **Transformers and Large Vision Models**
+
+- Vision transformers and their variants (ViT, Swin, PVT, etc.) now rival or surpass CNNs in **image classification, object detection, segmentation, video understanding, and generation**  (Khan et al., 2021; Hassija et al., 2025).  
+- Key strengths: long-range dependencies, scalable architectures, and easy extension to **multimodal** inputs like image–text or video–text  (Khan et al., 2021; Xu et al., 2022; Bayoudh et al., 2021; Wang et al., 2023).  
+- Surveys highlight a shift from CNN-only pipelines to hybrid and transformer‑only designs across low-level (super‑resolution) and high-level (reasoning, VQA) tasks  (Khan et al., 2021; Hassija et al., 2025; Dongjian, 2022).  
+
+### Major Application Shifts
+
+| Area                     | Recent trend                                       | Citations |
+|--------------------------|----------------------------------------------------|-----------|
+| Detection/segmentation   | Transformer-based and panoptic / 3D segmentation   |  (Trigka & Dritsas, 2025; Khan et al., 2021; Wang et al., 2023; Wang, 2016; Mohammed & Ralescu, 2024)|
+| Video/action recognition | From CNNs to multimodal transformer-based models   |  (Khan et al., 2021; Shaikh et al., 2024; Jiao et al., 2021; Zhu et al., 2020)|
+| Multimodal learning      | Unified image–text/audio models, cross-modal fusion|  (Xu et al., 2022; Bayoudh et al., 2021; Wang et al., 2023)|
+
+**Figure 1:** Key task areas impacted by new models
+
+## **Object Detection, Segmentation, and 3D Perception**
+
+- Deep learning has radically improved **object detection**; recent surveys emphasize robustness to occlusion, scale variation, and real‑time constraints, with transformers now part of state-of-the-art pipelines  (Trigka & Dritsas, 2025; Kaur & Singh, 2022; Dongjian, 2022).  
+- Modern **segmentation** includes semantic, instance, and **panoptic segmentation** to fully parse scenes, with extensions to 3D and video  (Wang et al., 2023; Wang, 2016; Mohammed & Ralescu, 2024).  
+- In autonomous driving and robotics, **3D object detection** using multimodal fusion of cameras, LiDAR, and radar is a major trend, often combining CNNs and transformers  (Trigka & Dritsas, 2025; Yao et al., 2023; Alaba et al., 2024).  
+
+## **Multimodal and Self-/Unsupervised Vision**
+
+- Deep **multimodal learning** integrates visual, textual, and other sensory data for tasks like vision–language reasoning and zero-shot recognition  (Xu et al., 2022; Bayoudh et al., 2021; Wang et al., 2023).  
+- Self-supervised transformers enable **unsupervised object discovery and saliency detection**, achieving state-of-the-art without manual labels  (Wang et al., 2022).  
+- In medical and robotic vision, there is strong movement toward self‑supervised and domain‑adaptation methods to reduce annotation needs  (Manakitsa et al., 2024; Rayed et al., 2024).  
+
+## **Conclusion**
+
+Current computer vision research centers on transformer-based and large pretrained models, richer scene understanding (2D/3D/panoptic/video), and multimodal fusion. There is parallel effort on self- and unsupervised learning to cut labeling costs and on making these powerful models efficient and robust for real-world deployment.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Trigka, M., & Dritsas, E. (2025). A Comprehensive Survey of Machine Learning Techniques and Models for Object Detection. *Sensors (Basel, Switzerland)*, 25. https://doi.org/10.3390/s25010214
+ 
+Khan, S., Naseer, M., Hayat, M., Zamir, S., Khan, F., & Shah, M. (2021). Transformers in Vision: A Survey. *ACM Computing Surveys (CSUR)*, 54, 1 - 41. https://doi.org/10.1145/3505244
+ 
+Wang, Y., Shen, X., Yuan, Y., Du, Y., Li, M., Hu, S., Crowley, J., & Vaufreydaz, D. (2022). TokenCut: Segmenting Objects in Images and Videos With Self-Supervised Transformer and Normalized Cut. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 45, 15790-15801. https://doi.org/10.1109/tpami.2023.3305122
+ 
+Manakitsa, N., Maraslidis, G., Moysis, L., & Fragulis, G. (2024). A Review of Machine Learning and Deep Learning for Object Detection, Semantic Segmentation, and Human Action Recognition in Machine and Robotic Vision. *Technologies*. https://doi.org/10.3390/technologies12020015
+ 
+Xu, P., Zhu, X., & Clifton, D. (2022). Multimodal Learning With Transformers: A Survey. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 45, 12113-12132. https://doi.org/10.1109/tpami.2023.3275156
+ 
+Wang, Y., Ahsan, U., Li, H., & Hagen, M. (2023). A Comprehensive Review of Modern Object Segmentation Approaches. *ArXiv*, abs/2301.07499. https://doi.org/10.1561/0600000097
+ 
+Hassija, V., Palanisamy, B., Chatterjee, A., Mandal, A., Chakraborty, D., Pandey, A., Chalapathi, G., & Kumar, D. (2025). Transformers for Vision: A Survey on Innovative Methods for Computer Vision. *IEEE Access*, 13, 95496-95523. https://doi.org/10.1109/access.2025.3571735
+ 
+Rayed, M., Islam, S., Niha, S., Jim, J., Kabir, M., & Mridha, M. (2024). Deep learning for medical image segmentation: State-of-the-art advancements and challenges. *Informatics in Medicine Unlocked*. https://doi.org/10.1016/j.imu.2024.101504
+ 
+Yao, J., Zhang, B., Li, C., Hong, D., & Chanussot, J. (2023). Extended Vision Transformer (ExViT) for Land Use and Land Cover Classification: A Multimodal Deep Learning Framework. *IEEE Transactions on Geoscience and Remote Sensing*, 61, 1-15. https://doi.org/10.1109/tgrs.2023.3284671
+ 
+Wang, X. (2016). Deep Learning in Object Recognition, Detection, and Segmentation. *Found. Trends Signal Process.*, 8, 217-382. https://doi.org/10.1561/2000000071
+ 
+Bayoudh, K., Knani, R., Hamdaoui, F., & Mtibaa, A. (2021). A survey on deep multimodal learning for computer vision: advances, trends, applications, and datasets. *The Visual Computer*, 38, 2939 - 2970. https://doi.org/10.1007/s00371-021-02166-7
+ 
+Mohammed, S., & Ralescu, A. (2024). Insights into Image Understanding: Segmentation Methods for Object Recognition and Scene Classification. *Algorithms*, 17, 189. https://doi.org/10.3390/a17050189
+ 
+Shaikh, M., Chai, D., Islam, S., & Akhtar, N. (2024). From CNNs to Transformers in Multimodal Human Action Recognition: A Survey. *ACM Transactions on Multimedia Computing, Communications and Applications*, 20, 1 - 24. https://doi.org/10.1145/3664815
+ 
+Wang, X., Chen, G., Qian, G., Gao, P., Wei, X., Wang, Y., Tian, Y., & Gao, W. (2023). Large-scale Multi-modal Pre-trained Models: A Comprehensive Survey. *Machine Intelligence Research*, 20, 447 - 482. https://doi.org/10.1007/s11633-022-1410-8
+ 
+Kaur, J., & Singh, W. (2022). Tools, techniques, datasets and application areas for object detection in an image: a review. *Multimedia Tools and Applications*, 81, 38297 - 38351. https://doi.org/10.1007/s11042-022-13153-y
+ 
+Alaba, S., Gurbuz, A., & Ball, J. (2024). Emerging Trends in Autonomous Vehicle Perception: Multimodal Fusion for 3D Object Detection. *World Electric Vehicle Journal*. https://doi.org/10.3390/wevj15010020
+ 
+Jiao, L., Zhang, R., Liu, F., Yang, S., Hou, B., Li, L., & Tang, X. (2021). New Generation Deep Learning for Video Object Detection: A Survey. *IEEE Transactions on Neural Networks and Learning Systems*, 33, 3195-3215. https://doi.org/10.1109/tnnls.2021.3053249
+ 
+, D. (2022). Recent advances in deep learning based computer vision. *2022 International Conference on Computers, Information Processing and Advanced Education (CIPAE)*, 174-179. https://doi.org/10.1109/cipae55637.2022.00044
+ 
+Zhu, H., Wei, H., Li, B., Yuan, X., & Kehtarnavaz, N. (2020). A Review of Video Object Detection: Datasets, Metrics and Methods. *Applied Sciences*. https://doi.org/10.3390/app10217834
+ 

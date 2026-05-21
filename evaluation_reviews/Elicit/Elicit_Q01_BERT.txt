@@ -1,0 +1,20 @@
+BERT (Bidirectional Encoder Representations from Transformers) is a language representation model introduced by Google researchers in 2018 that fundamentally changed how NLP systems understand text. Its core innovation is deceptively simple: unlike prior models that read text left-to-right or right-to-left, BERT reads in both directions simultaneously, conditioning on both left and right context in all layers. <citations>0</citations>
+
+## How BERT works
+
+BERT is built on the transformer encoder architecture and uses two pre-training objectives on large amounts of unlabeled text:
+
+1. **Masked Language Modeling (MLM):** Random words in a sentence are masked, and the model learns to predict them from surrounding context — forcing it to build deep bidirectional representations. <citations>1</citations>
+2. **Next Sentence Prediction (NSP):** The model learns whether two sentences naturally follow each other, capturing inter-sentence relationships.
+
+Once pre-trained, BERT can be fine-tuned with just one additional output layer for a wide range of downstream tasks — question answering, sentiment analysis, language inference — without redesigning the architecture for each task. <citations>0</citations>
+
+## How it improved NLP
+
+When published, BERT achieved state-of-the-art results on eleven NLP benchmarks simultaneously, including a 7.7-point absolute improvement on GLUE (to 80.5), MultiNLI accuracy of 86.7% (+4.6%), SQuAD v1.1 F1 of 93.2 (+1.5 points), and SQuAD v2.0 F1 of 83.1 (+5.1 points). <citations>0</citations> These were enormous jumps by the standards of incremental NLP research at the time.
+
+BERT's broader impact went beyond benchmark scores. It catalyzed the "pre-train then fine-tune" paradigm that now dominates NLP — the idea that a single model trained on generic language understanding can transfer effectively to specialized tasks. <citations>2,3</citations> Prior to BERT, state-of-the-art systems typically required task-specific architectures. ELMo (2018) had introduced contextualized word representations using bidirectional LSTMs, <citations>4</citations> but BERT showed that deep bidirectional transformers were far more powerful.
+
+BERT's influence has been vast: over 10,000 papers have extended it, <citations>1</citations> and it spawned a family of successors — RoBERTa showed that BERT was actually undertrained and could match or exceed later models with better hyperparameters and more data; <citations>5</citations> XLNet addressed BERT's limitation of ignoring dependencies between masked positions by using permutation-based training. <citations>6</citations>
+
+While BERT has since been surpassed by larger models (GPT-series, T5, and others), it remains a foundational technique — the model that proved pre-trained transformers could serve as a universal backbone for language understanding. <citations>3</citations>

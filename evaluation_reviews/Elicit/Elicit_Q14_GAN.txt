@@ -1,0 +1,47 @@
+Generative adversarial networks (GANs), introduced by Ian Goodfellow in 2014, are a framework where two neural networks compete in a game-theoretic setup to produce realistic synthetic data. The architecture is simple in concept: a **generator** takes random noise as input and tries to produce data (typically images) that look real, while a **discriminator** tries to distinguish the generator's fakes from genuine samples. The two are trained simultaneously — the generator improves at fooling the discriminator, and the discriminator improves at catching fakes — until (ideally) the generator produces outputs indistinguishable from real data. [^1][^2]
+
+Formally, this is framed as a minimax game: the generator minimizes and the discriminator maximizes a shared objective function. At the theoretical optimum, the generator's output distribution matches the real data distribution, and the discriminator can do no better than chance. The connection to Jensen–Shannon divergence between real and generated distributions provides the theoretical grounding. [^2]
+
+Several major architectural variants have emerged since 2014. **DCGAN** (Deep Convolutional GAN) introduced convolutional architectures that stabilized training and became the standard backbone. **Conditional GANs (cGAN)** add label or class information to both networks, allowing targeted generation — for instance, generating images of a specific category. **Wasserstein GAN (WGAN)** replaced the original loss with the Wasserstein distance, substantially improving training stability. **CycleGAN** enabled unpaired image-to-image translation (e.g., converting photographs to paintings without paired examples). And **StyleGAN**, from Karras et al. at NVIDIA, introduced a style-based generator using Adaptive Instance Normalization (AdaIN) that enabled unprecedented control over image features at different scales — from coarse structure to fine detail — producing photorealistic face images. [^2][^3][^4] StyleGAN2 further refined the architecture by redesigning normalization and regularization to remove characteristic artifacts. [^5] Bermano et al.'s state-of-the-art report describes how StyleGAN's latent space, despite being learned without supervision, turned out to be surprisingly well-disentangled, enabling fine-grained editing of generated images along attributes like pose, expression, and lighting. [^6][^7]
+
+A central challenge in GAN training is **mode collapse** — the generator learns to produce only a narrow subset of possible outputs rather than the full diversity of the data distribution. A systematic review by Cobbinah et al. (2025) classifies mitigation strategies into architectural modifications, loss function adaptations, regularization techniques, and hybrid approaches. [^8] Kodali et al. analyzed mode collapse through the lens of regret minimization and identified sharp discriminator gradients around real data points as a signature, proposing gradient penalty schemes (DRAGAN) to avoid degenerate local equilibria. [^9] Spectral regularization methods monitor singular value distributions in discriminator weight matrices to detect and prevent collapse. [^10] More recent work like DynGAN detects collapsed samples via discriminator outputs and dynamically partitions the training set to ensure progressive mode coverage. [^11]
+
+GANs have found applications across many domains:
+
+- **Image synthesis and editing:** The most visible application — generating photorealistic faces, scenes, and artwork. StyleGAN and its successors are widely used for controllable face generation and manipulation. [^6]
+- **Image-to-image translation:** CycleGAN, Pix2Pix, and related models convert images between domains (satellite-to-map, sketch-to-photo, day-to-night). [^2]
+- **Medical imaging and data augmentation:** GANs are particularly valuable in healthcare where labeled data is scarce. They generate synthetic medical images (MRI, CT, X-ray, histology) that augment training sets and improve downstream classification and segmentation. Frid-Adar et al. demonstrated roughly a 7% accuracy improvement in liver lesion classification using GAN-augmented CT data. [^12][^13][^14] A 2026 study showed GAN-based augmentation can improve segmentation Dice scores by 3–5% over standard augmentation in data-constrained settings. [^15]
+- **Text-to-image generation:** Conditional GANs like StackGAN generate images from text descriptions. [^3]
+- **Other domains:** Drug discovery, music generation, video synthesis, time-series forecasting, and handling class-imbalanced datasets. [^4]
+
+It's worth noting that GANs now compete with (and in many settings have been surpassed by) diffusion models for image generation quality. Several of the more recent surveys discuss the integration of GANs with transformers, diffusion models, and large language models as an active frontier. [^2][^4] This is a broad and well-studied field — this scan covers the main threads but there's much more depth available on any particular variant or application area.
+
+[^1]: Zhu et al., 2018. A Survey of Generative Adversarial Networks. ACM Cloud and Autonomic Computing Conference.
+
+[^2]: Chakraborty et al., 2023. Ten years of generative adversarial nets (GANs): a survey of the state-of-the-art. Machine Learning: Science and Technology.
+
+[^3]: Ghojogh et al., 2021. Generative Adversarial Networks and Adversarial Autoencoders: Tutorial and Survey. arXiv.org.
+
+[^4]: Iqbal et al., 2025. Advancements and challenges in the development of generative adversarial network (GANs) for deep learning. Discover Networks.
+
+[^5]: Karras et al., 2019. Analyzing and Improving the Image Quality of StyleGAN. Computer Vision and Pattern Recognition.
+
+[^6]: Bermano et al., 2022. State‐of‐the‐Art in the Architecture, Methods and Applications of StyleGAN. Computer graphics forum (Print).
+
+[^7]: Abdal et al., 2020. StyleFlow: Attribute-conditioned Exploration of StyleGAN-Generated Images using Conditional Continuous Normalizing Flows. ACM Transactions on Graphics.
+
+[^8]: Cobbinah et al., 2025. Diversity in Stable GANs: A Systematic Review of Mode Collapse Mitigation Strategies. Engineering Reports.
+
+[^9]: Kodali et al., 2018. On Convergence and Stability of GANs.
+
+[^10]: Liu et al., 2019. Spectral Regularization for Combating Mode Collapse in GANs. IEEE International Conference on Computer Vision.
+
+[^11]: Luo & Yang, 2024. DynGAN: Solving Mode Collapse in GANs With Dynamic Clustering. IEEE Transactions on Pattern Analysis and Machine Intelligence.
+
+[^12]: Frid-Adar, 2018. GAN-based Data Augmentation for Improved Liver Lesion Classification.
+
+[^13]: Biswas et al., 2023. Generative Adversarial Networks for Data Augmentation. arXiv.org.
+
+[^14]: Yahaya & Teo, 2023. Data augmentation using generative adversarial networks for images and biomarkers in medicine and neuroscience. Frontiers in Applied Mathematics and Statistics.
+
+[^15]: Sharma et al., 2026. An efficient approach to synthesize medical images for data augmentation with constrained training data. Discover Computing.

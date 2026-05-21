@@ -1,0 +1,130 @@
+# **BERT and its impact on natural language processing**
+
+**BERT** (Bidirectional Encoder Representations from Transformers) is a pre‑trained, bidirectional Transformer encoder that learns rich contextual representations of text and, when fine‑tuned, **substantially improves accuracy across many NLP tasks**.
+
+## What BERT is
+
+- BERT is a **Transformer encoder–only** model that reads text in both directions (left and right) at once, enabling deep bidirectional context modeling  (Devlin et al., 2019; Țucudean et al., 2024; Mohammed & Ali, 2021).  
+- It is pre‑trained on large corpora (e.g., English Wikipedia and books) with two self‑supervised tasks:  
+  - **Masked Language Modeling (MLM):** predict randomly masked words in a sentence.  
+  - **Next Sentence Prediction (NSP):** predict if one sentence follows another  (Devlin et al., 2019; Bello et al., 2023; Țucudean et al., 2024).  
+- After pre‑training, a simple task‑specific layer is added and the whole model is **fine‑tuned** for tasks like classification, QA, or sequence labeling  (Devlin et al., 2019; Gupta, 2024; Țucudean et al., 2024; Lin et al., 2020).
+
+## How BERT improves NLP
+
+### 1. Stronger contextual understanding
+- Bidirectional conditioning lets BERT use **both past and future context**, overcoming limits of unidirectional or shallow bidirectional models and static embeddings  (Devlin et al., 2019; Gupta, 2024; Gao et al., 2019; D.Deepa, 2021).  
+- BERT encodes **syntactic, semantic, and world knowledge** in its layers, benefiting varied tasks  (Țucudean et al., 2024).
+
+### 2. Large gains across many tasks
+- Original BERT set **state‑of‑the‑art** results on 11 benchmarks, including GLUE (+7.7 points), MultiNLI (+4.6% accuracy), and SQuAD question answering (+1.5–5.1 F1)  (Devlin et al., 2019).  
+- Subsequent surveys show BERT consistently **outperforms traditional ML and earlier deep models** in sentiment analysis, text ranking, information retrieval, and more  (Gupta, 2024; Wang et al., 2024; Gao et al., 2019; Țucudean et al., 2024; D.Deepa, 2021; Lin et al., 2020).
+
+### 3. Simple, unified transfer learning
+- A **single architecture** can be fine‑tuned for sentiment analysis, QA, summarization, spam detection, and domain‑specific tasks (e.g., radiology, morphologically rich languages) with minimal feature engineering  (Gupta, 2024; Gao et al., 2019; Țucudean et al., 2024; Özçift et al., 2021; Jiao et al., 2019).  
+
+### Example improvements table
+
+| Aspect | Pre‑BERT models | With BERT | Citations |
+|-------|-----------------|-----------|-----------|
+| Context modeling | Unidirectional / shallow | Deep bidirectional |  (Devlin et al., 2019; Gupta, 2024; Țucudean et al., 2024)|
+| Task coverage | Many task‑specific models | One model, many tasks |  (Devlin et al., 2019; Gupta, 2024; Țucudean et al., 2024; Lin et al., 2020)|
+| Benchmarks | Lower GLUE, SQuAD, NLI scores | New SOTA on 11 tasks |  (Devlin et al., 2019; Gupta, 2024)|
+
+**Figure 1:** How BERT architecture and training boost NLP benchmarks.
+
+## Conclusion
+
+BERT is a bidirectional Transformer encoder pre‑trained on massive text via MLM and NSP, then fine‑tuned for specific tasks. This design yields richer contextual representations, large accuracy gains on diverse NLP benchmarks, and a unified transfer‑learning workflow that has reshaped modern NLP.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Devlin, J., Chang, M., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. **, 4171-4186. https://doi.org/10.18653/v1/n19-1423
+ 
+Gupta, R. (2024). Bidirectional encoders to state-of-the-art: a review of BERT and its transformative impact on natural language processing. *Информатика. Экономика. Управление - Informatics. Economics. Management*. https://doi.org/10.47813/2782-5280-2024-3-1-0311-0320
+ 
+Wang, J., Huang, J., Tu, X., Wang, J., Huang, A., Laskar, M., & Bhuiyan, A. (2024). Utilizing BERT for Information Retrieval: Survey, Applications, Resources, and Challenges. *ACM Computing Surveys*, 56, 1 - 33. https://doi.org/10.1145/3648471
+ 
+Bello, A., Ng, S., & Leung, M. (2023). A BERT Framework to Sentiment Analysis of Tweets. *Sensors (Basel, Switzerland)*, 23. https://doi.org/10.3390/s23010506
+ 
+Gao, Z., Feng, A., Song, X., & Wu, X. (2019). Target-Dependent Sentiment Classification With BERT. *IEEE Access*, 7, 154290-154299. https://doi.org/10.1109/access.2019.2946594
+ 
+Țucudean, G., Bucos, M., Drăgulescu, B., & Căleanu, C. (2024). Natural language processing with transformers: a review. *PeerJ Computer Science*, 10. https://doi.org/10.7717/peerj-cs.2222
+ 
+Özçift, A., Akarsu, K., Yumuk, F., & Söylemez, C. (2021). Advancing natural language processing (NLP) applications of morphologically rich languages with bidirectional encoder representations from transformers (BERT): an empirical case study for Turkish. *Automatika*, 62, 226 - 238. https://doi.org/10.1080/00051144.2021.1922150
+ 
+, D. (2021). Bidirectional Encoder Representations from Transformers (BERT) Language Model for Sentiment Analysis task: Review. **, 12, 1708-1721. https://doi.org/10.17762/turcomat.v12i7.3055
+ 
+Mohammed, A., & Ali, A. (2021). Survey of BERT (Bidirectional Encoder Representation Transformer) types. *Journal of Physics: Conference Series*, 1963. https://doi.org/10.1088/1742-6596/1963/1/012173
+ 
+Lin, J., Nogueira, R., & Yates, A. (2020). Pretrained Transformers for Text Ranking: BERT and Beyond. *Proceedings of the 14th ACM International Conference on Web Search and Data Mining*. https://doi.org/10.1145/3437963.3441667
+ 
+Jiao, X., Yin, Y., Shang, L., Jiang, X., Chen, X., Li, L., Wang, F., & Liu, Q. (2019). TinyBERT: Distilling BERT for Natural Language Understanding. **, 4163-4174. https://doi.org/10.18653/v1/2020.findings-emnlp.372
+ 
+# **BERT and its impact on natural language processing**
+
+**BERT** (Bidirectional Encoder Representations from Transformers) is a pre‑trained, bidirectional Transformer encoder that learns rich contextual representations of text and, when fine‑tuned, **substantially improves accuracy across many NLP tasks**.
+
+## What BERT is
+
+- BERT is a **Transformer encoder–only** model that reads text in both directions (left and right) at once, enabling deep bidirectional context modeling  (Devlin et al., 2019; Țucudean et al., 2024; Mohammed & Ali, 2021).  
+- It is pre‑trained on large corpora (e.g., English Wikipedia and books) with two self‑supervised tasks:  
+  - **Masked Language Modeling (MLM):** predict randomly masked words in a sentence.  
+  - **Next Sentence Prediction (NSP):** predict if one sentence follows another  (Devlin et al., 2019; Bello et al., 2023; Țucudean et al., 2024).  
+- After pre‑training, a simple task‑specific layer is added and the whole model is **fine‑tuned** for tasks like classification, QA, or sequence labeling  (Devlin et al., 2019; Gupta, 2024; Țucudean et al., 2024; Lin et al., 2020).
+
+## How BERT improves NLP
+
+### 1. Stronger contextual understanding
+- Bidirectional conditioning lets BERT use **both past and future context**, overcoming limits of unidirectional or shallow bidirectional models and static embeddings  (Devlin et al., 2019; Gupta, 2024; Gao et al., 2019; D.Deepa, 2021).  
+- BERT encodes **syntactic, semantic, and world knowledge** in its layers, benefiting varied tasks  (Țucudean et al., 2024).
+
+### 2. Large gains across many tasks
+- Original BERT set **state‑of‑the‑art** results on 11 benchmarks, including GLUE (+7.7 points), MultiNLI (+4.6% accuracy), and SQuAD question answering (+1.5–5.1 F1)  (Devlin et al., 2019).  
+- Subsequent surveys show BERT consistently **outperforms traditional ML and earlier deep models** in sentiment analysis, text ranking, information retrieval, and more  (Gupta, 2024; Wang et al., 2024; Gao et al., 2019; Țucudean et al., 2024; D.Deepa, 2021; Lin et al., 2020).
+
+### 3. Simple, unified transfer learning
+- A **single architecture** can be fine‑tuned for sentiment analysis, QA, summarization, spam detection, and domain‑specific tasks (e.g., radiology, morphologically rich languages) with minimal feature engineering  (Gupta, 2024; Gao et al., 2019; Țucudean et al., 2024; Özçift et al., 2021; Jiao et al., 2019).  
+
+### Example improvements table
+
+| Aspect | Pre‑BERT models | With BERT | Citations |
+|-------|-----------------|-----------|-----------|
+| Context modeling | Unidirectional / shallow | Deep bidirectional |  (Devlin et al., 2019; Gupta, 2024; Țucudean et al., 2024)|
+| Task coverage | Many task‑specific models | One model, many tasks |  (Devlin et al., 2019; Gupta, 2024; Țucudean et al., 2024; Lin et al., 2020)|
+| Benchmarks | Lower GLUE, SQuAD, NLI scores | New SOTA on 11 tasks |  (Devlin et al., 2019; Gupta, 2024)|
+
+**Figure 1:** How BERT architecture and training boost NLP benchmarks.
+
+## Conclusion
+
+BERT is a bidirectional Transformer encoder pre‑trained on massive text via MLM and NSP, then fine‑tuned for specific tasks. This design yields richer contextual representations, large accuracy gains on diverse NLP benchmarks, and a unified transfer‑learning workflow that has reshaped modern NLP.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Devlin, J., Chang, M., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. **, 4171-4186. https://doi.org/10.18653/v1/n19-1423
+ 
+Gupta, R. (2024). Bidirectional encoders to state-of-the-art: a review of BERT and its transformative impact on natural language processing. *Информатика. Экономика. Управление - Informatics. Economics. Management*. https://doi.org/10.47813/2782-5280-2024-3-1-0311-0320
+ 
+Wang, J., Huang, J., Tu, X., Wang, J., Huang, A., Laskar, M., & Bhuiyan, A. (2024). Utilizing BERT for Information Retrieval: Survey, Applications, Resources, and Challenges. *ACM Computing Surveys*, 56, 1 - 33. https://doi.org/10.1145/3648471
+ 
+Bello, A., Ng, S., & Leung, M. (2023). A BERT Framework to Sentiment Analysis of Tweets. *Sensors (Basel, Switzerland)*, 23. https://doi.org/10.3390/s23010506
+ 
+Gao, Z., Feng, A., Song, X., & Wu, X. (2019). Target-Dependent Sentiment Classification With BERT. *IEEE Access*, 7, 154290-154299. https://doi.org/10.1109/access.2019.2946594
+ 
+Țucudean, G., Bucos, M., Drăgulescu, B., & Căleanu, C. (2024). Natural language processing with transformers: a review. *PeerJ Computer Science*, 10. https://doi.org/10.7717/peerj-cs.2222
+ 
+Özçift, A., Akarsu, K., Yumuk, F., & Söylemez, C. (2021). Advancing natural language processing (NLP) applications of morphologically rich languages with bidirectional encoder representations from transformers (BERT): an empirical case study for Turkish. *Automatika*, 62, 226 - 238. https://doi.org/10.1080/00051144.2021.1922150
+ 
+, D. (2021). Bidirectional Encoder Representations from Transformers (BERT) Language Model for Sentiment Analysis task: Review. **, 12, 1708-1721. https://doi.org/10.17762/turcomat.v12i7.3055
+ 
+Mohammed, A., & Ali, A. (2021). Survey of BERT (Bidirectional Encoder Representation Transformer) types. *Journal of Physics: Conference Series*, 1963. https://doi.org/10.1088/1742-6596/1963/1/012173
+ 
+Lin, J., Nogueira, R., & Yates, A. (2020). Pretrained Transformers for Text Ranking: BERT and Beyond. *Proceedings of the 14th ACM International Conference on Web Search and Data Mining*. https://doi.org/10.1145/3437963.3441667
+ 
+Jiao, X., Yin, Y., Shang, L., Jiang, X., Chen, X., Li, L., Wang, F., & Liu, Q. (2019). TinyBERT: Distilling BERT for Natural Language Understanding. **, 4163-4174. https://doi.org/10.18653/v1/2020.findings-emnlp.372
+ 

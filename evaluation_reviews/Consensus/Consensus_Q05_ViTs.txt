@@ -1,0 +1,72 @@
+# **Vision Transformers in Computer Vision:** Core Ideas and Mechanics
+
+Vision Transformers (ViTs) adapt the transformer architecture from language to images by turning images into sequences and using self-attention instead of convolutions. They have become strong backbones for many vision tasks, from classification to detection and segmentation  (Dosovitskiy et al., 2020; Khan et al., 2021; Liu et al., 2021; Li et al., 2023; Jamil et al., 2022).
+
+## **Core Working Principle**
+
+### From image to tokens  
+- Images are **split into small patches** (e.g., a grid)  (Dosovitskiy et al., 2020; Jamil et al., 2022; Bazi et al., 2021).  
+- Each patch is **flattened and linearly projected** into a vector; this becomes a “token”, analogous to a word embedding in NLP  (Dosovitskiy et al., 2020; Jamil et al., 2022; Liu et al., 2021).  
+- **Positional embeddings** are added so the model knows where each patch came from in the original image  (Dosovitskiy et al., 2020; Bazi et al., 2021; Hassija et al., 2025).
+
+### Transformer encoding  
+- The sequence of patch tokens is passed through a **Transformer encoder** with multi-head self-attention and feed-forward layers  (Dosovitskiy et al., 2020; Khan et al., 2021; Han et al., 2020).  
+- **Self-attention** lets each patch weight information from all other patches, capturing **global context and long-range dependencies** across the image  (Khan et al., 2021; Han et al., 2020; Jamil et al., 2022).  
+- A special **classification token** or pooled representation is sent to an MLP head to output class labels or other predictions  (Dosovitskiy et al., 2020; Jamil et al., 2022; Wang et al., 2025).
+
+## **How This Differs from CNNs**
+
+| Aspect | CNNs | Vision Transformers | Citations |
+|-------|------|---------------------|-----------|
+| Inductive bias | Strong (locality, translation equivariance) | Minimal, more general |  (Han et al., 2020; Liu et al., 2021; Khan et al., 2021)|
+| Context | Mainly local, builds up with depth | Direct **global** interactions via attention |  (Khan et al., 2021; Liu et al., 2021; Li et al., 2023)|
+| Input handling | Pixels / small kernels | Image **patch tokens** + positions |  (Dosovitskiy et al., 2020; Jamil et al., 2022; Bazi et al., 2021)|
+
+**Figure 1:** Key structural differences between CNNs and ViTs
+
+## **Applications Across Vision Tasks**
+
+- **Image classification:** ViT and its variants achieve state‑of‑the‑art results on benchmarks like ImageNet  (Dosovitskiy et al., 2020; Wang et al., 2025; Jamil et al., 2022).  
+- **Detection & segmentation:** DETR and ViT-based backbones replace anchors and heavy CNN heads with query-based and attention-based designs  (Li et al., 2023; Beal et al., 2020; Liu et al., 2021).  
+- **Low-level and 3D tasks:** Used for super-resolution, enhancement, colorization, point cloud analysis, and medical imaging  (Khan et al., 2021; Azad et al., 2023; Li et al., 2023; Pu et al., 2024).  
+- **Hybrid models:** CNN–Transformer hybrids combine local convolutional features with global self-attention to capture both local and global structure  (Khan et al., 2023; Papa et al., 2023; Elharrouss et al., 2025).
+
+## **Conclusion**
+
+Vision Transformers work by converting images into sequences of patch tokens and using self-attention to model relationships across the entire image. This design reduces vision-specific assumptions, captures global context efficiently, and scales well, enabling strong performance across many computer vision tasks.
+ 
+_These search results were found and analyzed using Consensus, an AI-powered search engine for research. Try it at https://consensus.app. © 2026 Consensus NLP, Inc. Personal, non-commercial use only; redistribution requires copyright holders’ consent._
+ 
+## References
+ 
+Khan, S., Naseer, M., Hayat, M., Zamir, S., Khan, F., & Shah, M. (2021). Transformers in Vision: A Survey. *ACM Computing Surveys (CSUR)*, 54, 1 - 41. https://doi.org/10.1145/3505244
+ 
+Wang, Y., Deng, Y., Zheng, Y., Chattopadhyay, P., & Wang, L. (2025). Vision Transformers for Image Classification: A Comparative Survey. *Technologies*. https://doi.org/10.3390/technologies13010032
+ 
+Liu, Y., Zhang, Y., Wang, Y., Hou, F., Yuan, J., Tian, J., Zhang, Y., Shi, Z., Fan, J., & He, Z. (2021). A Survey of Visual Transformers. *IEEE Transactions on Neural Networks and Learning Systems*, 35, 7478-7498. https://doi.org/10.1109/tnnls.2022.3227717
+ 
+Azad, R., Kazerouni, A., Heidari, M., Aghdam, E., Molaei, A., Jia, Y., Jose, A., Roy, R., & Merhof, D. (2023). Advances in Medical Image Analysis with Vision Transformers: A Comprehensive Review. *Medical image analysis*, 91, 103000. https://doi.org/10.48550/arxiv.2301.03505
+ 
+Hassija, V., Palanisamy, B., Chatterjee, A., Mandal, A., Chakraborty, D., Pandey, A., Chalapathi, G., & Kumar, D. (2025). Transformers for Vision: A Survey on Innovative Methods for Computer Vision. *IEEE Access*, 13, 95496-95523. https://doi.org/10.1109/access.2025.3571735
+ 
+Li, X., Ding, H., Zhang, W., Yuan, H., Pang, J., Cheng, G., Chen, K., Liu, Z., & Loy, C. (2023). Transformer-Based Visual Segmentation: A Survey. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 46, 10138-10163. https://doi.org/10.1109/tpami.2024.3434373
+ 
+Han, K., Wang, Y., Chen, H., Chen, X., Guo, J., Liu, Z., Tang, Y., Xiao, A., Xu, C., Xu, Y., Yang, Z., Zhang, Y., & Tao, D. (2020). A Survey on Vision Transformer. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, PP, 1-1. https://doi.org/10.1109/tpami.2022.3152247
+ 
+Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S., Uszkoreit, J., & Houlsby, N. (2020). An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale. *ArXiv*, abs/2010.11929. 
+ 
+Khan, A., Rauf, Z., Sohail, A., Khan, A., Asif, H., Asif, A., & Farooq, U. (2023). A survey of the vision transformers and their CNN-transformer based variants. *Artificial Intelligence Review*, 56, 2917 - 2970. https://doi.org/10.1007/s10462-023-10595-0
+ 
+Elharrouss, O., Himeur, Y., Mahmood, Y., Alrabaee, S., Ouamane, A., Bensaali, F., Bechqito, Y., & Chouchane, A. (2025). ViTs as backbones: Leveraging vision transformers for feature extraction. *Inf. Fusion*, 118, 102951. https://doi.org/10.1016/j.inffus.2025.102951
+ 
+Beal, J., Kim, E., Tzeng, E., Park, D., Zhai, A., & Kislyuk, D. (2020). Toward Transformer-Based Object Detection. *ArXiv*, abs/2012.09958. 
+ 
+Bazi, Y., Bashmal, L., Rahhal, M., Dayil, R., & Ajlan, N. (2021). Vision Transformers for Remote Sensing Image Classification. *Remote. Sens.*, 13, 516. https://doi.org/10.3390/rs13030516
+ 
+Pu, Q., Xi, Z., Yin, S., Zhao, Z., & Zhao, L. (2024). Advantages of transformer and its application for medical image segmentation: a survey. *BioMedical Engineering OnLine*, 23. https://doi.org/10.1186/s12938-024-01212-4
+ 
+Jamil, S., Piran, M., & Kwon, O. (2022). A Comprehensive Survey of Transformers for Computer Vision. *ArXiv*, abs/2211.06004. https://doi.org/10.48550/arxiv.2211.06004
+ 
+Papa, L., Russo, P., Amerini, I., & Zhou, L. (2023). A Survey on Efficient Vision Transformers: Algorithms, Techniques, and Performance Benchmarking. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 46, 7682-7700. https://doi.org/10.1109/tpami.2024.3392941
+ 
+
